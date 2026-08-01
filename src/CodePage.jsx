@@ -15,7 +15,7 @@ import { bookParts } from "./content/book.generated.js";
 
 const base = import.meta.env.BASE_URL;
 const releaseAsset =
-  "https://github.com/fyapeng/senecon-see/releases/latest/download/StructuralEstimation-Companion-Code-v1.10.0.zip";
+  "https://github.com/fyapeng/senecon-see/releases/download/v1.10.0/SenEcon-SEE-Companion-Code-v1.10.0.zip";
 const releasePage = "https://github.com/fyapeng/senecon-see/releases/tag/v1.10.0";
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];

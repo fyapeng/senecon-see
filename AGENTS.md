@@ -16,4 +16,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Keep the long-form preface out of the primary navigation. The hero's secondary action is the high-contrast “阅读部分内容” button beside the companion-code download.
 - Publish the preface and full twenty-one-chapter catalogue as a separate reading page. Its deployed HTML is generated one-way from the authoritative LaTeX source and must not become an independently edited textbook source.
 - Keep `/code/` as the canonical web index promised by the preface. Store the immutable full code package in GitHub Releases, while the page explains versions, chapter paths, tests, and download entry points.
+- Publish the versioned textbook PDF from GitHub Releases and link it directly from the homepage. Do not publish the LaTeX source or generated build files.
 - The full catalogue must expose section-level titles generated from the authoritative chapter sources; use chapter disclosures to keep the twenty-one-chapter directory scannable.

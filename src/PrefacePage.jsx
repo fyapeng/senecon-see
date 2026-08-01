@@ -11,8 +11,9 @@ import { bookParts, prefaceMeta } from "./content/book.generated.js";
 import prefaceHtml from "./content/preface.generated.html?raw";
 
 const base = import.meta.env.BASE_URL;
-const releaseAsset =
-  "https://github.com/fyapeng/senecon-see/releases/latest/download/StructuralEstimation-Companion-Code-v1.10.0.zip";
+const releaseBase = "https://github.com/fyapeng/senecon-see/releases/download/v1.10.0";
+const releaseAsset = `${releaseBase}/SenEcon-SEE-Companion-Code-v1.10.0.zip`;
+const textbookPdf = `${releaseBase}/SenEcon-SEE-Textbook-v1.10.0.pdf`;
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
 const readingSections = [
   ["定量研究中的结构问题", "定量研究中的结构问题"],
@@ -159,6 +160,9 @@ export function PrefacePage() {
             <h2>从阅读进入计算实验</h2>
           </div>
           <div className="reading-cta-actions">
+            <a className="button button-paper" href={textbookPdf}>
+              <DownloadSimple size={23} /> 下载教材 PDF
+            </a>
             <a className="button button-gold" href={releaseAsset}>
               <DownloadSimple size={23} /> 下载配套代码
             </a>

@@ -202,6 +202,8 @@ a {
   gap: 34px;
   margin-top: 43px;
 }
+.hero-reading-link { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.84); font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(210,166,78,.7); padding-bottom: 5px; }
+.hero-reading-link:hover, .hero-reading-link:focus-visible { color: var(--gold-soft); }
 
 .button {
   display: inline-flex;
@@ -319,7 +321,7 @@ a {
 
 .version-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 30px;
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
@@ -441,7 +443,7 @@ a {
 
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 54px;
   border-top: 1px solid var(--hairline);
   border-bottom: 1px solid var(--hairline);
