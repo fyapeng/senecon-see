@@ -12,20 +12,14 @@ import {
   X,
 } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
+import { bookParts } from "./content/book.generated.js";
 
 const base = import.meta.env.BASE_URL;
 const releaseAsset =
   "https://github.com/fyapeng/senecon-see/releases/latest/download/StructuralEstimation-Companion-Code-v1.10.0.zip";
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 
-const parts = [
-  ["Ⅰ", "结构估计基础", "第 1—3 章"],
-  ["Ⅱ", "个体选择、异质性与自选择", "第 4—7 章"],
-  ["Ⅲ", "需求、供给与策略互动", "第 8—12 章"],
-  ["Ⅳ", "动态结构模型", "第 13—16 章"],
-  ["Ⅴ", "生命周期与企业动态", "第 17—18 章"],
-  ["Ⅵ", "复杂互动、定量均衡与宏观结构模型", "第 19—21 章"],
-];
+const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
 
 function Header() {
   const [open, setOpen] = useState(false);
@@ -80,8 +74,9 @@ function Hero() {
               <DownloadSimple size={25} weight="regular" />
               下载配套代码
             </a>
-            <a className="text-link text-link-light" href="#updates">
-              查看勘误 <ArrowRight size={19} />
+            <a className="button button-paper" href={`${base}preface/`}>
+              <BookOpenText size={24} weight="regular" />
+              阅读部分内容
             </a>
           </div>
         </div>
@@ -200,15 +195,27 @@ function BookStructure() {
         <h2 id="structure-title">全书结构</h2>
       </div>
       <p className="structure-intro">六部二十一章，从识别与估计基础进入个体选择、产业组织、动态模型和定量均衡。</p>
-      <ol className="part-list">
-        {parts.map(([number, title, chapters]) => (
-          <li key={number}>
-            <span className="part-number">{number}</span>
-            <span className="part-title">{title}</span>
-            <span className="part-chapters">{chapters}</span>
-          </li>
+      <div className="catalogue-grid">
+        {bookParts.map((part, index) => (
+          <article className="catalogue-part" key={part.title}>
+            <header>
+              <span className="part-number">{partNumbers[index]}</span>
+              <div>
+                <h3>{part.title}</h3>
+                <p>第 {part.chapters[0].number}—{part.chapters.at(-1).number} 章</p>
+              </div>
+            </header>
+            <ol>
+              {part.chapters.map((chapter) => (
+                <li key={chapter.number}>
+                  <span>第 {chapter.number} 章</span>
+                  <strong>{chapter.title}</strong>
+                </li>
+              ))}
+            </ol>
+          </article>
         ))}
-      </ol>
+      </div>
     </section>
   );
 }

@@ -231,6 +231,19 @@ a {
   background: #deb766;
 }
 
+.button-paper {
+  border-color: rgba(251, 248, 241, 0.72);
+  background: rgba(251, 248, 241, 0.94);
+  color: var(--deep);
+  box-shadow: 0 13px 34px rgba(0, 0, 0, 0.11);
+  font-size: 17px;
+  font-weight: 650;
+}
+
+.button-paper:hover {
+  background: #fffdf8;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;
@@ -479,36 +492,69 @@ a {
   line-height: 1.85;
 }
 
-.part-list {
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--hairline);
-  list-style: none;
+.catalogue-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 58px 72px;
 }
 
-.part-list li {
+.catalogue-part {
+  border-top: 1px solid var(--hairline);
+}
+
+.catalogue-part header {
   display: grid;
-  grid-template-columns: 76px 1fr auto;
-  align-items: center;
-  min-height: 78px;
+  grid-template-columns: 58px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 25px 0 20px;
   border-bottom: 1px solid var(--hairline);
 }
 
 .part-number {
   color: #a57d38;
   font-family: Georgia, serif;
-  font-size: 23px;
+  font-size: 27px;
 }
 
-.part-title {
+.catalogue-part h3 {
+  margin: 0;
   font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
-  font-size: 17px;
-  font-weight: 650;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.55;
 }
 
-.part-chapters {
+.catalogue-part header p {
+  margin: 5px 0 0;
   color: var(--muted);
   font-size: 13px;
+}
+
+.catalogue-part ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalogue-part li {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  padding: 13px 0;
+  border-bottom: 1px solid rgba(23, 63, 71, 0.11);
+}
+
+.catalogue-part li span {
+  color: #9b783e;
+  font-size: 12px;
+}
+
+.catalogue-part li strong {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
 }
 
 footer {
@@ -745,14 +791,9 @@ footer {
     padding: 30px 12px;
   }
 
-  .part-list li {
-    grid-template-columns: 55px 1fr;
-    gap: 4px 0;
-    padding: 18px 0;
-  }
-
-  .part-chapters {
-    grid-column: 2;
+  .catalogue-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   .footer-inner {

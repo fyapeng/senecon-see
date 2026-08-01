@@ -1,0 +1,613 @@
+<!-- Generated from book/frontmatter/preface.tex; source sha256 28e33a72c6ac. Do not edit by hand. -->
+<h1 class="unnumbered" id="前言">前言</h1>
+<p>经济学的经验研究从可观察的数据出发，却很少止于对数据本身的概括。研究者通常希望知道，价格、收入、制度与市场环境的变化如何影响个人和企业的选择；这些选择如何汇聚为价格、数量、进入、退出与资源配置；当政策规则离开历史样本的支持范围时，经济主体与市场又将形成怎样的新均衡（equilibrium）。《结构估计导论》讨论的正是从观测事实通向行为机制、均衡结果与政策反事实（counterfactual）的这条路径。</p>
+<p>数据能够直接记录消费、就业、入学、定价、投资、竞标和迁移，却不能直接揭示效用、成本、信念、信息、约束与预期。结构模型（structural
+model）为这些不可直接观察的对象规定经济含义，并说明它们通过决策规则、状态转移和均衡条件生成观测分布。估计的任务由此具有明确边界：数据提供哪些信息，经济理论加入哪些限制，数值方法如何求得模型所定义的对象，政策结论又依赖哪些跨环境保持稳定的关系。结构研究的价值与风险都来自这套完整联系。</p>
+<p>本书同时讨论约简式证据（reduced-form
+evidence）与结构分析。随机实验、自然实验和其他研究设计能够提供透明的局部因果比较；结构模型则在需要机制分解、福利计算、动态调整、均衡反馈和样本外制度分析时，引入更多经济对象。二者的分工取决于研究问题与目标参数。可信的因果估计能够约束结构模型，结构模型也能够说明一个局部效应在更大政策系统中的位置。全书的基本立场是：任何超出历史比较范围的结论，都应当明确交代新增的理论限制、数据支持和计算步骤。</p>
+<h2 class="unnumbered"
+id="定量研究中的结构问题">定量研究中的结构问题</h2>
+<p>经验研究面对的任务大致可以分为事实描述、因果识别和制度分析。事实描述关心总体分布、条件关系和异质性，例如不同收入家庭的教育选择有何差异，市场集中度较高的行业是否具有更高价格。因果识别把注意力放在一个明确定义的比较上，例如学费下降是否提高入学率，一项并购是否推高产品价格。制度分析进一步研究历史上尚未出现的规则：补贴范围扩大以后，哪些学生会改变选择；并购被禁止或允许以后，企业会如何重新定价和调整产品；税制、拍卖规则或支付制度改变以后，均衡与福利将如何变化。</p>
+<p>这几类问题有时使用同一份数据，却要求不同的论证。描述性结论需要区分样本规律与总体对象，因果结论需要说明反事实比较由何种外生变化识别，制度分析还必须刻画规则变化以后主体如何重新优化、市场如何重新清算。结构估计主要服务于后一类任务，同时接受描述事实和因果证据的约束。一个模型若不能解释已经观察到的选择与价格，也不能复现可信的外生变化所揭示的行为反应，其政策外推便缺少经验基础。</p>
+<p>结构估计（structural
+estimation）包括一组彼此关联的工作。研究者首先规定主体、状态、信息、选择集合、时序和约束，继而写出效用、利润、技术或资源条件；决策规则与均衡概念把这些原始对象转化为行动和结果；观测过程说明数据记录了哪些变量，又遗漏、聚合或测量了哪些变量；识别分析研究观测分布能够区分哪些结构；估计和推断把总体限制转化为样本程序；政策分析则在新环境中重新求解模型。似然、矩条件、模拟方法和贝叶斯程序都可以进入这一过程，但它们本身并不定义结构研究。决定研究内容的是经济对象及其与数据之间的映射。</p>
+<p>结构模型经常被用于福利与制度设计。消费者剩余依赖偏好的货币尺度，企业利润依赖需求、成本和竞争方式，动态政策还涉及未来状态与预期。研究者因此需要说明福利函数包含哪些主体和资源，政策改变哪些规则，哪些对象被假定为稳定，以及新均衡是否存在、是否唯一。能够写出一个可计算的反事实只是分析的起点；识别、验证与敏感性决定其知识含量。</p>
+<h2 class="unnumbered" id="结构计量的形成">结构计量的形成</h2>
+<h3 class="unnumbered" id="概率模型与联立关系">概率模型与联立关系</h3>
+<p>二十世纪早期的计量研究已经尝试估计需求、供给、投资和宏观波动。经济关系通常同时发生：市场价格由需求与供给共同决定，收入影响消费并受到劳动选择和宏观环境影响，政策回应经济状态并反过来改变行为。单个回归系数在这种系统中难以直接对应一条行为关系。</p>
+<p>考尔斯委员会（Cowles
+Commission）在二十世纪四十年代和五十年代形成的研究纲领，将经济理论、概率模型、结构方程（structural
+equation）和识别条件（identification conditions）放入同一系统。<span
+class="citation" data-cites="Haavelmo1944">Haavelmo
+(1944)</span>强调，经济模型需要赋予观测样本明确的概率含义，参数估计与统计检验才有对象。需求、供给和价格的联立系统由此成为经典例子：结构方程描述行为、技术或制度限制，约简式方程（reduced-form
+equation）把内生变量表示为外生变量与扰动的函数。排除限制（exclusion
+restriction）、秩条件（rank
+condition）以及其他经济限制决定观测分布能否区分不同结构。<span
+class="citation"
+data-cites="KoopmansReiersol1950 Hurwicz1962 Rothenberg1971">Koopmans
+and Reiersøl (1950; Hurwicz 1962; Rothenberg
+1971)</span>进一步发展了结构特征、系统表示和局部识别的分析。</p>
+<p>这一传统确立了几项长期有效的研究原则。估计对象需要在经济模型中获得定义；观测分布通常无法自动分解出行为方程、技术关系与均衡条件；政策分析依赖跨环境稳定的原始对象。结构参数一旦随政策制度共同变化，历史估计值便不能直接用于新制度。1989年经济学奖授予Haavelmo，授奖说明同时强调概率论基础与联立经济结构，概括了现代结构计量的两个出发点<span
+class="citation" data-cites="NobelPrize1989">(The Royal Swedish Academy
+of Sciences 1989)</span>。</p>
+<h3 class="unnumbered"
+id="政策规则预期与卢卡斯批判">政策规则、预期与卢卡斯批判</h3>
+<p>二十世纪中叶的大型宏观计量模型由许多估计方程构成，并被广泛用于政策预测。消费、投资、工资和价格方程均产生于特定政策规则与预期环境。政府系统地改变通胀目标、税收规则或货币政策以后，家庭与企业对未来的判断及其决策规则也会调整。旧制度下的回归系数因而未必能够描述新制度。</p>
+<p><span class="citation" data-cites="Lucas1976">Lucas
+(1976)</span>把这一困难表述为计量政策评价问题，后来称为卢卡斯批判（Lucas
+critique）。政策分析需要区分在制度变化中相对稳定的偏好、技术和约束，与随政策规则和预期共同变化的决策规则。理性预期和动态优化随后改变了宏观经济学的建模标准。1995年经济学奖对Lucas的表彰，以及2011年对Sargent和Sims关于宏观因果关系研究的表彰，反映了制度、预期和时间序列识别在政策分析中的持续重要性<span
+class="citation" data-cites="NobelPrize1995 NobelPrize2011">(The Royal
+Swedish Academy of Sciences 1995, 2011)</span>。</p>
+<p>这条研究路线贯穿本书的动态离散选择、企业投资、生命周期决策、DSGE和HANK模型。政策规则改变以后，模型需要重新计算价值函数、决策函数、状态分布与均衡价格。将一个历史回归式中的政策变量替换为新数值，通常无法完成这样的调整。</p>
+<h3 class="unnumbered" id="因果识别的证据标准">因果识别的证据标准</h3>
+<p>结构模型和大型计量模型在二十世纪七八十年代受到的主要批评之一，是经验结论可能高度依赖函数形式、排除限制和研究者设定，而缺少清楚的外生变异。此后，随机实验、自然实验、工具变量、回归断点、双重差分和事件研究在应用微观经济学中迅速发展。研究者更加重视处理组与对照组的来源、目标人群的范围以及识别假设可以接受哪些直接检验。</p>
+<p><span class="citation" data-cites="AngristPischke2010">Angrist and
+Pischke
+(2010)</span>把这一转向概括为经验经济学的“可信性革命”。研究设计由此成为因果主张的中心。<span
+class="citation" data-cites="ImbensAngrist1994">Imbens and Angrist
+(1994)</span>说明，在处理效应异质的环境中，工具变量通常识别由特定工具改变选择的边际人群。该参数与工具、制度和目标群体紧密相连。2021年经济学奖分别表彰Card在劳动经济学中的经验贡献，以及Angrist和Imbens对因果关系分析的方法贡献，显示自然实验和局部因果参数已经成为现代经验研究的重要组成部分<span
+class="citation" data-cites="NobelPrize2021">(The Royal Swedish Academy
+of Sciences 2021)</span>。</p>
+<p>这一变化也重塑了结构研究的证据标准。现代结构工作需要交代参数所依赖的外生变异，区分由数据直接约束的部分与由函数形式或理论限制决定的部分，并使用未参与估计的事实检验模型。实验或准实验估计量可以进入目标矩，也可以用作外部验证和敏感性基准。约简式证据因此构成结构模型的经验纪律。</p>
+<h3 class="unnumbered" id="方法传统的汇合">方法传统的汇合</h3>
+<p>经济学方法的发展并未沿一条单独路线前进。Haavelmo推动了概率化的结构识别；Lucas、Sargent和Sims研究制度变化、预期与宏观动态；Heckman和McFadden建立了选择、异质性与离散决策的微观计量工具；Card、Angrist和Imbens提高了自然实验与异质因果效应的证据标准。产业组织方面，Tirole关于市场势力与规制的研究，以及Milgrom和Wilson关于拍卖理论与制度设计的研究，使政策分析进一步进入策略互动和机制设计<span
+class="citation"
+data-cites="NobelPrize2000 NobelPrize2014 NobelPrize2020">(The Royal
+Swedish Academy of Sciences 2000, 2014, 2020)</span>。</p>
+<p>这些传统在现代结构研究中相互交汇。因果主张需要可信变异，机制解释需要可检验含义，政策外推需要稳定性条件，制度设计还要重新计算参与者的策略反应。经济学奖可以作为学科问题变迁的历史标记，其作用在于帮助读者理解这些研究传统怎样形成，不能代替对具体模型与证据的判断。</p>
+<h2 class="unnumbered"
+id="结构方法在不同领域的展开">结构方法在不同领域的展开</h2>
+<h3 class="unnumbered"
+id="选择异质性与微观数据">选择、异质性与微观数据</h3>
+<p>战后计量研究逐步从宏观总量扩展到个人、家庭、企业、产品和交易。劳动参与、职业、学校、居住地、交通方式和品牌购买常以有限选项呈现。选择还会决定哪些结果能够进入样本：就业者才有工资记录，入学者才有在校表现，进入市场的企业才有销量和价格。观测机制因而与经济行为相互联系。</p>
+<p>随机效用模型把不可观测偏好与选择概率连接起来。<span class="citation"
+data-cites="McFadden1974">McFadden
+(1974)</span>建立的离散选择框架，使交通、职业、产品和地点选择能够从个体行为出发估计。样本选择模型则把进入观测样本的过程纳入经济决策；<span
+class="citation" data-cites="Heckman1979">Heckman
+(1979)</span>展示了忽略这种选择可能造成的系统偏误。2000年经济学奖将Heckman和McFadden的贡献置于微观计量经济学的共同发展中，官方说明特别提到微观数据和计算能力增长对个人与家庭行为研究的推动<span
+class="citation" data-cites="NobelPrize2000">(The Royal Swedish Academy
+of Sciences 2000)</span>。</p>
+<p>劳动、教育、健康和公共经济学沿着选择、异质性与动态投资形成了丰富的结构模型。个人是否工作、上大学、迁移、参保或接受治疗，取决于预期收益、成本、约束以及个人掌握的信息；政策会改变不同人群的边际选择。Roy模型、样本选择、边际处理效应和动态离散选择提供了连接潜在结果与选择行为的语言<span
+class="citation"
+data-cites="Roy1951 HeckmanVytlacil2005 CarneiroHeckmanVytlacil2011 Rust1987">(Roy
+1951; Heckman and Vytlacil 2005; Carneiro, Heckman, and Vytlacil 2011;
+Rust
+1987)</span>。当考试、量表等多项指标共同测量较低维的能力或技能时，潜在因子系统能够约束不可观测异质性与技能形成过程<span
+class="citation" data-cites="CunhaHeckmanSchennach2010">(Cunha, Heckman,
+and Schennach
+2010)</span>。这些模型用于研究人群为何作出不同选择、短期干预如何改变长期状态，以及局部因果证据在何种条件下能够支持更广的政策规则。</p>
+<h3 class="unnumbered"
+id="市场势力策略互动与制度设计">市场势力、策略互动与制度设计</h3>
+<p>现代产业组织研究的对象由需求、成本、信息和竞争规则共同决定。企业的价格、产品、产能、进入、退出、研发和竞标相互影响，市场集中度或平均价格很难单独揭示竞争机制。二十世纪八十年代以后，博弈论、信息经济学和契约理论改变了产业组织的理论基础，市场势力开始更多地通过企业在具体环境中的最优行为和均衡结果加以度量。</p>
+<p>经验产业组织据此发展出从消费者需求到企业供给和市场均衡的定量框架。差异化产品需求模型利用消费者在多个产品与外部选项之间的选择恢复替代关系；企业一阶条件把价格、需求弹性、边际成本和所有权结构联系起来；并购、税收、产品退出与监管政策需要在新环境中重新求解价格和市场份额。<span
+class="citation" data-cites="Berry1994 BerryLevinsohnPakes1995">S. T.
+Berry (1994; S. Berry, Levinsohn, and Pakes
+1995)</span>建立的随机系数需求与市场均衡框架，成为现代经验产业组织的基础模型之一。</p>
+<p>产业组织的结构研究还包括进入、拍卖和企业动态。进入模型利用市场规模和竞争条件研究企业数量<span
+class="citation" data-cites="BresnahanReiss1991">(Bresnahan and Reiss
+1991)</span>；拍卖模型依据竞标规则、私人信息和次序统计量恢复价值或成本；动态产业模型把投资、产品质量、进入退出与未来竞争相连<span
+class="citation" data-cites="EricsonPakes1995 PakesMcGuire1994">(Ericson
+and Pakes 1995; Pakes and McGuire
+1994)</span>。这些模型要求研究者明确策略空间、信息结构和均衡选择。规制与拍卖设计的研究表明，政策评价经常需要刻画企业针对新规则作出的策略反应<span
+class="citation" data-cites="NobelPrize2014 NobelPrize2020">(The Royal
+Swedish Academy of Sciences 2014, 2020)</span>。</p>
+<h3 class="unnumbered" id="动态决策与状态积累">动态决策与状态积累</h3>
+<p>劳动供给、职业、设备维护、企业投资、研发、耐用品购买和家庭储蓄都具有跨期结构。当前选择改变未来状态，主体据此比较当期收益和未来价值。动态规划（dynamic
+programming）用Bellman方程表达这种权衡；结构估计利用行动、状态转移和结果的联合分布恢复当期收益、调整成本、折现和预期。<span
+class="citation" data-cites="Rust1987 HotzMiller1993">Rust (1987; Hotz
+and Miller
+1993)</span>所代表的动态离散选择研究，使有限状态环境下的动态决策能够系统估计；生命周期模型、企业动态和动态博弈进一步加入持久异质性、进入退出与策略互动。</p>
+<p>动态模型的难点分布在经济与计算两端。状态变量需要概括所有与未来有关的信息，主体的信念需要与可观察信息相容，折现与当期效用需要获得独立识别，数值近似需要维持策略与价值排序。Bellman方程给出递归表示，可靠的经验分析还要说明状态如何测量、转移如何估计，以及求解误差怎样传播到参数和反事实。</p>
+<h3 class="unnumbered" id="贸易空间与宏观均衡">贸易、空间与宏观均衡</h3>
+<p>税收、贸易成本、住房供给、货币政策和社会保险会同时改变价格、工资、资产回报以及人口和企业的配置。局部处理效应可以识别政策传导中的一个环节，整个经济的调整还取决于市场清算和一般均衡反馈。定量一般均衡模型把家庭与企业的决策规则、政府预算和市场清算结合起来，并使用微观异质性、宏观总量与制度事实共同约束参数。</p>
+<p>动态随机一般均衡（dynamic stochastic general equilibrium,
+DSGE）模型重视冲击、预期和跨期调整；异质主体模型研究资产分布、边际消费倾向和政策传导；空间、贸易与生产网络模型追踪地区、部门和企业之间的重配。它们把卢卡斯批判提出的稳定性问题推广到更大的系统。政策改变以后，行为规则、分布状态和均衡价格需要共同满足新的最优性与清算条件。</p>
+<h3 class="unnumbered"
+id="数据与计算条件的变化">数据与计算条件的变化</h3>
+<p>结构估计近几十年的扩展与数据、理论、计算和政策需求的共同变化密切相关。产品级、行政、面板、实验、地理和平台数据提供了更细的选择与状态信息；离散选择、动态规划、博弈论和信息经济学提供了能够解释这些数据的模型；模拟、并行计算、自动微分和高维优化使大规模结构可以实际估计；竞争政策、教育、医疗、气候、社会保险和宏观稳定等问题又持续提出历史样本中尚未出现的政策组合。</p>
+<p>新的条件提高了研究可能性，也提高了论证要求。海量交易记录仍可能缺少识别偏好或成本所需的外生变化，数值算法的收敛也不能证明经济环境设定正确。现代结构研究因此更加重视识别证明、样本外验证、敏感性分析、局部误设、集合识别和计算误差传播<span
+class="citation"
+data-cites="Manski2003 Tamer2010 AndrewsGentzkowShapiro2020">(Manski
+2003; Tamer 2010; Andrews, Gentzkow, and Shapiro
+2020)</span>。本书将这些问题放入基础章节，并在各类模型中反复调用。</p>
+<h2 class="unnumbered"
+id="约简式证据与结构模型">约简式证据与结构模型</h2>
+<p>约简式研究通常直接估计由某项外生变化识别的因果对象。随机分配、资格阈值、制度差异和时间变化构造出具体比较，估计量与样本中的政策、群体和支持范围相联系。研究者可以围绕平行趋势、排除限制、操纵、溢出和样本选择检查识别假设。此类方法尤其适合回答：某项实际发生的政策在特定人群和特定变异范围内造成了多大变化。</p>
+<p>因果参数的局部性构成其定义的一部分。局部平均处理效应描述由特定工具改变选择的边际人群；阈值附近的回归断点效应属于阈值附近个体；一个地区的小幅价格变化所揭示的需求反应也具有明确支持范围。政策一旦同时改变供给、进入、信息或均衡价格，历史处理效应便难以直接相加。总效应还可能把偏好、选择、成本和均衡反馈压缩在同一个参数中，机制分解与福利计算需要进一步的经济结构。</p>
+<p>结构模型明确主体如何选择，以及这些选择如何形成市场结果。需求与供给、当前行动与未来状态、处理选择与潜在结果、企业策略与市场均衡可以进入同一分析系统。研究者由此能够考察新的价格表、产品组合、市场结构和长期政策，计算福利，并分解政策通过哪些渠道发生作用。</p>
+<p>结构结论同时依赖附加限制。效用和技术的函数形式、信息时序、状态变量、未观测异质性、测量过程、均衡概念和数值近似都可能影响反事实。同一观测分布可能与多种结构相容，而这些结构对新政策给出不同预测。样本内拟合说明模型能够接近某些历史事实，识别与验证决定这些事实能否支持结构解释，敏感性分析则揭示政策结论对附加限制的依赖程度。</p>
+<p>两类方法可以形成一条连续的证据链。实验或准实验首先建立一个透明的局部因果事实；结构模型说明该事实由哪些偏好、成本、约束或均衡反应共同生成，并把它与其他选择、价格和状态转移信息结合；模型继而预测新的制度环境；留出样本、另一项政策或新的因果估计可以用于检验外推。研究问题决定需要停留在哪一层。一个局部效应已经足以回答问题时，结构建模不会自动增加结论的可信度；政策目标涉及机制、福利、动态或均衡时，结构限制则提供不可缺少的连接。</p>
+<h3 class="unnumbered"
+id="约简式半结构式与完整结构式">约简式、半结构式与完整结构式</h3>
+<p>经验方法并非只有“约简式”与“完整结构式”两个端点。边际处理效应（marginal
+treatment effect,
+MTE）在潜在结果框架中加入随机效用选择方程，利用选择阈值组织ATE、ATT、LATE与政策相关处理效应之间的关系；福利分析中的充分统计量方法则从完整模型推导只计算特定福利对象所需的弹性、边际行为反应或分布统计量<span
+class="citation"
+data-cites="HeckmanVytlacil2005 CarneiroHeckmanVytlacil2011">(Heckman
+and Vytlacil 2005; Carneiro, Heckman, and Vytlacil
+2011)</span>。这类半结构式方法保留部分行为结构，同时避免恢复与当前问题无关的全部基础参数。它们能够回答多远的问题，取决于所保留结构对政策变化是否稳定，而非取决于“半结构”这一名称。</p>
+<p>因此，研究路径应由目标对象反向决定。若目标是现行补贴在资格阈值附近的局部入学效应，RDD已经给出直接对象；若目标是把阈值变化推广到不同选择边际，MTE或选择模型需要刻画谁会因政策而改变教育状态；若目标还包括不同补贴额度、学校容量、学费调整与社会福利，模型必须进一步纳入效用、成本、供给和均衡。数据越不能观察这些新增环节，结论越依赖结构限制，识别集合或政策结果区间便可能比强行报告单一点估计更诚实。</p>
+<p><span class="citation" data-cites="LiPengYi2026">李星宇, 彭依菁, and
+易君健
+(2026)</span>把模型构建、识别、估计、推断、验证与应用视为相互约束的六个环节，而不是依次勾选的程序。这个视角对本书的直接启发是：模型的复杂度不能脱离识别与验证信息单独决定；估计方法不能脱离识别约束单独选择；反事实的可信范围也不能脱离用于估计和留出的经验事实单独判断。下面的大学补贴例子用同一研究问题展示这些连接。</p>
+<p>约简式证据和机器学习在这条链条中承担的角色也应区分。约简式设计可以提供模型必须复现的局部因果事实、用于间接推断的统计量以及不参与估计的验证对象；机器学习可以测量非结构化变量、逼近高维干扰函数，并在动态模型中近似值函数、政策函数或均衡映射<span
+class="citation" data-cites="LiPengYi2026">(李星宇, 彭依菁, and 易君健
+2026)</span>。这些工具扩大了可处理的数据和模型范围，但不会自动赋予输出以结构含义。由机器学习生成的指标仍需说明测量对象和误差机制，神经网络近似仍需报告最优性或均衡残差，进入结构估计的预测量仍需把第一阶段误差、正则化和样本复用纳入推断。方法之间的结合由它们在证据链中的具体位置决定，而不是由把多个算法放入同一程序决定。</p>
+<h2 class="unnumbered"
+id="大学补贴同一问题的多种经验路径">大学补贴：同一问题的多种经验路径</h2>
+<p>设想政府准备评估并扩大大学学费补贴。研究者可能只有一次横截面调查，也可能观察到一项地区性制度改革，或者掌握按家庭收入阈值发放补贴的行政规则。三类数据都可以研究教育选择，但它们提供的比较、识别的参数和允许回答的政策问题并不相同。同一个“补贴是否提高入学率”的问题不存在唯一的经验方法；研究设计由制度变化、数据结构和目标参数共同决定。</p>
+<h3 class="unnumbered"
+id="横截面制度变化与资格阈值">横截面、制度变化与资格阈值</h3>
+<p>先考虑只有横截面数据的情形。令<span
+class="math inline">\(A_i\)</span>表示学生是否进入大学，<span
+class="math inline">\(t_i=p_i-s_i\)</span>表示净学费，<span
+class="math inline">\(r_i\)</span>表示家庭收入，<span
+class="math inline">\(x_i\)</span>包括学业成绩、父母教育、地区和学校质量等预定特征。最直接的线性回归为
+<span class="math display">\[A_i=\alpha+\beta_t t_i+\beta_r
+r_i+x_i&#39;\gamma+u_i.
+\tag{1}\]</span> 该回归可以描述在控制<span
+class="math inline">\(x_i\)</span>以后，净学费、家庭收入与入学之间的条件关系，也可以用于预测样本支持范围内的入学概率。若希望把<span
+class="math inline">\(\beta_t\)</span>解释为净学费的因果效应，需要至少满足
+<span class="math display">\[\mathbb E[u_i\mid t_i,r_i,x_i]=0,\]</span>
+并要求净学费在给定协变量后仍有足够变异。现实中，学校定价、奖助学金、学生择校、预期大学收益和融资约束往往共同决定<span
+class="math inline">\(t_i\)</span>与<span
+class="math inline">\(A_i\)</span>，这一条件通常缺少直接保证。因此，横截面回归本身首先提供描述性或预测性证据；因果解释必须由额外的制度知识、工具变量、随机分配或其他外生变化支持。家庭收入系数也面临相同问题：收入同时代理融资能力、家庭环境、地区机会和教育偏好，不能仅凭回归形式获得因果含义。</p>
+<p>若某些地区或群体在某一时期开始实施补贴，而其他可比地区尚未实施，可以使用双重差分（difference
+in differences, DID）。令<span
+class="math inline">\(D_g\)</span>表示群体<span
+class="math inline">\(g\)</span>最终接受政策，<span
+class="math inline">\(\mathrm{Post}_t\)</span>表示政策实施后，基本回归为
+<span
+class="math display">\[A_{igt}=\mu_g+\lambda_t+\tau_{\mathrm{DID}}D_g\mathrm{Post}_t+x_{igt}&#39;\gamma+u_{igt}.
+\tag{2}\]</span>
+在没有补贴时，处理组与对照组平均入学结果需要具有平行趋势；主体不能在政策实施前提前反应；样本构成、测量方式和其他同时发生的群体特定政策不能产生同一跳变；跨地区招生、同伴效应或财政转移造成的溢出也需要排除或显式建模。在这些条件下，<span
+class="math inline">\(\tau_{\mathrm{DID}}\)</span>识别政策对实际处理群体的平均影响。若各地区分期实施且政策效应随群体或时间变化，简单的双向固定效应系数一般不再等于一个透明的平均处理效应，需要按处理批次和相对时期构造相应的组别–时间参数。</p>
+<p>现行补贴若规定家庭收入低于阈值<span
+class="math inline">\(c\)</span>即可获得资格，则可以使用回归断点设计（regression
+discontinuity design, RDD）。令<span
+class="math inline">\(r_i\)</span>为规则使用的收入，<span
+class="math inline">\(Z_i=\mathbf
+1\{r_i&lt;c\}\)</span>表示补贴资格。对入学结果的局部线性回归可以写为
+<span class="math display">\[A_i=\alpha+\tau_A Z_i
++\beta_{-}(r_i-c)(1-Z_i)
++\beta_{+}(r_i-c)Z_i
++x_i&#39;\gamma+u_i.
+\tag{3}\]</span> 若家庭不能精确操纵<span
+class="math inline">\(r_i\)</span>，无补贴时的潜在入学结果在<span
+class="math inline">\(c\)</span>处连续，没有其他制度在同一阈值发生离散变化，并且阈值附近单位之间不存在政策溢出，则<span
+class="math inline">\(\tau_A\)</span>识别阈值处补贴资格对入学的局部因果效应。收入密度、预定协变量和其他政策变量在阈值处的连续性能够检验部分可观察含义，但不能替代潜在结果连续性本身。</p>
+<p>资格有时只提高实际领取补贴或实际入学的概率。令<span
+class="math inline">\(T_i\)</span>表示实际接受补贴或实际进入大学，<span
+class="math inline">\(Y_i\)</span>表示毕业或就业收入，模糊回归断点估计量为
+<span class="math display">\[\tau_{\mathrm{FRD}}
+=
+\frac{
+\displaystyle \lim_{r\uparrow c}\mathbb E[Y_i\mid r_i=r]
+-\lim_{r\downarrow c}\mathbb E[Y_i\mid r_i=r]
+}{
+\displaystyle \lim_{r\uparrow c}\mathbb E[T_i\mid r_i=r]
+-\lim_{r\downarrow c}\mathbb E[T_i\mid r_i=r]
+}.
+\tag{4}\]</span>
+在连续性、排除限制、非零第一阶段和单调性成立时，该比率识别阈值附近服从者的局部平均处理效应（local
+average treatment effect,
+LATE）。它回答的是现行阈值附近、由资格变化所改变人群的政策效果。横截面回归、DID与RDD由此对应不同的比较：条件相关关系、实际改革对处理群体的平均影响，以及资格阈值附近的局部效应。估计量的名称不能决定可信度；制度如何产生变异、数据记录哪些变量以及识别条件是否成立才是论证的核心。</p>
+<h3 class="unnumbered"
+id="从局部因果效应到结构选择模型">从局部因果效应到结构选择模型</h3>
+<p>政策部门还可能关心未曾实施的补贴额度、资格范围扩大到更高收入家庭后的入学人数、学生福利、财政成本以及学校容量反应。这些对象超出式(1)–(4)直接识别的历史比较。一个最小的结构模型可以先固定学校供给，只刻画学生的大学选择。</p>
+<p>令<span class="math inline">\(U_i(1)\)</span>和<span
+class="math inline">\(U_i(0)\)</span>分别表示入学与不入学的效用，<span
+class="math inline">\(g_i\)</span>表示学生在作出选择时预期的大学收入增益或其他可观测收益指标。设
+<span class="math display">\[\begin{aligned}
+U_i(1)&amp;=\delta+x_i&#39;\beta+\rho
+g_i-\alpha(p_i-s_i)+\varepsilon_{i1},\\
+U_i(0)&amp;=\varepsilon_{i0},
+\end{aligned}\]</span> 其中<span
+class="math inline">\(\alpha&gt;0\)</span>是净学费的边际效用成本，<span
+class="math inline">\(\delta+x_i&#39;\beta+\rho
+g_i\)</span>汇总可观测的非价格收益。学生选择 <span
+class="math display">\[A_i=\mathbf 1\{U_i(1)\geq U_i(0)\}.
+\tag{5}\]</span> 令 <span
+class="math display">\[v_i(\psi)=\delta+x_i&#39;\beta+\rho
+g_i-\alpha(p_i-s_i),
+\qquad
+\psi=(\delta,\beta&#39;,\rho,\alpha)&#39;.\]</span> 若<span
+class="math inline">\(\varepsilon_{i0}\)</span>与<span
+class="math inline">\(\varepsilon_{i1}\)</span>条件于可观测变量独立同分布地服从第一型极值分布，则<span
+class="math inline">\(\varepsilon_{i1}-\varepsilon_{i0}\)</span>服从逻辑斯蒂分布。由选择规则(5)可得
+<span class="math display">\[P_i(\psi)
+=\Pr(A_i=1\mid x_i,g_i,p_i,s_i)
+=\Lambda\!\left(v_i(\psi)\right)
+=\frac{\exp(v_i(\psi))}{1+\exp(v_i(\psi))}.
+\tag{6}\]</span>
+这一步把效用比较转化为数据中可以估计的选择概率。对独立样本，似然函数与对数似然分别为
+<span class="math display">\[\begin{aligned}
+L_n(\psi)
+&amp;=\prod_{i=1}^n P_i(\psi)^{A_i}\bigl[1-P_i(\psi)\bigr]^{1-A_i},\\
+\ell_n(\psi)
+&amp;=\sum_{i=1}^n\left\{A_i
+v_i(\psi)-\log\bigl[1+\exp(v_i(\psi))\bigr]\right\}.
+\tag{7}
+\end{aligned}\]</span> 记<span
+class="math inline">\(z_i=(1,x_i&#39;,g_i,-(p_i-s_i))&#39;\)</span>，则一阶条件为
+<span class="math display">\[\frac{\partial \ell_n(\psi)}{\partial\psi}
+=\sum_{i=1}^n\bigl[A_i-P_i(\psi)\bigr]z_i=0,
+\tag{8}\]</span> Hessian矩阵为 <span
+class="math display">\[\frac{\partial^2
+\ell_n(\psi)}{\partial\psi\partial\psi&#39;}
+=-\sum_{i=1}^n P_i(\psi)\bigl[1-P_i(\psi)\bigr]z_i z_i&#39;.
+\tag{9}\]</span>
+若净学费与其他解释变量提供充分的条件变异，使总体信息矩阵正定，并且条件选择概率设定正确，则极大似然估计量由最大化式(7)得到。式(8)说明估计的实际含义：参数调整到模型预测概率与观测选择之间的加权残差在样本中正交于所有解释变量。式(9)同时给出局部曲率和标准误计算所需的信息。</p>
+<p>把式(7)写出来仍未完成识别论证。若学校根据学生未观测的入学偏好定价，或者奖助学金根据研究者未观察到的能力和家庭困难发放，则<span
+class="math inline">\(p_i-s_i\)</span>与<span
+class="math inline">\(\varepsilon_{i1}-\varepsilon_{i0}\)</span>相关，<span
+class="math inline">\(\alpha\)</span>不能由普通logit似然获得因果解释。可信的随机补贴、工具变量、制度改革或资格阈值可以为价格参数提供外生变异。函数形式使模型可计算，但不能替代外生变化。</p>
+<p>资格阈值可以直接说明约简式效应如何约束结构参数。设阈值附近除补贴外的确定性效用连续，补贴使净学费下降已知金额<span
+class="math inline">\(\Delta
+s&gt;0\)</span>，并暂时假定阈值附近学生具有共同的<span
+class="math inline">\(\alpha\)</span>。记阈值右侧未获补贴者的极限入学概率为<span
+class="math inline">\(q_0\)</span>，左侧获补贴者的极限入学概率为<span
+class="math inline">\(q_1\)</span>。由式(6)，存在阈值处的基准效用<span
+class="math inline">\(v_c\)</span>使 <span
+class="math display">\[q_0=\Lambda(v_c),
+\qquad
+q_1=\Lambda(v_c+\alpha\Delta s).\]</span> 对两式作logit变换即可得到
+<span class="math display">\[\alpha
+=\frac{\operatorname{logit}(q_1)-\operatorname{logit}(q_0)}{\Delta s},
+\qquad
+\operatorname{logit}(q)=\log\frac{q}{1-q}.
+\tag{10}\]</span> RDD估计的入学跳跃为<span
+class="math inline">\(q_1-q_0\)</span>，两侧的局部入学率和补贴额度由数据与制度给出，因此式(10)把局部因果证据映射为一个局部价格敏感度。该映射依赖共同价格系数、逻辑斯蒂冲击、阈值处其他效用成分连续以及没有容量反馈等附加限制。允许<span
+class="math inline">\(\alpha_i\)</span>异质以后，同一个概率跳跃通常只约束<span
+class="math inline">\(\alpha_i\)</span>分布的某个泛函，不能自动恢复全体学生的价格偏好。</p>
+<p>结构参数也可以通过匹配约简式统计量估计。令<span
+class="math inline">\(\widehat\pi\)</span>收集数据中的RDD跳跃、DID效应、不同收入和成绩组的入学率及毕业率，<span
+class="math inline">\(\pi(\psi)\)</span>表示在给定结构参数下由模型计算或模拟得到的同类统计量。最小距离估计量为
+<span class="math display">\[\widehat\psi
+=\arg\min_{\psi\in\Psi}
+\bigl[\widehat\pi-\pi(\psi)\bigr]&#39;
+W_n
+\bigl[\widehat\pi-\pi(\psi)\bigr].
+\tag{11}\]</span>
+极大似然使用个体选择分布的完整参数化形式；式(11)只使用研究者选定的统计量。二者都需要先从经济模型推导数据对象，再由样本构造目标函数。<span
+class="citation" data-cites="LiPengYi2026">李星宇, 彭依菁, and 易君健
+(2026)</span>以供给–需求系统展示了从模型求解、参数识别和样本估计到统计推断、验证与反事实的完整连接；这里把不同研究设计进一步作为结构估计的识别信息或验证对象。</p>
+<p>识别约束决定了可用的估计方法。若模型给出由有限维参数唯一决定的完整联合密度，可以使用极大似然；若只可信地给出条件均值、正交矩或若干分布泛函，则分别对应最小二乘、GMM或最小距离。把一个便于计算的估计器套在模型上，并不能补足缺失的识别。更严格地，若存在<span
+class="math inline">\(\psi\neq\psi&#39;\)</span>使<span
+class="math inline">\(\pi(\psi)=\pi(\psi&#39;)\)</span>，式(11)即使被全局优化也不能区分两组结构参数；此时应报告
+<span class="math display">\[\mathcal I(\pi_0)
+=\{\psi\in\Psi:\pi(\psi)=\pi_0\}
+\tag{12}\]</span>
+及其诱导的政策结果集合，而不是把优化器返回的某个点误称为识别结果。</p>
+<p>结构估计的数值计算是估计量定义的一部分。对每一组候选<span
+class="math inline">\(\psi\)</span>，研究者需要先求解选择或均衡、对不可观测异质性积分，再计算<span
+class="math inline">\(\pi(\psi)\)</span>；外层优化随后反复调用这一过程。若内层均衡残差、积分误差或模拟噪声与样本矩的不确定性处于同一量级，外层目标函数的极小值便不再准确近似理论估计量。实际实现应固定共同随机数，报告概率和、积分误差、均衡残差和梯度核验，并逐步收紧容差，直到参数与政策对象的变化小于预先规定的统计或经济精度。</p>
+<p>用于估计、模型选择和验证的事实也应分开。若RDD跳跃已经进入<span
+class="math inline">\(\widehat\pi\)</span>，模型复现这一跳跃主要说明优化程序完成了目标匹配，不能再把它作为独立的样本外验证。可以把另一批次改革、另一阈值、未参与估计的毕业率或学校容量反应留作验证；没有独立数据时，也应报告未使用矩、矩误设敏感性以及关键描述统计对结构参数的约束。样本内匹配、留出验证和透明度分析回答不同问题，不能由一张“拟合良好”的图共同替代。</p>
+<h3 class="unnumbered"
+id="政策反事实福利与容量均衡">政策反事实、福利与容量均衡</h3>
+<p>估计<span
+class="math inline">\(\widehat\psi\)</span>以后，先考虑学校学费、容量和学生构成保持不变，只把补贴从<span
+class="math inline">\(s_i\)</span>改为<span
+class="math inline">\(s_i&#39;\)</span>. 对学生<span
+class="math inline">\(i\)</span>，新的入学概率为 <span
+class="math display">\[P_i(s_i&#39;;\widehat\psi)
+=\Lambda\!\left(v_i(\widehat\psi)
++\widehat\alpha(s_i&#39;-s_i)\right).
+\tag{13}\]</span> 样本所代表人群中的新增入学人数可由 <span
+class="math display">\[\Delta N
+=\sum_{i=1}^n w_i
+\left[P_i(s_i&#39;;\widehat\psi)-P_i(s_i;\widehat\psi)\right]
+\tag{14}\]</span> 计算，其中<span
+class="math inline">\(w_i\)</span>是抽样或人口权重。该反事实允许补贴额度和资格规则变化，但仍假定偏好参数、冲击分布、可选学校、学费、容量和样本所代表的人口组成保持稳定。把阈值处RDD效应直接乘以新增资格人数，相当于在没有显式模型的情况下施加更强的同质性和供给不变假设；式(14)至少把这些假设写进了可检查的结构。</p>
+<p>在第一型极值冲击的规范化下，选择前的期望最大效用等于一个与政策无关的常数加<span
+class="math inline">\(\log[1+\exp(v_i)]\)</span>。若<span
+class="math inline">\(\alpha\)</span>是货币的边际效用且在政策间稳定，则补贴变化的货币等价福利为
+<span class="math display">\[\mathrm{CV}_i
+=\frac{
+\log\!\left[1+\exp\bigl(v_i(s_i&#39;;\widehat\psi)\bigr)\right]
+-\log\!\left[1+\exp\bigl(v_i(s_i;\widehat\psi)\bigr)\right]
+}{\widehat\alpha}.
+\tag{15}\]</span> 若补贴只在实际入学时支付，政府的机械支出为 <span
+class="math display">\[G(s&#39;)=\sum_{i=1}^n w_i
+s_i&#39;P_i(s_i&#39;;\widehat\psi).\]</span>
+财政成本、学生福利、大学资源成本、税收回收和教育外部性属于不同对象。社会福利计算需要说明补贴作为转移如何进入政府预算、筹资是否产生边际公共资金成本，以及同伴或生产率外部性是否纳入。</p>
+<p>固定学费的反事实可能违反学校容量。设所有学生面对同一均衡学费<span
+class="math inline">\(p\)</span>，总容量为<span
+class="math inline">\(K\)</span>。补贴规则改变后，学费<span
+class="math inline">\(p&#39;\)</span>需要满足 <span
+class="math display">\[\sum_{i=1}^n w_i
+\Lambda\!\left(
+\delta+x_i&#39;\beta+\rho g_i-\alpha(p&#39;-s_i&#39;)
+\right)=K.
+\tag{16}\]</span> 当<span
+class="math inline">\(\alpha&gt;0\)</span>时，左侧关于<span
+class="math inline">\(p&#39;\)</span>连续且严格递减；若<span
+class="math inline">\(K\)</span>位于价格趋于负无穷与正无穷时的需求极限之间，均衡学费唯一。数值上可以用二分法求解式(16)，并报告市场清算残差。补贴提高学生支付能力会在固定价格下扩大需求；容量约束下，部分补贴可能转化为更高学费，入学数量则由<span
+class="math inline">\(K\)</span>限制。多所学校、异质专业和内生容量会把一个标量方程扩展为需求、定价、录取与投资组成的均衡系统。政策反事实必须重新求解所有受政策影响的内生对象。</p>
+<h3 class="unnumbered"
+id="具有多重测量时的潜在因子模型">具有多重测量时的潜在因子模型</h3>
+<p>前面的基准模型把学业准备和预期收益放入可观测变量<span
+class="math inline">\(x_i\)</span>与<span
+class="math inline">\(g_i\)</span>。若研究者观察到高中考试分项、教师评价、行为量表、认知测试以及后续成绩等多项指标，可以进一步建立潜在因子模型（latent
+factor model），用较低维的能力或技能<span
+class="math inline">\(\theta_i\)</span>解释这些测量、教育选择与潜在结果之间的共同变异。这是一种需要特定数据结构的扩展，单个考试总分不足以同时区分真实技能与测量误差。</p>
+<p>考虑一维线性测量系统 <span class="math display">\[\begin{aligned}
+\theta_i&amp;\sim F_\theta(\cdot;\xi),\nonumber\\
+m_{ij}&amp;=\mu_j+\kappa_j\theta_i+\nu_{ij},
+\qquad j=1,\ldots,J,
+\tag{17}
+\end{aligned}\]</span> 以及教育状态<span
+class="math inline">\(a\in\{0,1\}\)</span>下的潜在收入 <span
+class="math display">\[y_i(a)=x_i&#39;\beta_a+\lambda_a\theta_i+e_{ia}.
+\tag{18}\]</span> 选择效用的确定性部分可以写为 <span
+class="math display">\[v_i(\theta_i;\psi)
+=\delta+x_i&#39;\beta+\rho\theta_i-\alpha(p_i-s_i).
+\tag{19}\]</span> 条件于<span
+class="math inline">\(\theta_i\)</span>，入学概率仍为<span
+class="math inline">\(P_i(\theta_i;\psi)=\Lambda(v_i(\theta_i;\psi))\)</span>。数据只观察到实际选择下的结果<span
+class="math inline">\(y_i=y_i(A_i)\)</span>。在给定条件独立性和分布假设后，个体<span
+class="math inline">\(i\)</span>对联合似然的贡献为 <span
+class="math display">\[\begin{aligned}
+L_i(\psi)
+=\int
+&amp; P_i(\theta;\psi)^{A_i}
+\bigl[1-P_i(\theta;\psi)\bigr]^{1-A_i}
+f_{y,A_i}(y_i\mid x_i,\theta;\psi)
+\nonumber\\[-0.2em]
+&amp;\times
+\prod_{j=1}^J f_{m,j}(m_{ij}\mid\theta;\psi)
+\,dF_\theta(\theta;\xi).
+\tag{20}
+\end{aligned}\]</span>
+式(20)展示了潜在因子结构如何运行。测量指标约束<span
+class="math inline">\(\theta\)</span>的分布及载荷，入学选择约束技能与教育效用的关系，实际收入约束被选择状态下的收益方程，所有不可观测技能通过积分从似然中消去。给定一组候选参数，研究者使用高斯求积或模拟计算每个<span
+class="math inline">\(L_i(\psi)\)</span>，再最大化<span
+class="math inline">\(\sum_i\log
+L_i(\psi)\)</span>。数值实现需要检查求积节点、模拟次数、梯度与最优值对初值的敏感性。</p>
+<p>常见的一维线性–正态测量系统通常至少需要三项对同一因子具有非零载荷、且测量误差在给定因子后相互独立的指标，并需要固定<span
+class="math inline">\(\mathbb E[\theta_i]=0\)</span>与<span
+class="math inline">\(\operatorname{Var}(\theta_i)=1\)</span>，或固定一项载荷与截距，以确定因子的尺度、位置和符号。若测量误差相关、指标同时受其他潜在维度影响，或者只有一项含噪指标，额外结构与数据便不可缺少。式(18)中的两个潜在收入不能同时被观察，<span
+class="math inline">\(\lambda_0\)</span>、<span
+class="math inline">\(\lambda_1\)</span>及教育收益分布还需要选择方程、排除限制、实验或准实验变化以及相应的分布假设共同识别。</p>
+<p>若研究目标进一步比较大学补贴与早期教育投入，需要观察多个年龄阶段的技能测量、家庭与学校投入以及后续结果，并建立技能形成过程
+<span class="math display">\[\theta_{i,t+1}
+=F_t(\theta_{it},I_{it},h_{it};\eta)+\omega_{i,t+1}.
+\tag{21}\]</span>
+仅有成年后的单次横截面无法分别恢复早期技能、投入生产率与阶段互补性。纵向测量、投入价格或制度变化、测量误差结构和初始条件共同决定这些参数能否识别<span
+class="citation" data-cites="CunhaHeckmanSchennach2010">(Cunha, Heckman,
+and Schennach 2010)</span>。</p>
+<p>估计潜在因子模型以后，新补贴下的个体入学概率需要对技能后验分布积分：
+<span class="math display">\[P_i(s_i&#39;)
+=\int
+\Lambda\!\left(v_i(\theta,s_i&#39;;\widehat\psi)\right)
+\,dF(\theta\mid m_i,x_i,y_i,A_i;\widehat\psi).
+\tag{22}\]</span>
+人群政策预测则使用目标人群的技能分布，而非机械复制当前样本的个体后验。潜在因子系统能够处理不可观测异质性及多项指标的测量误差，也引入了载荷、分布、条件独立和尺度规范化等新限制。数据是否包含多重测量、纵向结果和可信的成本变化，决定这一扩展是否可行。</p>
+<h3 class="unnumbered" id="证据链与方法边界">证据链与方法边界</h3>
+<p>大学补贴例子说明，同一研究主题可以沿不同层次展开。横截面回归描述净学费、收入与入学的条件关系；DID研究一项实际制度变化对处理群体的影响；RDD识别资格阈值附近的局部效应；结构选择模型把成本、收益和异质性映射为选择概率、似然和政策反事实；潜在因子系统在存在多重测量时进一步连接不可观测技能、选择和结果；学校供给模块处理学费、容量和录取的均衡反馈。</p>
+<p>每增加一层分析，目标参数与所需证据都会变化。局部因果估计已经能够回答现行政策在目标人群中的效果时，完整结构模型未必必要。资格范围、补贴额度、人口构成或学校行为离开历史环境以后，研究者需要明确新增的偏好、技术、测量和均衡限制。可信的DID或RDD估计可以进入式(11)的目标矩，也可以作为未参与估计的验证事实；结构模型若不能复现这些设计所揭示的局部反应，其更远反事实缺少经验支撑。方法选择由问题、制度和数据共同约束，因果识别、结构建模与数值求解分别承担不可互换的论证义务。</p>
+<h2 class="unnumbered" id="本书的范围与写法">本书的范围与写法</h2>
+<p>《结构估计导论》面向经济学硕士高年级、博士研究生以及希望系统进入结构经验研究的读者。全书假定读者掌握研究生层次的微观经济学和计量经济学，熟悉概率论、数理统计、多元微积分、线性代数与基础优化。动态规划、博弈论、贝叶斯计算、凸分析和高级数值方法在相应章节中补充。具备Python数组、函数和基本绘图经验即可开始配套计算；更复杂的软件工程内容会随模型逐步引入。</p>
+<p>书名中的“导论”指向一种进入方式。全书从具体经济模型出发，逐步建立结构、识别、估计和计算的共同语言，随后进入离散选择、产业组织、动态模型、生命周期和定量均衡。部分章节达到研究前沿所需的数学与计算深度。初次阅读可以先掌握模型结构、主要命题和透明实现，再回到技术证明与大型计算；研究型读者则可以把各章作为独立的模型与方法参考。</p>
+<p>正文保留核心推导。概率公式需要从分布假设和选择规则导出，似然与矩条件需要说明其总体来源，均衡方程需要由主体最优性和资源约束建立。关键识别、估计和算法结果给出证明；较长的一般定理可以在调用时核验条件，并将技术细节置于附录。经典论文按照其经济环境、原始假设和观测映射重构，使读者看到模型结论怎样从基本设定逐步产生。</p>
+<p>章节的组织服从各自的理论谱系。离散选择从随机效用和替代关系展开，拍卖从信息结构和竞标策略展开，动态模型从状态、价值和递归展开，生产率研究则围绕投入选择、代理变量和企业动态推进。全书不采用统一的论文模板。定义、推导、反例、经验识别、算法和应用在不同章节中的位置，由知识之间的先后关系决定。</p>
+<p>数学表达与文字解释共同承担教学。公式给出可检验的逻辑，文字说明对象的经济含义、假设的作用以及结论适用的范围。反例通常放在相应结果附近，用来显示某项条件缺失以后会发生什么。习题包括推导、证明、计算、模型比较和研究设计，部分题目适合课程作业，部分题目可以发展为复现或研究项目。</p>
+<p>计算材料遵循同一原则。正文展示如何把经济对象翻译为数组、函数、目标函数、固定点和均衡求解器；配套程序提供可运行实现、测试和批量实验。数值结果服务于理解算法和模型，不以大量日志替代推导。自动微分、并行化和JIT加速在能够改善研究实现时引入，同时保留透明的NumPy或SciPy基准版本。</p>
+<p>阅读配套程序时，可以沿着五个层次推进。第一步在核心模块中确认状态、行动、转移、矩条件或均衡残差如何表示；第二步运行透明入口，观察离散化、积分、优化或固定点迭代中的中间对象；第三步检查概率和、约束、残差、梯度与容差；第四步用解析结果、有限差分或自动微分交叉核验；第五步改变政策或制度，并重新求解所有受到影响的内生对象。代码包中的计算实验与习题索引列出各章入口和测试，程序输出不代替这套求解过程。</p>
+<h2 class="unnumbered" id="全书安排与阅读方法">全书安排与阅读方法</h2>
+<p>全书分为六部分，共二十一章。</p>
+<p>第一部分“结构估计基础”包括结构模型、识别与估计、计算方法三章。第1章说明经济环境如何生成选择、市场结果和数据；第2章讨论总体识别、局部识别、似然、矩条件、模拟估计与统计推断；第3章介绍数值表示、积分、优化、自动微分、非线性方程和程序组织。</p>
+<p>第二部分“个体选择、异质性与自选择”包括第4至第7章。第4章从随机效用进入随机系数、面板选择与潜在类别；第5章讨论搜索、考虑集、注意力和信息获取；第6章研究自选择、Roy模型与政策相关处理效应；第7章处理潜在变量、测量误差和技能形成。</p>
+<p>第三部分“需求、供给与策略互动”包括第8至第12章。第8章讨论需求系统与福利，第9章研究差异化产品需求，第10章连接需求、成本、定价、所有权与市场势力，第11章讨论进入与静态博弈，第12章讨论拍卖、采购和机制环境。</p>
+<p>第四部分“动态结构模型”包括第13至第16章。第13章建立动态规划，第14章讨论动态选择的估计，第15章研究动态搜索、隐藏状态、学习与信念，第16章进入多主体动态博弈。</p>
+<p>第五部分“生命周期与企业动态”包括第17和第18章，分别研究教育、劳动、家庭与健康等生命周期决策，以及生产率、投资、进入退出和企业动态。</p>
+<p>第六部分“复杂互动、定量均衡与宏观结构模型”包括第19至第21章。第19章讨论基于主体的模型、不可聚合互动与无似然推断，第20章讨论空间、贸易与生产网络，第21章介绍DSGE、状态空间估计、异质主体模型和HANK。</p>
+<p>一学期课程可以选取第1至第4章作为共同基础，再从产业组织、动态模型或定量均衡中选择一个连续模块。产业组织路线可以在基础章后学习第8至第16章；劳动、教育、健康与公共经济学路线可以学习第5至第7章、第13至第15章和第17章；企业、贸易与宏观路线可以学习第9至第10章、第13至第16章和第18至第21章。</p>
+<p>阅读模型章时，可以持续检查若干问题：主体掌握哪些信息，效用、技术和约束怎样写入模型，行动或均衡如何求解，数据记录哪些变量，识别依赖哪些变化，估计量利用哪些概率或矩条件，政策改变哪些环境要素，福利如何定义，计算误差和模型误设会怎样传到结论。</p>
+<h2 class="unnumbered"
+id="代码复现与人工智能工具">代码、复现与人工智能工具</h2>
+<p>本书的配套入口为</p>
+<div class="center">
+<p><a href="https://fyapeng.com/senecon-see/"
+class="uri">https://fyapeng.com/senecon-see/</a></p>
+</div>
+<p>网站将提供完整Python代码、环境说明、版本化下载、勘误和更新记录。代码总页计划位于</p>
+<div class="center">
+<p><a href="https://fyapeng.com/senecon-see/code/"
+class="uri">https://fyapeng.com/senecon-see/code/</a></p>
+</div>
+<p>各章页面使用<code>ch01</code>至<code>ch21</code>的稳定编号。</p>
+<p>书中出现的<code>labs/ch01/</code>、<code>labs/ch02/</code>等路径均相对于完整代码包的根目录。每章代码包括按教材顺序运行的教程入口、可复用的核心函数、批量实验和自动测试。NumPy与SciPy用于透明实现，JAX用于自动微分、JIT和适合向量化的研究级计算。网站目录发生调整时，章节编号保持稳定，并通过重定向维护已有链接。</p>
+<p>Python具有开放的科学计算生态，数组、优化、统计、自动微分、并行计算和可视化工具能够在同一环境中协作。程序可以从短小的教学原型逐步扩展到研究实现，也便于连接数据处理、机器学习和网页展示。不同语言在特定任务上各有性能与生态优势；本书将Python作为统一教学语言，以便读者清楚观察算法与经济对象之间的对应关系。性能关键模块仍可通过编译、并行化或外部语言接口进一步优化。</p>
+<p>生成式人工智能降低了语法查询、接口转换、样板代码、单元测试和初步调试的成本。它可以帮助读者把伪代码转换为Python，比较同一算法的不同实现，或定位常见报错。模型的经济内容仍需由研究者判断：状态是否充分，排除限制是否成立，均衡是否唯一，目标函数为何平坦，反事实是否受到数据支持。生成代码还可能包含维度错误、错误默认值、数值不稳定和经济含义偏离，程序能够运行并不能构成正确性的证明。</p>
+<p>本书把程序能力落实为可检查的工作：准确翻译模型，使用解析解、小规模例子和模拟数据验证实现，记录随机数、容差、依赖环境与收敛信息，并使估计和反事实能够由他人复现。自动测试检查概率恒等式、梯度、固定点、均衡条件和关键输出。人工智能工具可以参与代码书写和诊断，模型设定、识别论证、数值证据与最终结论仍由研究者负责。</p>
+<h2 class="unnumbered" id="勘误与更新">勘误与更新</h2>
+<p>配套网站持续维护勘误、程序环境与更新记录。读者在使用公式、程序和政策结论时，可以核对网站公布的当前状态；引用本书或配套代码时，建议同时记录访问日期。读者发现的公式错误、程序问题和表述歧义，均可通过配套网站提供的渠道反馈。</p>
+<p>本书的写作受益于课程讲授、研究讨论和代码复现中积累的问题。理论、数据与计算之间的联系需要在实际使用中反复检验，后续修订将以可复现的勘误和明确的教学反馈为依据。</p>
+<h1 class="unnumbered" id="bibliography">前言参考文献</h1>
+<div id="refs" class="references csl-bib-body hanging-indent"
+role="doc-bibliography">
+<div id="ref-AndrewsGentzkowShapiro2020" class="csl-entry"
+role="doc-biblioentry">
+Andrews, Isaiah, Matthew Gentzkow, and Jesse M. Shapiro. 2020. <span>“On
+the Informativeness of Descriptive Statistics for Structural
+Estimates.”</span> <em>Econometrica</em> 88 (6): 2231–58. <a
+href="https://doi.org/10.3982/ECTA16768">https://doi.org/10.3982/ECTA16768</a>.
+</div>
+<div id="ref-AngristPischke2010" class="csl-entry"
+role="doc-biblioentry">
+Angrist, Joshua D., and J"orn-Steffen Pischke. 2010. <span>“The
+Credibility Revolution in Empirical Economics: How Better Research
+Design Is Taking the Con Out of Econometrics.”</span> <em>Journal of
+Economic Perspectives</em> 24 (2): 3–30. <a
+href="https://doi.org/10.1257/jep.24.2.3">https://doi.org/10.1257/jep.24.2.3</a>.
+</div>
+<div id="ref-Berry1994" class="csl-entry" role="doc-biblioentry">
+Berry, Steven T. 1994. <span>“Estimating Discrete-Choice Models of
+Product Differentiation.”</span> <em>RAND Journal of Economics</em> 25
+(2): 242–62. <a
+href="https://doi.org/10.2307/2555829">https://doi.org/10.2307/2555829</a>.
+</div>
+<div id="ref-BerryLevinsohnPakes1995" class="csl-entry"
+role="doc-biblioentry">
+Berry, Steven, James Levinsohn, and Ariel Pakes. 1995. <span>“Automobile
+Prices in Market Equilibrium.”</span> <em>Econometrica</em> 63 (4):
+841–90. <a
+href="https://doi.org/10.2307/2171802">https://doi.org/10.2307/2171802</a>.
+</div>
+<div id="ref-BresnahanReiss1991" class="csl-entry"
+role="doc-biblioentry">
+Bresnahan, Timothy F., and Peter C. Reiss. 1991. <span>“Entry and
+Competition in Concentrated Markets.”</span> <em>Journal of Political
+Economy</em> 99 (5): 977–1009. <a
+href="https://doi.org/10.1086/261786">https://doi.org/10.1086/261786</a>.
+</div>
+<div id="ref-CarneiroHeckmanVytlacil2011" class="csl-entry"
+role="doc-biblioentry">
+Carneiro, Pedro, James J. Heckman, and Edward J. Vytlacil. 2011.
+<span>“Estimating Marginal Returns to Education.”</span> <em>American
+Economic Review</em> 101 (6): 2754–81. <a
+href="https://doi.org/10.1257/aer.101.6.2754">https://doi.org/10.1257/aer.101.6.2754</a>.
+</div>
+<div id="ref-CunhaHeckmanSchennach2010" class="csl-entry"
+role="doc-biblioentry">
+Cunha, Flavio, James J. Heckman, and Susanne M. Schennach. 2010.
+<span>“Estimating the Technology of Cognitive and Noncognitive Skill
+Formation.”</span> <em>Econometrica</em> 78 (3): 883–931. <a
+href="https://doi.org/10.3982/ECTA6551">https://doi.org/10.3982/ECTA6551</a>.
+</div>
+<div id="ref-EricsonPakes1995" class="csl-entry" role="doc-biblioentry">
+Ericson, Richard, and Ariel Pakes. 1995. <span>“Markov-Perfect Industry
+Dynamics: A Framework for Empirical Work.”</span> <em>Review of Economic
+Studies</em> 62 (1): 53–82. <a
+href="https://doi.org/10.2307/2297841">https://doi.org/10.2307/2297841</a>.
+</div>
+<div id="ref-Haavelmo1944" class="csl-entry" role="doc-biblioentry">
+Haavelmo, Trygve. 1944. <span>“The Probability Approach in
+Econometrics.”</span> <em>Econometrica</em> 12 (Supplement): 1–118.
+</div>
+<div id="ref-Heckman1979" class="csl-entry" role="doc-biblioentry">
+Heckman, James J. 1979. <span>“Sample Selection Bias as a Specification
+Error.”</span> <em>Econometrica</em> 47 (1): 153–61. <a
+href="https://doi.org/10.2307/1912352">https://doi.org/10.2307/1912352</a>.
+</div>
+<div id="ref-HeckmanVytlacil2005" class="csl-entry"
+role="doc-biblioentry">
+Heckman, James J., and Edward J. Vytlacil. 2005. <span>“Structural
+Equations, Treatment Effects, and Econometric Policy Evaluation.”</span>
+<em>Econometrica</em> 73 (3): 669–738. <a
+href="https://doi.org/10.1111/j.1468-0262.2005.00594.x">https://doi.org/10.1111/j.1468-0262.2005.00594.x</a>.
+</div>
+<div id="ref-HotzMiller1993" class="csl-entry" role="doc-biblioentry">
+Hotz, V. Joseph, and Robert A. Miller. 1993. <span>“Conditional Choice
+Probabilities and the Estimation of Dynamic Models.”</span> <em>The
+Review of Economic Studies</em> 60 (3): 497–529. <a
+href="https://doi.org/10.2307/2298122">https://doi.org/10.2307/2298122</a>.
+</div>
+<div id="ref-Hurwicz1962" class="csl-entry" role="doc-biblioentry">
+Hurwicz, Leonid. 1962. <span>“On the Structural Form of Interdependent
+Systems.”</span> In <em>Logic, Methodology and Philosophy of Science:
+Proceedings of the 1960 International Congress</em>, edited by Ernest
+Nagel, Patrick Suppes, and Alfred Tarski, 232–39. Stanford, CA: Stanford
+University Press.
+</div>
+<div id="ref-ImbensAngrist1994" class="csl-entry"
+role="doc-biblioentry">
+Imbens, Guido W., and Joshua D. Angrist. 1994. <span>“Identification and
+Estimation of Local Average Treatment Effects.”</span>
+<em>Econometrica</em> 62 (2): 467–75. <a
+href="https://doi.org/10.2307/2951620">https://doi.org/10.2307/2951620</a>.
+</div>
+<div id="ref-KoopmansReiersol1950" class="csl-entry"
+role="doc-biblioentry">
+Koopmans, Tjalling C., and Olav Reiersøl. 1950. <span>“The
+Identification of Structural Characteristics.”</span> <em>The Annals of
+Mathematical Statistics</em> 21 (2): 165–81. <a
+href="https://doi.org/10.1214/aoms/1177729837">https://doi.org/10.1214/aoms/1177729837</a>.
+</div>
+<div id="ref-Lucas1976" class="csl-entry" role="doc-biblioentry">
+Lucas, Jr., Robert E. 1976. <span>“Econometric Policy Evaluation: A
+Critique.”</span> <em>Carnegie-Rochester Conference Series on Public
+Policy</em> 1: 19–46. <a
+href="https://doi.org/10.1016/S0167-2231(76)80003-6">https://doi.org/10.1016/S0167-2231(76)80003-6</a>.
+</div>
+<div id="ref-Manski2003" class="csl-entry" role="doc-biblioentry">
+Manski, Charles F. 2003. <em>Partial Identification of Probability
+Distributions</em>. New York: Springer. <a
+href="https://doi.org/10.1007/b97478">https://doi.org/10.1007/b97478</a>.
+</div>
+<div id="ref-McFadden1974" class="csl-entry" role="doc-biblioentry">
+McFadden, Daniel. 1974. <span>“Conditional Logit Analysis of Qualitative
+Choice Behavior.”</span> In <em>Frontiers in Econometrics</em>, edited
+by Paul Zarembka, 105–42. New York: Academic Press.
+</div>
+<div id="ref-PakesMcGuire1994" class="csl-entry" role="doc-biblioentry">
+Pakes, Ariel, and Paul McGuire. 1994. <span>“Computing Markov-Perfect
+Nash Equilibria: Numerical Implications of a Dynamic Differentiated
+Product Model.”</span> <em>RAND Journal of Economics</em> 25 (4):
+555–89. <a
+href="https://doi.org/10.2307/2555976">https://doi.org/10.2307/2555976</a>.
+</div>
+<div id="ref-Rothenberg1971" class="csl-entry" role="doc-biblioentry">
+Rothenberg, Thomas J. 1971. <span>“Identification in Parametric
+Models.”</span> <em>Econometrica</em> 39 (3): 577–91.
+</div>
+<div id="ref-Roy1951" class="csl-entry" role="doc-biblioentry">
+Roy, A. D. 1951. <span>“Some Thoughts on the Distribution of
+Earnings.”</span> <em>Oxford Economic Papers</em> 3 (2): 135–46. <a
+href="https://doi.org/10.1093/oxfordjournals.oep.a041827">https://doi.org/10.1093/oxfordjournals.oep.a041827</a>.
+</div>
+<div id="ref-Rust1987" class="csl-entry" role="doc-biblioentry">
+Rust, John. 1987. <span>“Optimal Replacement of <span>GMC</span> Bus
+Engines: An Empirical Model of Harold Zurcher.”</span>
+<em>Econometrica</em> 55 (5): 999–1033. <a
+href="https://doi.org/10.2307/1911259">https://doi.org/10.2307/1911259</a>.
+</div>
+<div id="ref-Tamer2010" class="csl-entry" role="doc-biblioentry">
+Tamer, Elie. 2010. <span>“Partial Identification in
+Econometrics.”</span> <em>Annual Review of Economics</em> 2: 167–95. <a
+href="https://doi.org/10.1146/annurev.economics.050708.143401">https://doi.org/10.1146/annurev.economics.050708.143401</a>.
+</div>
+<div id="ref-NobelPrize1989" class="csl-entry" role="doc-biblioentry">
+The Royal Swedish Academy of Sciences. 1989. <span>“The Prize in
+Economic Sciences 1989: Press Release.”</span> 1989. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/1989/press-release/">https://www.nobelprize.org/prizes/economic-sciences/1989/press-release/</a>.
+</div>
+<div id="ref-NobelPrize1995" class="csl-entry" role="doc-biblioentry">
+———. 1995. <span>“The Prize in Economic Sciences 1995: Press
+Release.”</span> 1995. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/1995/press-release/">https://www.nobelprize.org/prizes/economic-sciences/1995/press-release/</a>.
+</div>
+<div id="ref-NobelPrize2000" class="csl-entry" role="doc-biblioentry">
+———. 2000. <span>“The Prize in Economic Sciences 2000: Press
+Release.”</span> 2000. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/2000/press-release/">https://www.nobelprize.org/prizes/economic-sciences/2000/press-release/</a>.
+</div>
+<div id="ref-NobelPrize2011" class="csl-entry" role="doc-biblioentry">
+———. 2011. <span>“The Prize in Economic Sciences 2011: Press
+Release.”</span> 2011. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/2011/press-release/">https://www.nobelprize.org/prizes/economic-sciences/2011/press-release/</a>.
+</div>
+<div id="ref-NobelPrize2014" class="csl-entry" role="doc-biblioentry">
+———. 2014. <span>“The Prize in Economic Sciences 2014: Press
+Release.”</span> 2014. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/2014/press-release/">https://www.nobelprize.org/prizes/economic-sciences/2014/press-release/</a>.
+</div>
+<div id="ref-NobelPrize2020" class="csl-entry" role="doc-biblioentry">
+———. 2020. <span>“The Prize in Economic Sciences 2020: Press
+Release.”</span> 2020. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/2020/press-release/">https://www.nobelprize.org/prizes/economic-sciences/2020/press-release/</a>.
+</div>
+<div id="ref-NobelPrize2021" class="csl-entry" role="doc-biblioentry">
+———. 2021. <span>“The Prize in Economic Sciences 2021: Press
+Release.”</span> 2021. <a
+href="https://www.nobelprize.org/prizes/economic-sciences/2021/press-release/">https://www.nobelprize.org/prizes/economic-sciences/2021/press-release/</a>.
+</div>
+<div id="ref-LiPengYi2026" class="csl-entry" role="doc-biblioentry">
+李星宇, 彭依菁, and 易君健. 2026.
+<span>“结构方程的基本概念、核心步骤、技术难点与前沿进展.”</span>
+工作论文（CCER讨论稿系列） C2026002. 北京大学中国经济研究中心. <a
+href="https://nsd.pku.edu.cn/xzyj/cbw/tlg1/tlg2026/e47c930a57874b0da339f4de59028e0e.htm">https://nsd.pku.edu.cn/xzyj/cbw/tlg1/tlg2026/e47c930a57874b0da339f4de59028e0e.htm</a>.
+</div>
+</div>

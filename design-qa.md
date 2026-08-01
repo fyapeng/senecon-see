@@ -62,3 +62,21 @@ A separate crop was not required because the side-by-side image renders the hero
 - Console and build result: production build succeeds; no browser console errors were observed.
 
 final result: passed
+
+## Scoped reading-page update · 2026-08-02
+
+- User reference: `C:\Users\ENAN\AppData\Local\Temp\codex-clipboard-cb4a6b58-245d-4e03-81df-a8f8e3b445e7.png`
+- Hero implementation: `E:\StructuralEstimation\site\implementation-hero-actions.png`
+- Same-state comparison: `E:\StructuralEstimation\site\design-qa-comparison-reading-button.png`
+- Reading-page desktop: `E:\StructuralEstimation\site\implementation-reading-desktop.png`
+- Equation rendering: `E:\StructuralEstimation\site\implementation-reading-equations.png`
+- Reading-page mobile: `E:\StructuralEstimation\site\implementation-reading-mobile-fixed.png`
+- Requested change: removed the preface from primary navigation and replaced the low-contrast secondary link beside “下载配套代码” with a paper-white “阅读部分内容” button.
+- Content result: the new reading route contains all nine sections of the authoritative LaTeX preface, 22 numbered equation groups, references, and the complete six-part/21-chapter catalogue. Generated HTML and chapter metadata are one-way build artifacts and remain visibly marked as non-authoritative.
+- Desktop result: the new secondary action keeps the selected hero hierarchy and has clear contrast against the deep-teal field. The long-form page uses an editorial reading measure, sticky local contents, a real front-cover asset, and restrained section rhythm.
+- Mobile result: the hero actions stack into full tap targets; long bibliography URLs wrap; display equations remain horizontally scrollable inside their own container. Final document width is exact (`scrollWidth = clientWidth = 375`) at a 390 × 844 viewport.
+- Interaction result: “阅读部分内容” reaches `/senecon-see/preface/`; the “完整目录” control resolves to `#contents` with all 21 chapter rows visible; the code download remains available from both pages.
+- Runtime result: MathJax rendered 206 containers from the 22 numbered equation groups, no unresolved equation labels remained, and no Vite runtime error overlay was present.
+- Comparison result: the combined source/implementation image confirms that the illegible white text link has been replaced by a distinct, readable button without changing the selected palette, primary CTA, curve, or book composition.
+
+final result: passed
