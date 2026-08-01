@@ -58,7 +58,7 @@ function ReadingHeader() {
       <nav aria-label="阅读页导航">
         <a href={base}>首页</a>
         <a href="#contents">完整目录</a>
-        <a href={releaseAsset}>下载代码</a>
+        <a href={`${base}code/`}>配套代码</a>
       </nav>
     </header>
   );
@@ -98,14 +98,25 @@ function FullCatalogue() {
                 <p>第 {part.chapters[0].number}—{part.chapters.at(-1).number} 章</p>
               </div>
             </header>
-            <ol>
+            <div className="catalogue-chapter-details">
               {part.chapters.map((chapter) => (
-                <li key={chapter.number}>
-                  <span>{String(chapter.number).padStart(2, "0")}</span>
-                  <strong>{chapter.title}</strong>
-                </li>
+                <details key={chapter.number}>
+                  <summary>
+                    <span>{String(chapter.number).padStart(2, "0")}</span>
+                    <strong>{chapter.title}</strong>
+                    <small>{chapter.sections.length} 节</small>
+                  </summary>
+                  <ol>
+                    {chapter.sections.map((section, sectionIndex) => (
+                      <li key={`${chapter.number}-${sectionIndex}`}>
+                        <span>{chapter.number}.{sectionIndex + 1}</span>
+                        <span>{section}</span>
+                      </li>
+                    ))}
+                  </ol>
+                </details>
               ))}
-            </ol>
+            </div>
           </article>
         ))}
       </div>

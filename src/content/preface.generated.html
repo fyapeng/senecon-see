@@ -227,8 +227,8 @@ L_n(\psi)
 \ell_n(\psi)
 &amp;=\sum_{i=1}^n\left\{A_i
 v_i(\psi)-\log\bigl[1+\exp(v_i(\psi))\bigr]\right\}.
-\tag{7}
-\end{aligned}\]</span> 记<span
+
+\end{aligned}\tag{7}\]</span> 记<span
 class="math inline">\(z_i=(1,x_i&#39;,g_i,-(p_i-s_i))&#39;\)</span>，则一阶条件为
 <span class="math display">\[\frac{\partial \ell_n(\psi)}{\partial\psi}
 =\sum_{i=1}^n\bigl[A_i-P_i(\psi)\bigr]z_i=0,
@@ -333,11 +333,11 @@ class="math inline">\(g_i\)</span>。若研究者观察到高中考试分项、�
 factor model），用较低维的能力或技能<span
 class="math inline">\(\theta_i\)</span>解释这些测量、教育选择与潜在结果之间的共同变异。这是一种需要特定数据结构的扩展，单个考试总分不足以同时区分真实技能与测量误差。</p>
 <p>考虑一维线性测量系统 <span class="math display">\[\begin{aligned}
-\theta_i&amp;\sim F_\theta(\cdot;\xi),\nonumber\\
+\theta_i&amp;\sim F_\theta(\cdot;\xi),\\
 m_{ij}&amp;=\mu_j+\kappa_j\theta_i+\nu_{ij},
 \qquad j=1,\ldots,J,
-\tag{17}
-\end{aligned}\]</span> 以及教育状态<span
+
+\end{aligned}\tag{17}\]</span> 以及教育状态<span
 class="math inline">\(a\in\{0,1\}\)</span>下的潜在收入 <span
 class="math display">\[y_i(a)=x_i&#39;\beta_a+\lambda_a\theta_i+e_{ia}.
 \tag{18}\]</span> 选择效用的确定性部分可以写为 <span
@@ -354,12 +354,12 @@ L_i(\psi)
 &amp; P_i(\theta;\psi)^{A_i}
 \bigl[1-P_i(\theta;\psi)\bigr]^{1-A_i}
 f_{y,A_i}(y_i\mid x_i,\theta;\psi)
-\nonumber\\[-0.2em]
+\\[-0.2em]
 &amp;\times
 \prod_{j=1}^J f_{m,j}(m_{ij}\mid\theta;\psi)
 \,dF_\theta(\theta;\xi).
-\tag{20}
-\end{aligned}\]</span>
+
+\end{aligned}\tag{20}\]</span>
 式(20)展示了潜在因子结构如何运行。测量指标约束<span
 class="math inline">\(\theta\)</span>的分布及载荷，入学选择约束技能与教育效用的关系，实际收入约束被选择状态下的收益方程，所有不可观测技能通过积分从似然中消去。给定一组候选参数，研究者使用高斯求积或模拟计算每个<span
 class="math inline">\(L_i(\psi)\)</span>，再最大化<span

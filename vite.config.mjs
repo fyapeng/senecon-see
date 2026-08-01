@@ -13,6 +13,7 @@ export default defineConfig({
       input: {
         home: path.resolve(root, "index.html"),
         preface: path.resolve(root, "preface/index.html"),
+        code: path.resolve(root, "code/index.html"),
       },
     },
   },
@@ -23,7 +24,7 @@ export default defineConfig({
     host: "0.0.0.0",
     allowedHosts: ["terminal.local"],
     warmup: {
-      clientFiles: ["./src/main.jsx", "./src/preface-main.jsx"],
+      clientFiles: ["./src/main.jsx", "./src/preface-main.jsx", "./src/code-main.jsx"],
     },
   },
   plugins: [react()],

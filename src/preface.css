@@ -316,12 +316,59 @@
   list-style: none;
 }
 
+.catalogue-chapter-details details {
+  border-bottom: 1px solid rgba(23, 63, 71, 0.11);
+}
+
+.catalogue-chapter-details summary {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: baseline;
+  padding: 15px 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.catalogue-chapter-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.catalogue-chapter-details summary > span {
+  color: #ae8745;
+  font-family: Georgia, serif;
+  font-size: 12px;
+}
+
+.catalogue-chapter-details summary strong {
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.catalogue-chapter-details summary small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.catalogue-chapter-details details[open] summary {
+  color: var(--deep);
+}
+
+.catalogue-chapter-details details ol {
+  padding: 3px 0 14px 50px;
+}
+
 .reading-catalogue-grid li {
   display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 16px;
-  padding: 13px 0;
-  border-bottom: 1px solid rgba(23, 63, 71, 0.11);
+  grid-template-columns: 42px 1fr;
+  gap: 12px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(23, 63, 71, 0.07);
+  color: #536965;
+  font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif;
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .reading-catalogue-grid li span {

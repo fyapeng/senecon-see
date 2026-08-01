@@ -46,7 +46,7 @@ function Header() {
       </button>
       <nav className={open ? "nav-links is-open" : "nav-links"} aria-label="主导航">
         <a href="#introduction">简介</a>
-        <a href="#resources">配套代码</a>
+        <a href={`${base}code/`}>配套代码</a>
         <a href="#updates">勘误与更新</a>
         <a href={repositoryUrl} target="_blank" rel="noreferrer">
           GitHub
@@ -134,8 +134,8 @@ function Preface() {
         <p>
           本书讨论从观测事实通向行为机制、均衡结果与政策反事实的路径，并把模型构建、识别、估计、推断、验证与应用放在同一方法链中。
         </p>
-        <a className="text-link" href="#about">
-          了解本书结构 <ArrowRight size={18} />
+        <a className="text-link" href={`${base}preface/`}>
+          阅读前言与完整目录 <ArrowRight size={18} />
         </a>
       </div>
       <div className="preface-art">
@@ -161,8 +161,8 @@ function Resources() {
             <Code size={34} />
             <h3>配套代码</h3>
             <p>二十一章 Python 实验、透明实现与数值验证代码。</p>
-            <a href={releaseAsset}>
-              下载 v1.10.0 <ArrowRight size={18} />
+            <a href={`${base}code/`}>
+              浏览代码总页 <ArrowRight size={18} />
             </a>
           </article>
           <article id="updates">

@@ -63,6 +63,21 @@ A separate crop was not required because the side-by-side image renders the hero
 
 final result: passed
 
+## Scoped formula, catalogue, and code update · 2026-08-02
+
+- Formula source: `C:\Users\ENAN\AppData\Local\Temp\codex-clipboard-7ff488ce-15f3-4ef1-ab55-5b06ea669657.png`
+- Formula implementation: `E:\StructuralEstimation\site\implementation-formula-fixed-focused.png`
+- Same-state formula comparison: `E:\StructuralEstimation\site\design-qa-comparison-formula-fix.png`
+- Code-page mobile implementation: `E:\StructuralEstimation\site\implementation-code-mobile.png`
+- Viewport: 390 × 844 CSS px at device scale 1. Source formula screenshot is 504 × 476 px; the fixed formula region was cropped from the mobile implementation and normalized without changing aspect ratio.
+- Formula result: the `align` source is now emitted as a numbered `equation` containing `aligned`, placing `\tag{7}` outside the aligned environment. Browser rendering produced 206 MathJax containers and zero `mjx-merror` elements. The long formula scrolls inside its own block while the document has zero horizontal overflow.
+- Catalogue result: all 21 chapters expose 176 numbered section-level entries generated from the authoritative chapter sources. Chapter disclosures open and preserve the PDF-style hierarchy without making the catalogue permanently thousands of pixels longer.
+- Code-page result: `/code/` provides the stable route named in the preface, 21 chapter paths, environment and test guidance, release metadata, and the complete v1.10.0 download. Immutable source remains in GitHub Releases to avoid a second drifting copy.
+- Interactions checked: code-page navigation, release download URL, chapter catalogue disclosures, and mobile layout. No Vite runtime overlay was present.
+- Required fidelity surfaces: the new page reuses the established serif/sans hierarchy, warm-paper/deep-teal/gold tokens, original hero field, Phosphor icon family, and real book asset. Copy and paths match the current release and textbook structure.
+
+final result: passed
+
 ## Scoped reading-page update · 2026-08-02
 
 - User reference: `C:\Users\ENAN\AppData\Local\Temp\codex-clipboard-cb4a6b58-245d-4e03-81df-a8f8e3b445e7.png`
