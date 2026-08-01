@@ -202,8 +202,8 @@ a {
   gap: 34px;
   margin-top: 43px;
 }
-.hero-reading-link { display: inline-flex; align-items: center; gap: 7px; color: rgba(255,255,255,.84); font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(210,166,78,.7); padding-bottom: 5px; }
-.hero-reading-link:hover, .hero-reading-link:focus-visible { color: var(--gold-soft); }
+.hero-reading-link { display: inline-flex; align-items: center; gap: 7px; color: var(--gold-soft); font-size: 14px; font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 5px; }
+.hero-reading-link:hover, .hero-reading-link:focus-visible { color: #f2d38e; }
 
 .button {
   display: inline-flex;
