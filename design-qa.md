@@ -49,4 +49,16 @@ A separate crop was not required because the side-by-side image renders the hero
 
 - [P3] Platform font rendering varies slightly when Noto CJK fonts are not installed; the current serif and sans fallbacks preserve hierarchy.
 
+## Scoped introduction update · 2026-08-02
+
+- User reference: `C:\Users\ENAN\AppData\Local\Temp\codex-clipboard-15db1392-27db-43fc-890f-1fbc1c7996c7.png`
+- Desktop implementation: `E:\StructuralEstimation\site\implementation-introduction-desktop.png`
+- Mobile implementation: `E:\StructuralEstimation\site\implementation-introduction-mobile.png`
+- Same-state comparison: `E:\StructuralEstimation\site\design-qa-comparison-introduction.png`
+- Requested change: renamed the visible navigation item and section heading from “前言” to “简介”; replaced the text-free LaTeX field with a complete front cover rendered from the authoritative current PDF.
+- Desktop result: the existing two-column editorial composition, copy measure, colors, and spacing are preserved. The full title, English subtitle, and author remain legible, with no cover cropping.
+- Mobile result: the cover scales within the content column without distortion or horizontal overflow (`scrollWidth = clientWidth`).
+- Accessibility result: the section keeps its labelled region semantics and the new cover has descriptive alternative text.
+- Console and build result: production build succeeds; no browser console errors were observed.
+
 final result: passed

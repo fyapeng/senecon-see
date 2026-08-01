@@ -51,7 +51,7 @@ function Header() {
         {open ? <X size={25} /> : <List size={25} />}
       </button>
       <nav className={open ? "nav-links is-open" : "nav-links"} aria-label="主导航">
-        <a href="#preface">前言</a>
+        <a href="#introduction">简介</a>
         <a href="#resources">配套代码</a>
         <a href="#updates">勘误与更新</a>
         <a href={repositoryUrl} target="_blank" rel="noreferrer">
@@ -127,11 +127,11 @@ function VersionStrip() {
 
 function Preface() {
   return (
-    <section className="preface-section page-shell" id="preface" aria-labelledby="preface-title">
+    <section className="preface-section page-shell" id="introduction" aria-labelledby="introduction-title">
       <div className="preface-copy">
         <div className="section-kicker">
           <span />
-          <h2 id="preface-title">前言</h2>
+          <h2 id="introduction-title">简介</h2>
         </div>
         <blockquote>
           经济学的经验研究从可观察的数据出发，却很少止于对数据本身的概括。研究者通常希望知道，价格、收入、制度与市场环境的变化如何影响个人和企业的选择；这些选择如何汇聚为价格、数量、进入、退出与资源配置；当政策规则离开历史样本的支持范围时，经济主体与市场又将形成怎样的新均衡。
@@ -143,8 +143,8 @@ function Preface() {
           了解本书结构 <ArrowRight size={18} />
         </a>
       </div>
-      <div className="preface-art" aria-hidden="true">
-        <img src={`${base}assets/cover-field.png`} alt="" />
+      <div className="preface-art">
+        <img src={`${base}assets/book-cover-front-v2.png`} alt="《结构估计导论》正面封面" />
       </div>
     </section>
   );

@@ -384,14 +384,17 @@ a {
 .preface-art {
   position: relative;
   min-height: 560px;
+  display: grid;
+  place-items: center;
+  padding: 28px;
   overflow: hidden;
+  background: #eee7dc;
 }
 
 .preface-art img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 68% center;
+  width: min(100%, 430px);
+  height: auto;
+  box-shadow: 0 24px 54px rgb(20 53 60 / 18%);
 }
 
 .resources-section {
@@ -595,7 +598,8 @@ footer {
   }
 
   .preface-art {
-    min-height: 340px;
+    min-height: 0;
+    padding: 24px;
   }
 }
 
