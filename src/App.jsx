@@ -81,7 +81,7 @@ function Hero() {
               <FilePdf size={24} weight="regular" />
               下载教材 PDF
             </a>
-            <a className="hero-reading-link" href={`${base}preface/`}><BookOpenText size={20} /> 阅读部分内容</a>
+            <a className="hero-reading-link" href={`${base}preface/`}><BookOpenText size={20} /> 阅读前言</a>
           </div>
         </div>
         <div className="book-stage">
