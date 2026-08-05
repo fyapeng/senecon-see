@@ -15,8 +15,8 @@ import { bookParts } from "./content/book.generated.js";
 
 const base = import.meta.env.BASE_URL;
 const releaseAsset =
-  "https://github.com/fyapeng/senecon-see/releases/download/v1.10.0/SenEcon-SEE-Companion-Code-v1.10.0.zip";
-const releasePage = "https://github.com/fyapeng/senecon-see/releases/tag/v1.10.0";
+  "https://github.com/fyapeng/senecon-see/releases/download/v1.11.0/SenEcon-SEE-Companion-Code-v1.11.0.zip";
+const releasePage = "https://github.com/fyapeng/senecon-see/releases/tag/v1.11.0";
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
 
@@ -74,7 +74,7 @@ export function CodePage() {
             <h1>配套代码</h1>
             <p className="code-deck">从透明的 NumPy / SciPy 基准实现，进入自动微分、JIT、模拟估计与均衡求解。</p>
             <div className="code-hero-actions">
-              <a className="button button-gold" href={releaseAsset}><DownloadSimple size={23} /> 下载 v1.10.0</a>
+              <a className="button button-gold" href={releaseAsset}><DownloadSimple size={23} /> 下载 v1.11.0</a>
               <a className="code-release-link" href={releasePage} target="_blank" rel="noreferrer">查看发布记录 <ArrowRight size={18} /></a>
             </div>
           </div>
@@ -125,7 +125,7 @@ export function CodePage() {
 
       <section className="code-bottom-cta">
         <div className="code-shell">
-          <div><p className="eyebrow">配套材料 v1.10.0</p><h2>下载完整代码后，从第 1 章开始运行。</h2></div>
+          <div><p className="eyebrow">配套材料 v1.11.0</p><h2>下载完整代码后，从第 1 章开始运行。</h2></div>
           <div className="code-bottom-actions">
             <a className="button button-gold" href={releaseAsset}><DownloadSimple size={22} /> 下载代码包</a>
             <a href={base}><ArrowLeft size={18} /> 返回首页</a>

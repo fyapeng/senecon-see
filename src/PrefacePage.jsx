@@ -11,9 +11,9 @@ import { bookParts, prefaceMeta } from "./content/book.generated.js";
 import prefaceHtml from "./content/preface.generated.html?raw";
 
 const base = import.meta.env.BASE_URL;
-const releaseBase = "https://github.com/fyapeng/senecon-see/releases/download/v1.10.0";
-const releaseAsset = `${releaseBase}/SenEcon-SEE-Companion-Code-v1.10.0.zip`;
-const textbookPdf = `${releaseBase}/SenEcon-SEE-Textbook-v1.10.0.pdf`;
+const releaseBase = "https://github.com/fyapeng/senecon-see/releases/download/v1.11.0";
+const releaseAsset = `${releaseBase}/SenEcon-SEE-Companion-Code-v1.11.0.zip`;
+const textbookPdf = `${releaseBase}/SenEcon-SEE-Textbook-v1.11.0.pdf`;
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
 const readingSections = [
   ["定量研究中的结构问题", "定量研究中的结构问题"],

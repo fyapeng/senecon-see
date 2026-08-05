@@ -17,9 +17,9 @@ import { useEffect, useState } from "react";
 import { bookParts } from "./content/book.generated.js";
 
 const base = import.meta.env.BASE_URL;
-const releaseBase = "https://github.com/fyapeng/senecon-see/releases/download/v1.10.0";
-const releaseAsset = `${releaseBase}/SenEcon-SEE-Companion-Code-v1.10.0.zip`;
-const textbookPdf = `${releaseBase}/SenEcon-SEE-Textbook-v1.10.0.pdf`;
+const releaseBase = "https://github.com/fyapeng/senecon-see/releases/download/v1.11.0";
+const releaseAsset = `${releaseBase}/SenEcon-SEE-Companion-Code-v1.11.0.zip`;
+const textbookPdf = `${releaseBase}/SenEcon-SEE-Textbook-v1.11.0.pdf`;
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
@@ -109,11 +109,11 @@ function VersionStrip() {
       <div className="version-strip">
         <div>
           <CalendarBlank size={28} />
-          <p><span>当前版本</span><strong>v1.10.0 · 2026-08-01</strong></p>
+          <p><span>当前版本</span><strong>v1.11.0 · 2026-08-05</strong></p>
         </div>
         <div>
           <BookOpenText size={29} />
-          <p><span>教材规模</span><strong>998 页</strong></p>
+          <p><span>教材规模</span><strong>1026 页</strong></p>
         </div>
         <div>
           <Stack size={29} />
@@ -184,7 +184,7 @@ function Resources() {
           <article>
             <FilePdf size={34} />
             <h3>教材 PDF</h3>
-            <p>v1.10.0 · 更新于 2026-08-02 · CC BY-NC 4.0。</p>
+            <p>v1.11.0 · 更新于 2026-08-05 · CC BY-NC 4.0。</p>
             <a href={textbookPdf}>
               下载完整教材 <ArrowRight size={18} />
             </a>
