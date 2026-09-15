@@ -4,7 +4,6 @@ import {
   BookOpenText,
   CheckCircle,
   Code,
-  DownloadSimple,
   Flask,
   FolderOpen,
   GithubLogo,
@@ -14,9 +13,6 @@ import {
 import { bookParts } from "./content/book.generated.js";
 
 const base = import.meta.env.BASE_URL;
-const releaseAsset =
-  "https://github.com/fyapeng/senecon-see/releases/download/v1.11.0/SenEcon-SEE-Companion-Code-v1.11.0.zip";
-const releasePage = "https://github.com/fyapeng/senecon-see/releases/tag/v1.11.0";
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
 
@@ -74,20 +70,20 @@ export function CodePage() {
             <h1>配套代码</h1>
             <p className="code-deck">从透明的 NumPy / SciPy 基准实现，进入自动微分、JIT、模拟估计与均衡求解。</p>
             <div className="code-hero-actions">
-              <a className="button button-gold" href={releaseAsset}><DownloadSimple size={23} /> 下载 v1.11.0</a>
-              <a className="code-release-link" href={releasePage} target="_blank" rel="noreferrer">查看发布记录 <ArrowRight size={18} /></a>
+              <a className="button button-gold" href="#revision"><Code size={23} /> 查看代码修订状态</a>
+              <a className="code-release-link" href={`${base}#updates`}>勘误与更新 <ArrowRight size={18} /></a>
             </div>
           </div>
           <div className="code-package-card">
             <Package size={34} />
-            <p>当前代码包</p>
-            <strong>21 章 · 约 0.94 MB</strong>
-            <span>ZIP · SHA-256 由 GitHub Release 记录</span>
+            <p>配套代码修订中</p>
+            <strong>21 章 · 暂停下载</strong>
+            <span>旧版代码包已撤下，正在逐章核查</span>
           </div>
         </div>
       </section>
 
-      <section className="code-principle code-shell" aria-labelledby="code-principle-title">
+      <section className="code-principle code-shell" id="revision" aria-labelledby="code-principle-title">
         <div className="section-kicker"><span /><h2 id="code-principle-title">网页索引与版本下载</h2></div>
         <div className="code-principle-grid">
           <div>
@@ -95,8 +91,8 @@ export function CodePage() {
             <p>书中引用的 <code>senecon-see/code/</code> 指向这里，用于说明环境、章节结构、测试与当前版本。</p>
           </div>
           <div>
-            <h3>完整代码由 Release 保存</h3>
-            <p>代码包继续使用版本化下载，可以固定文件、校验摘要并保留历史版本；网页不复制出第二套会漂移的源代码。</p>
+            <h3>新版将在校对后发布</h3>
+            <p>旧版代码包已于2026年9月15日撤下。修订将核对数学实现、数值可靠性与研究复现案例，完成后重新提供版本化下载。</p>
           </div>
         </div>
       </section>
@@ -125,9 +121,9 @@ export function CodePage() {
 
       <section className="code-bottom-cta">
         <div className="code-shell">
-          <div><p className="eyebrow">配套材料 v1.11.0</p><h2>下载完整代码后，从第 1 章开始运行。</h2></div>
+          <div><p className="eyebrow">配套材料修订中</p><h2>新版代码将在校订后提供下载。</h2></div>
           <div className="code-bottom-actions">
-            <a className="button button-gold" href={releaseAsset}><DownloadSimple size={22} /> 下载代码包</a>
+            <a className="button button-gold" href="#revision"><Code size={22} /> 查看修订状态</a>
             <a href={base}><ArrowLeft size={18} /> 返回首页</a>
           </div>
         </div>
