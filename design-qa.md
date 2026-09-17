@@ -95,3 +95,8 @@ final result: passed
 - Comparison result: the combined source/implementation image confirms that the illegible white text link has been replaced by a distinct, readable button without changing the selected palette, primary CTA, curve, or book composition.
 
 final result: passed
+
+
+## v2.0.0 publication — 2026-09-18
+
+Added separate textbook and solutions PDF download cards, a paired reading archive and restored code downloads. Retained the established four-card layout and visual system. Refreshed the authorized preface and full catalogue from LaTeX; six generated preface navigation anchors resolve. Browser inspection checked home resource cards, preface hero/navigation and the 21-chapter code page. Production build and all four Sites packaging tests pass. Release assets are external to Git; no textbook TeX is included in website history.

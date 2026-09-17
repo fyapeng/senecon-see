@@ -15,6 +15,8 @@ import {
 import { useEffect, useState } from "react";
 import { bookParts } from "./content/book.generated.js";
 
+import { release } from "./content/release.js";
+
 const base = import.meta.env.BASE_URL;
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 
@@ -69,13 +71,13 @@ function Hero() {
           <p className="author">Axel·Sencium</p>
           <p className="hero-summary">从数据、模型与识别出发，理解机制与政策反事实。</p>
           <div className="hero-actions">
-            <a className="button button-gold" href={`${base}code/`}>
+            <a className="button button-gold" href={release.code}>
               <Code size={25} weight="regular" />
-              配套代码与修订
+              下载配套代码
             </a>
-            <a className="button button-paper" href="#updates">
+            <a className="button button-paper" href="#resources">
               <FileText size={24} weight="regular" />
-              查看修订状态
+              教材与习题解答
             </a>
             <a className="hero-reading-link" href={`${base}preface/`}><BookOpenText size={20} /> 阅读前言</a>
           </div>
@@ -105,11 +107,11 @@ function VersionStrip() {
       <div className="version-strip">
         <div>
           <CalendarBlank size={28} />
-          <p><span>当前状态</span><strong>修订中 · 暂停下载</strong></p>
+          <p><span>当前状态</span><strong>第二版 · 已发布</strong></p>
         </div>
         <div>
           <BookOpenText size={29} />
-          <p><span>修订基稿</span><strong>v1.11.0</strong></p>
+          <p><span>当前版本</span><strong>{release.version}</strong></p>
         </div>
         <div>
           <Stack size={29} />
@@ -158,7 +160,7 @@ function Resources() {
             <p className="eyebrow eyebrow-dark">代码与维护</p>
             <h2 id="resources-title">配套材料</h2>
           </div>
-          <p>教材与配套代码正在逐章核查。旧版下载已撤下，新版将在校订后发布。</p>
+          <p>教材、习题解答与配套程序按同一版本提供。教材与解答采用 CC BY-NC 4.0，原创代码采用 MIT；第三方适配保留原许可。</p>
         </div>
         <div className="resource-grid">
           <article>
@@ -172,7 +174,7 @@ function Resources() {
           <article id="updates">
             <FileText size={34} />
             <h3>勘误与更新</h3>
-            <p>2026-09-15 起开展逐章内容核查与代码校对，旧版教材和代码包已撤下。</p>
+            <p>2026-09-18 发布第二版，完成章级校订、教育主线整合与阅读查阅补充。</p>
             <a href={`${repositoryUrl}/issues`} target="_blank" rel="noreferrer">
               提交或查看反馈 <ArrowRight size={18} />
             </a>
@@ -180,20 +182,21 @@ function Resources() {
           <article>
             <FilePdf size={34} />
             <h3>教材 PDF</h3>
-            <p>下载暂停，正在校订。新版发布后将在此提供下载。</p>
-            <a href="#updates">
-              查看修订状态 <ArrowRight size={18} />
+            <p>六部二十一章，1101 页；含阅读路线、数学查阅与中英文主题索引。</p>
+            <a href={release.textbook}>
+              下载教材 PDF <ArrowRight size={18} />
             </a>
           </article>
           <article>
-            <GithubLogo size={34} />
-            <h3>源代码仓库</h3>
-            <p>网站源码、发布记录与后续维护均公开保存在 GitHub。</p>
-            <a href={repositoryUrl} target="_blank" rel="noreferrer">
-              浏览 GitHub <ArrowRight size={18} />
+            <FilePdf size={34} />
+            <h3>习题解答手册</h3>
+            <p>覆盖第1—21章的418道习题，325页；题号与教材对应，含计算与开放题说明。</p>
+            <a href={release.solutions}>
+              下载习题解答 PDF <ArrowRight size={18} />
             </a>
           </article>
         </div>
+        <p className="download-note">需要跨书跳转时，<a href={release.bundle}>合并下载教材与解答</a>，解压后保持两个PDF在同一文件夹并保留文件名。也可查看<a href={release.url}>版本说明与文件校验值</a>。</p>
       </div>
     </section>
   );

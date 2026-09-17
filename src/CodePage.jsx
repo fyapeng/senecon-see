@@ -12,6 +12,8 @@ import {
 } from "@phosphor-icons/react";
 import { bookParts } from "./content/book.generated.js";
 
+import { release } from "./content/release.js";
+
 const base = import.meta.env.BASE_URL;
 const repositoryUrl = "https://github.com/fyapeng/senecon-see";
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
@@ -70,15 +72,15 @@ export function CodePage() {
             <h1>配套代码</h1>
             <p className="code-deck">从透明的 NumPy / SciPy 基准实现，进入自动微分、JIT、模拟估计与均衡求解。</p>
             <div className="code-hero-actions">
-              <a className="button button-gold" href="#revision"><Code size={23} /> 查看代码修订状态</a>
+              <a className="button button-gold" href={release.code}><Code size={23} /> 下载 v2.0.0 代码包</a>
               <a className="code-release-link" href={`${base}#updates`}>勘误与更新 <ArrowRight size={18} /></a>
             </div>
           </div>
           <div className="code-package-card">
             <Package size={34} />
-            <p>配套代码修订中</p>
-            <strong>21 章 · 暂停下载</strong>
-            <span>旧版代码包已撤下，正在逐章核查</span>
+            <p>配套代码 v2.0.0</p>
+            <strong>21 章 · 完整程序与测试</strong>
+            <span>2026-09-18 · 原创代码 MIT</span>
           </div>
         </div>
       </section>
@@ -91,8 +93,8 @@ export function CodePage() {
             <p>书中引用的 <code>senecon-see/code/</code> 指向这里，用于说明环境、章节结构、测试与当前版本。</p>
           </div>
           <div>
-            <h3>新版将在校对后发布</h3>
-            <p>旧版代码包已于2026年9月15日撤下。修订将核对数学实现、数值可靠性与研究复现案例，完成后重新提供版本化下载。</p>
+            <h3>与教材同步的版本</h3>
+            <p>本包包含二十一章实验、研究适配和习题计算。原创代码为MIT；第三方GPL、AGPL、BSD与MIT适配保留各自许可和来源。实际环境记录与安装说明随包提供。</p>
           </div>
         </div>
       </section>
@@ -103,7 +105,7 @@ export function CodePage() {
           <div className="workflow-grid">
             <article><FolderOpen size={29} /><span>01</span><h3>解压代码包</h3><p>保持 <code>labs/</code>、<code>tests/</code> 与环境文件的相对路径。</p></article>
             <article><TerminalWindow size={29} /><span>02</span><h3>建立 Python 环境</h3><p>按根目录说明安装 NumPy、SciPy、JAX 与测试依赖。</p></article>
-            <article><BookOpenText size={29} /><span>03</span><h3>先读 tutorial.py</h3><p>沿教材顺序理解状态、目标函数、估计和反事实对象。</p></article>
+            <article><BookOpenText size={29} /><span>03</span><h3>先读各章 README</h3><p>沿教材顺序理解状态、目标函数、估计和反事实对象。</p></article>
             <article><Flask size={29} /><span>04</span><h3>运行对应测试</h3><p>用解析结果、梯度、概率恒等式、固定点和均衡残差核验实现。</p></article>
           </div>
         </div>
@@ -121,9 +123,9 @@ export function CodePage() {
 
       <section className="code-bottom-cta">
         <div className="code-shell">
-          <div><p className="eyebrow">配套材料修订中</p><h2>新版代码将在校订后提供下载。</h2></div>
+          <div><p className="eyebrow">第二版配套材料</p><h2>下载程序，逐步核验模型与政策计算。</h2></div>
           <div className="code-bottom-actions">
-            <a className="button button-gold" href="#revision"><Code size={22} /> 查看修订状态</a>
+            <a className="button button-gold" href={release.code}><Code size={22} /> 下载代码包</a>
             <a href={base}><ArrowLeft size={18} /> 返回首页</a>
           </div>
         </div>

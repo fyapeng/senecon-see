@@ -6,22 +6,12 @@ import {
   ListBullets,
 } from "@phosphor-icons/react";
 import { useEffect } from "react";
-import { bookParts, prefaceMeta } from "./content/book.generated.js";
+import { bookParts, prefaceMeta, readingSections } from "./content/book.generated.js";
 import prefaceHtml from "./content/preface.generated.html?raw";
 
 const base = import.meta.env.BASE_URL;
 const partNumbers = ["Ⅰ", "Ⅱ", "Ⅲ", "Ⅳ", "Ⅴ", "Ⅵ"];
-const readingSections = [
-  ["定量研究中的结构问题", "定量研究中的结构问题"],
-  ["结构计量的形成", "结构计量的形成"],
-  ["结构方法在不同领域的展开", "结构方法在不同领域的展开"],
-  ["约简式证据与结构模型", "约简式证据与结构模型"],
-  ["大学补贴同一问题的多种经验路径", "大学补贴：同一问题的多种经验路径"],
-  ["本书的范围与写法", "本书的范围与写法"],
-  ["全书安排与阅读方法", "全书安排与阅读方法"],
-  ["代码复现与人工智能工具", "代码、复现与人工智能工具"],
-  ["勘误与更新", "勘误与更新"],
-];
+
 
 function useMathJax() {
   useEffect(() => {
@@ -134,8 +124,8 @@ export function PrefacePage() {
             <h1>前言</h1>
             <p className="reading-deck">从观测事实通向行为机制、均衡结果与政策反事实。</p>
             <div className="reading-meta">
-              <span><Clock size={18} /> 约 25 分钟</span>
-              <span><BookOpenText size={18} /> 9 节 · {prefaceMeta.equationCount} 组编号公式</span>
+              <span><Clock size={18} /> 约 {prefaceMeta.readingMinutes} 分钟</span>
+              <span><BookOpenText size={18} /> {readingSections.length} 节 · 前言与全书目录</span>
             </div>
           </div>
           <img src={`${base}assets/book-cover-front-v2.png`} alt="《结构估计导论》正面封面" />
@@ -153,11 +143,11 @@ export function PrefacePage() {
         <div className="page-shell">
           <div>
             <p className="eyebrow">配套材料</p>
-            <h2>教材与配套代码正在校订</h2>
+            <h2>教材、习题解答与配套代码</h2>
           </div>
           <div className="reading-cta-actions">
-            <a className="button button-paper" href={`${base}#updates`}>
-              <BookOpenText size={23} /> 查看修订状态
+            <a className="button button-paper" href={`${base}#resources`}>
+              <BookOpenText size={23} /> 教材与解答下载
             </a>
             <a className="button button-gold" href={`${base}code/`}>
               <BookOpenText size={23} /> 配套代码索引

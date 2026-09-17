@@ -18,3 +18,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - Keep `/code/` as the canonical web index promised by the preface. Store the immutable full code package in GitHub Releases, while the page explains versions, chapter paths, tests, and download entry points.
 - Publish the versioned textbook PDF from GitHub Releases and link it directly from the homepage. Do not publish the LaTeX source or generated build files.
 - The full catalogue must expose section-level titles generated from the authoritative chapter sources; use chapter disclosures to keep the twenty-one-chapter directory scannable.
+
+- Publish the textbook and solutions manual as separate PDF downloads plus a reading ZIP that preserves their relative cross-PDF links. Textbook and solutions are CC BY-NC 4.0; original companion code is MIT, with explicit third-party exceptions.

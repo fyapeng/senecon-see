@@ -1,4 +1,4 @@
-// Generated from book/main.tex and book/chapters/ch*.tex. Do not edit by hand.
+// Generated from authoritative LaTeX. Do not edit by hand.
 export const bookParts = [
   {
     "title": "结构估计基础",
@@ -240,7 +240,7 @@ export const bookParts = [
         "sections": [
           "从单主体动态规划到产业状态的共同演化",
           "有限状态随机博弈与Markov完美均衡",
-          "Ericson–Pakes型产业演化",
+          "Ericson--Pakes型产业演化",
           "产业路径观测与第一阶段",
           "动态均衡根集合、正则性与均衡延拓",
           "持久企业类型、初始状态与路径混合",
@@ -259,7 +259,7 @@ export const bookParts = [
         "sections": [
           "生命周期模型的结构对象与适用范围",
           "有限期环境、历史与终端价值",
-          "离散–连续生命周期环境与预算时序",
+          "离散--连续生命周期环境与预算时序",
           "家庭形成、婚姻状态与双边同意",
           "健康存量、治疗、保险与死亡",
           "联合估计、外部矩与验证样本",
@@ -290,18 +290,15 @@ export const bookParts = [
         "number": 19,
         "title": "基于主体的模型",
         "sections": [
-          "方法边界：从均衡映射到结构仿真器",
-          "主体、制度与观测核",
-          "从程序到概率律",
-          "何时可以聚合：ABM与经典模型的精确边界",
-          "识别：从微观规则到观测分布",
+          "主体模型的结构环境与概率表示",
+          "聚合、均值场与有限总体误差",
+          "识别与观测设计",
           "模拟最小距离与间接推断",
           "无似然贝叶斯推断",
-          "计算：随机数、代理模型与可微仿真",
+          "仿真计算与误差控制",
           "程序核验、经验验证与模型比较",
-          "政策反事实、行为稳定性与福利",
-          "典型经济环境中的模型架构",
-          "计算实验：局部互动、聚合失败与无似然估计"
+          "政策反事实与福利",
+          "局部互动模型的估计与政策实验"
         ]
       },
       {
@@ -335,4 +332,5 @@ export const bookParts = [
     ]
   }
 ];
-export const prefaceMeta = {"sourceHash": "28e33a72c6ac", "equationCount": 22, "sectionCount": 9};
+export const prefaceMeta = {"characters": 11657, "readingMinutes": 26, "updated": "2026-09-18"};
+export const readingSections = [["从约简式证据到结构问题", "从约简式证据到结构问题"], ["结构估计怎样成为经济学的研究方法", "结构估计怎样成为经济学的研究方法"], ["一项结构研究怎样展开", "一项结构研究怎样展开"], ["全书讨论哪些模型与方法", "全书讨论哪些模型与方法"], ["怎样使用这本书", "怎样使用这本书"], ["计算材料复现与更新", "计算材料、复现与更新"]];
