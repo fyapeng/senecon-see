@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { book, chapterHref, Footer, Paper, paperCases, partOfChapter, Rich, SiteNav } from "./shared.jsx";
+import { book, chapterHref, Footer, Paper, paperCases, paperCount, partOfChapter, Rich, SiteNav } from "./shared.jsx";
 
 export function CasesPage() {
   const [part, setPart] = useState("all");
@@ -21,9 +21,9 @@ export function CasesPage() {
       <main className="page-shell cases-page">
         <header className="page-head">
           <p className="eyebrow eyebrow-dark">论文案例</p>
-          <h1>{paperCases.length} 篇论文怎样做结构估计</h1>
+          <h1>{paperCases.length} 个论文案例</h1>
           <p>
-            每个案例先说明原文要解决的问题和它的想法，再写出关键方程，交代数据怎样变成回归或矩，列出原文的结果，并在一个已知真值的小经济中用原文的估计方法重算一遍。下面是每个案例的开头一段；完整内容在对应章节的 PDF 中，小经济的程序在配套程序包里。
+            每个案例先说明原文要解决的问题和它的想法，再写出关键方程，交代数据怎样变成回归或矩，列出原文的结果，并在一个已知真值的小经济中用原文的估计方法重算一遍。这些案例涉及 {paperCount} 篇论文，有几篇在不同章节从不同角度出现。下面是每个案例的开头一段；完整内容在对应章节的 PDF 中，小经济的程序在配套程序包里。
           </p>
         </header>
         <div className="case-filters">
@@ -38,7 +38,7 @@ export function CasesPage() {
             搜索
             <input type="search" value={query} placeholder="作者、题目或关键词" onChange={(e) => setQuery(e.target.value)} />
           </label>
-          <span className="case-count">{shown.length} 篇</span>
+          <span className="case-count">{shown.length} 个</span>
         </div>
         <div className="case-list">
           {shown.map((c) => (
@@ -46,7 +46,6 @@ export function CasesPage() {
               <summary>
                 <span className="case-chapter">第 {c.chapter} 章</span>
                 <Rich as="span" html={c.title} />
-                <small>{c.paper.authors} ({c.paper.year})</small>
               </summary>
               <Paper paper={c.paper} />
               {c.intro && <Rich html={c.intro} />}

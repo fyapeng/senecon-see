@@ -87,7 +87,7 @@ function Hero() {
             <a className="hero-reading-link" href={`${base}preface/`}><BookOpenText size={20} /> 阅读前言</a>
           </div>
           <p className="hero-status">
-            上下两册 · {book.chapters.length} 章与 {book.appendices.length} 个附录 · {book.pages} 页 · {paperCases.length} 篇论文案例
+            上下两册 · {book.chapters.length} 章与 {book.appendices.length} 个附录 · {book.pages} 页 · {paperCases.length} 个论文案例
           </p>
         </div>
         <div className="book-stage">
@@ -219,7 +219,7 @@ function Materials() {
           <article>
             <Files size={34} />
             <h3>论文案例</h3>
-            <p>{paperCases.length} 篇论文：原文的想法、关键方程、数据怎样变成矩，以及在已知真值的小经济中重演的估计。</p>
+            <p>{paperCases.length} 个案例：原文的想法、关键方程、数据怎样变成矩，以及在已知真值的小经济中重演的估计。</p>
             <a href={`${base}cases/`}>浏览案例库 <ArrowRight size={18} /></a>
           </article>
           <article>

@@ -494,15 +494,15 @@
      "number": "2.9",
      "subsections": [
       {
-       "title": "Roy模型的经验内容",
+       "title": "Heckman and Honoré（1990）：Roy模型的经验内容",
        "number": "2.9.1"
       },
       {
-       "title": "由出价反推估值",
+       "title": "Guerre, Perrigne and Vuong（2000）：由出价反推估值",
        "number": ""
       },
       {
-       "title": "动态离散选择中的规范化",
+       "title": "Magnac and Thesmar（2002）：动态离散选择中的规范化",
        "number": "2.9.3"
       },
       {
@@ -510,7 +510,7 @@
        "number": ""
       },
       {
-       "title": "多重均衡下的识别：航空市场进入",
+       "title": "Ciliberto and Tamer（2009）：多重均衡下的航空市场进入",
        "number": ""
       }
      ]
@@ -525,8 +525,9 @@
    "casesIntro": "本节读几篇论文的识别论证。它们分别来自劳动经济学、拍卖与动态选择，各自代表本章的一种识别来源：分布形状与排除变量、均衡条件的反演、规范化与先验给定的参数。阅读时可以按同一组问题提问：数据是什么，模型的哪一部分要识别，论证用到了哪些限制，什么仍然无法识别。",
    "cases": [
     {
-     "title": "Roy模型的经验内容",
+     "title": "Heckman and Honoré（1990）：Roy模型的经验内容",
      "number": "2.9.1",
+     "isPaper": true,
      "paper": {
       "key": "HeckmanHonore1990",
       "authors": "Heckman and Honoré",
@@ -539,8 +540,9 @@
      "intro": "Heckman and Honoré (1990)问的是：只观察每个人选择的部门和在该部门的收入，Roy模型能告诉我们什么？定理2.19已经给出了一半答案：没有分布假设，任何$(D,Y)$的分布都可以由某个Roy模型生成。这篇论文给出了另一半：哪些假设恢复了模型的经验内容，各自恢复了多少。下面的定理编号和结论来自Econometrica发表版。"
     },
     {
-     "title": "由出价反推估值",
+     "title": "Guerre, Perrigne and Vuong（2000）：由出价反推估值",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "GuerrePerrigneVuong2000",
       "authors": "Guerre, Perrigne, and Vuong",
@@ -553,8 +555,9 @@
      "intro": "Guerre, Perrigne, and Vuong (2000)研究第一价格密封拍卖。$I$个风险中性的投标人，各自的估值独立地来自同一个分布$F$，出价最高者以自己的出价成交。研究者观察到出价，想知道估值的分布。在对称的单调均衡中，估值为$v$的投标人最大化$(v-b)G(b)^{I-1}$，$G$是出价的分布函数，一阶条件给出\n$$v=\\xi(b)\\equiv b+\\frac{G(b)}{(I-1)g(b)}.$$\n右边只含出价的分布和密度，都由数据识别，于是每个出价都换算成一个估值，识别不需要对$F$作任何参数假设。可以手算核对：估值在$[0,1]$上均匀分布、$I=2$时，均衡出价$b=v/2$，$G(b)=2b$，$g(b)=2$，$\\xi(b)=2b$；$I=3$时$b=2v/3$，$\\xi(b)=3b/2$，都还原为估值。"
     },
     {
-     "title": "动态离散选择中的规范化",
+     "title": "Magnac and Thesmar（2002）：动态离散选择中的规范化",
      "number": "2.9.3",
+     "isPaper": true,
      "paper": {
       "key": "MagnacThesmar2002",
       "authors": "Magnac and Thesmar",
@@ -569,12 +572,14 @@
     {
      "title": "三篇论文的共同模式",
      "number": "",
+     "isPaper": false,
      "paper": null,
      "intro": "表2.5把三篇论文放在一起。它们的论证有同样的结构：先写出观测分布与结构之间的映射，再找出使映射可逆的最弱限制，最后说明这些限制不成立时什么会失去识别。"
     },
     {
-     "title": "多重均衡下的识别：航空市场进入",
+     "title": "Ciliberto and Tamer（2009）：多重均衡下的航空市场进入",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "CilibertoTamer2009",
       "authors": "Ciliberto and Tamer",
@@ -985,23 +990,23 @@
      "number": "3.9",
      "subsections": [
       {
-       "title": "Hansen与Singleton：Euler方程的广义矩估计",
+       "title": "Hansen and Singleton（1982）：Euler方程的广义矩估计",
        "number": ""
       },
       {
-       "title": "收入过程、最小距离与权重",
+       "title": "MaCurdy（1982）与Abowd and Card（1989）：收入过程、最小距离与权重",
        "number": ""
       },
       {
-       "title": "Blundell、Pistaferri与Preston：消费对收入冲击的保险",
+       "title": "Blundell, Pistaferri and Preston（2008）：消费对收入冲击的保险",
        "number": ""
       },
       {
-       "title": "Keane与Wolpin：模拟与插值",
+       "title": "Keane and Wolpin（1994）：模拟与插值",
        "number": ""
       },
       {
-       "title": "Smith：用模拟向量自回归估计非线性动态模型",
+       "title": "Smith（1993）：用模拟向量自回归估计非线性动态模型",
        "number": ""
       }
      ]
@@ -1018,8 +1023,9 @@
    "casesIntro": "本节读五组研究。前三组以广义矩、最小距离与多阶段推理为主要工具，后两组以模拟为主要工具。每组先说论文的问题与做法，再列出发表版中的关键数字，然后在一个知道真值的小经济上重做一遍它的估计，看方法在什么条件下可靠。",
    "cases": [
     {
-     "title": "Hansen与Singleton：Euler方程的广义矩估计",
+     "title": "Hansen and Singleton（1982）：Euler方程的广义矩估计",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "HansenSingleton1982",
       "authors": "Hansen and Singleton",
@@ -1032,8 +1038,9 @@
      "intro": "<strong>问题与做法。</strong>Hansen and Singleton (1982)要估计代表性家庭的偏好参数，又不想设定收入过程、资产供给与市场结构。他们只用Euler方程(3.12)。论文把它写成$\\E[\\beta x_{1,t+1}^{\\alpha}x_{2,t+1}-1\\mid\\mathcal F_t]=0$，其中$x_1=C_{t+1}/C_t$，$x_2$是资产的实际总回报，$\\alpha=-\\gamma$。任何$\\mathcal F_t$中的变量与括号内的误差正交。他们取$x_t=(x_{1t},x_{2t})$的前NLAG期滞后加常数作为工具，NLAG取1、2、4、6，得到$1+2\\,\\mathrm{NLAG}$个矩、两个参数，用第3.3节的两步GMM估计，并用J统计量检验$2\\,\\mathrm{NLAG}-1$个过度识别限制。"
     },
     {
-     "title": "收入过程、最小距离与权重",
+     "title": "MaCurdy（1982）与Abowd and Card（1989）：收入过程、最小距离与权重",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "MaCurdy1982",
       "authors": "MaCurdy",
@@ -1046,8 +1053,9 @@
      "intro": "MaCurdy (1982)与Abowd and Card (1989)估计收入（以及工作小时）变化的协方差结构。思路是第3.4节的例子：先计算收入变化的各阶自协方差，再寻找能复制它们的随机过程。Abowd与Card用三份调查的四个样本：两个收入动态面板（PSID）样本、全国纵向调查（NLS）的年长男性样本，以及西雅图与丹佛收入维持实验（SIME/DIME）的对照组。四个样本的协方差结构非常相似：收入与小时的变化在两阶以后几乎不相关；除了没有序列相关的测量误差，收入与小时共有一个二阶移动平均的成分，还有一个只影响方差的非平稳成分。把共同成分解释为生产率的变化，可以推出跨期替代弹性；但大部分收入与小时的共同变化发生在小时工资不变时，这一点不利于生命周期劳动供给模型。MaCurdy 1982的全文本书未能取得，这里关于收入过程的设定依据Abowd与Card以及Altonji and Segal (1996)的转述。"
     },
     {
-     "title": "Blundell、Pistaferri与Preston：消费对收入冲击的保险",
+     "title": "Blundell, Pistaferri and Preston（2008）：消费对收入冲击的保险",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BlundellPistaferriPreston2008",
       "authors": "Blundell, Pistaferri, and Preston",
@@ -1060,8 +1068,9 @@
      "intro": "<strong>问题与做法。</strong>Blundell, Pistaferri, and Preston (2008)问家庭在多大程度上为永久与暂时收入冲击投保，以及1980年代收入不平等与消费不平等的走势为什么分开。在第3.4节的收入过程之外，设消费增长为\n$$\\Delta c_{it}=\\phi\\,\\zeta_{it}+\\psi\\,e_{it}+v_{it},$$\n$\\phi$与$\\psi$分别是永久与暂时冲击传递到消费的比例，$1-\\phi$可以解释为对永久冲击的保险程度，$v_{it}$是与收入无关的消费冲击或测量误差。由式(3.14)的结构，\n$$\\Cov(\\Delta c_t,\\Delta y_{t+1})=-\\psi\\sigma_e^2,\\qquad\n\\Cov(\\Delta c_t,\\Delta y_{t-1}+\\Delta y_t+\\Delta y_{t+1})=\\phi\\sigma_\\zeta^2,$$\n而$\\Cov(\\Delta y_t,\\Delta y_{t+1})=-\\sigma_e^2$，$\\Cov(\\Delta y_t,\\Delta y_{t-1}+\\Delta y_t+\\Delta y_{t+1})=\\sigma_\\zeta^2$。所以两个传递系数都是协方差之比，相当于用下一期的收入增长作工具识别暂时冲击的传递、用三期收入增长之和作工具识别永久冲击的传递。下一期的收入增长包含$-e_t$，与$t$期的暂时冲击相关、与永久冲击无关；三期之和等于$\\zeta_{t-1}+\\zeta_t+\\zeta_{t+1}+e_{t+1}-e_{t-2}$，其中的暂时冲击都与$t$期的暂时冲击无关，只剩永久冲击$\\zeta_t$与$\\Delta c_t$相关。按这一构造模拟2000户、8期，$\\phi=0.65$，$\\psi=0.05$，得到$\\hat\\phi=0.680$（Bootstrap标准误0.042）与$\\hat\\psi=0.058$（0.009）。"
     },
     {
-     "title": "Keane与Wolpin：模拟与插值",
+     "title": "Keane and Wolpin（1994）：模拟与插值",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "KeaneWolpin1994",
       "authors": "Keane and Wolpin",
@@ -1074,8 +1083,9 @@
      "intro": "<strong>问题与做法。</strong>动态离散选择模型（第10章）在每个状态点需要计算下一期的期望最大值，即$\\mathrm{Emax}=\\E\\max_k\\{V_k+\\varepsilon_k\\}$。冲击是多维正态时，它是一个没有闭式的多重积分；状态点又成千上万，每次似然计算都要在每个状态点做一次积分。Keane and Wolpin (1994)的做法有两步。第一步只在状态点的一个子集上用Monte Carlo积分计算Emax。第二步用这些点估计一个插值回归，补全其余状态点。插值函数是他们“大量试验”后选定的（式17）：\n$$\\mathrm{EMAX}-\\mathrm{MAXE}=\\pi_0+\\sum_j\\pi_{1j}(\\mathrm{MAXE}-V_j)+\\sum_j\\pi_{2j}(\\mathrm{MAXE}-V_j)^{1/2},$$\n其中$V_j$是各选项价值的均值，$\\mathrm{MAXE}=\\max_jV_j$，系数逐期用最小二乘估计。理由是$\\mathrm{EMAX}-\\mathrm{MAXE}$必为正，大小取决于各选项价值相互之间有多接近。插值值低于MAXE时取MAXE。"
     },
     {
-     "title": "Smith：用模拟向量自回归估计非线性动态模型",
+     "title": "Smith（1993）：用模拟向量自回归估计非线性动态模型",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "Smith1993",
       "authors": "Smith",
@@ -1892,19 +1902,19 @@
      "number": "5.9",
      "subsections": [
       {
-       "title": "教师出勤：实验、模型与方案设计",
+       "title": "Duflo, Hanna and Ryan（2012）：教师出勤的实验、模型与方案设计",
        "number": ""
       },
       {
-       "title": "动态教育模型的留出验证",
+       "title": "Todd and Wolpin（2006）：动态教育模型的留出验证",
        "number": ""
       },
       {
-       "title": "实验与结构模型的结合",
+       "title": "Todd and Wolpin（2023）：实验与结构模型的结合",
        "number": ""
       },
       {
-       "title": "用政策实施前的数据估计，用政策检验",
+       "title": "Kaboski and Townsend（2011）：用政策实施前的数据估计，用政策检验",
        "number": ""
       },
       {
@@ -1922,8 +1932,9 @@
    "casesIntro": "本节先细读一篇在随机实验之上估计动态模型、用对照组做留出检验、再用模型设计方案的研究，然后读一篇关于实验与结构模型怎样结合的综述，并回顾两篇在第22章细读过的研究。最后给出一份读结构论文时的检查清单。",
    "cases": [
     {
-     "title": "教师出勤：实验、模型与方案设计",
+     "title": "Duflo, Hanna and Ryan（2012）：教师出勤的实验、模型与方案设计",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "DufloHannaRyan2012",
       "authors": "Duflo, Hanna, and Ryan",
@@ -1936,8 +1947,9 @@
      "intro": "<strong>问题与做法。</strong>Duflo, Hanna, and Ryan (2012)研究印度拉贾斯坦邦乌代布尔一个非政府组织（Seva Mandir）办的单教师非正规学校。教师缺勤率很高，项目开始前研究学校的缺勤率为44%。113所学校随机分成57所处理学校和56所对照学校。处理学校的学生每天上学和放学时给教师和同学拍照，相机的日期时间不能改；两张照片相隔至少5小时、每张至少有8个孩子，这一天才算有效。处理学校教师的月工资是有效天数$d$的函数\n$$\\pi(d)=500+50\\max\\{0,d-10\\}\\quad\\text{卢比},$$\n即出勤20天得1000卢比，多一天加50，少一天扣50，扣到500为止；对照学校仍是固定的1000卢比。实验回答了“这个方案是否有效”。为了回答“换一种方案会怎样”“照相机本身有没有作用”，作者在处理组的逐日出勤数据上估计了一个动态劳动供给模型。"
     },
     {
-     "title": "动态教育模型的留出验证",
+     "title": "Todd and Wolpin（2006）：动态教育模型的留出验证",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "ToddWolpin2006",
       "authors": "Todd and Wolpin",
@@ -1950,8 +1962,9 @@
      "intro": "Todd and Wolpin (2006)用同样的逻辑研究墨西哥的PROGRESA：只用没有补贴的数据（对照村，以及处理村项目以前的数据）估计一个生育与子女教育的动态模型，再预测1998年处理村的入学率。预测与实际相差不到1个百分点，12到15岁女孩的预测效应10.1%，实验估计在8.0%到10.3%之间；男孩差一些。模型随后用于比较实验没有实施的方案。这项研究的模型、检验和方案比较在第22.8.1节细读。它与上面的研究方向相反：DHR用处理组估计、对照组检验，Todd与Wolpin用对照组估计、处理组检验，后者检验的方向恰好是政策移动的方向。Attanasio, Meghir, and Santiago (2012)则把处理村与对照村都用于估计（第22.8.2节）。阅读时要分清实验结果是进入了估计，还是被留作检验。"
     },
     {
-     "title": "实验与结构模型的结合",
+     "title": "Todd and Wolpin（2023）：实验与结构模型的结合",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "ToddWolpin2023",
       "authors": "Todd and Wolpin",
@@ -1964,8 +1977,9 @@
      "intro": "Todd and Wolpin (2023)综述了把随机实验与结构模型结合的研究。他们把实验数据的用途分为两种：一种是留出，用对照组（或处理组）估计模型，再预测另一组，作为模型选择与验证；另一种是把两组都用于估计，让处理带来的变化帮助识别参数、提高精度。两者可以先后进行：先留出检验，再用全部数据重新估计。无论哪种方式，实验都需要测量模型中决定选择的关键变量，而不只是处理状态与结果；PROGRESA同时调查了处理村与对照村家庭的详细情况，DHR的相机记录了每一天的出勤，才使上面的研究成为可能。"
     },
     {
-     "title": "用政策实施前的数据估计，用政策检验",
+     "title": "Kaboski and Townsend（2011）：用政策实施前的数据估计，用政策检验",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "KaboskiTownsend2011",
       "authors": "Kaboski and Townsend",
@@ -1980,6 +1994,7 @@
     {
      "title": "怎样判断一篇结构论文的结论",
      "number": "",
+     "isPaper": false,
      "paper": null,
      "intro": "一篇结构论文的结论通常可以写成一个简单的句子：“把助学金延后发放更能减少辍学”，“新产品带来的消费者福利超过了利润转移”，“定向补贴会吸引高效率的企业进入”。读者可以从这句话出发逆向追问：政策对象是怎样定义的，模型在新环境中求解了什么，参数由数据中的哪些变化约束，数值误差与没有识别的方向是否足以改变结论。"
     }
@@ -2326,15 +2341,15 @@
      "number": "6.8",
      "subsections": [
       {
-       "title": "取消资助的自然实验",
+       "title": "Dynarski（2003）：取消资助的自然实验",
        "number": ""
       },
       {
-       "title": "信贷约束是否阻碍入学",
+       "title": "Keane and Wolpin（2001）：信贷约束是否阻碍入学",
        "number": ""
       },
       {
-       "title": "实验与结构模型的结合",
+       "title": "Attanasio, Meghir and Santiago（2012）：实验与结构模型的结合",
        "number": ""
       },
       {
@@ -2372,8 +2387,9 @@
    "casesIntro": "本章的项目是构造的，但它的问题与方法来自一组真实的研究。本节细读两篇：一篇用一次制度变化识别资助对入学的作用，一篇用结构模型问借不到钱是否阻碍入学；再回顾一篇在第22章细读过的、把实验放进结构估计的研究。Todd and Wolpin (2006)的留出验证在第5.9节与第22.8.1节讨论。",
    "cases": [
     {
-     "title": "取消资助的自然实验",
+     "title": "Dynarski（2003）：取消资助的自然实验",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "Dynarski2003",
       "authors": "Dynarski",
@@ -2386,8 +2402,9 @@
      "intro": "<strong>问题与做法。</strong>Dynarski (2003)问：助学金能不能提高上大学的比例？回归入学对可得资助的系数不行，因为资助资格与能力、家境等看不到的因素相关。她用的是一次制度变化。1965到1982年，社会保障制度给已故、残疾或退休的参保人18到22岁的子女发放上大学期间的月度补助；1980年，父母一方已故的子女平均每年得到6700美元（2000年美元），而公立大学的学费只有1900美元；高峰时，18到21岁的全日制大学生中12%领取这项补助。国会1981年投票取消它，1982年起逐步停发。她只用父亲已故作为资格的代理变量，因为父母残疾或退休本身可能受补助影响；90%的受益人是通过父亲获得资格的。估计方程是双重差分（第2.3节）：\n$$y_i=\\alpha+\\beta\\,\\text{父亲已故}_i+\\delta\\,\\text{取消前}_i+\\gamma\\,\\text{父亲已故}_i\\times\\text{取消前}_i+v_i,$$\n$\\gamma$是提供资助（而不是实际领取）的效果，用政策语言说是意向处理效应，也是政策制定者能控制的量。"
     },
     {
-     "title": "信贷约束是否阻碍入学",
+     "title": "Keane and Wolpin（2001）：信贷约束是否阻碍入学",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "KeaneWolpin2001",
       "authors": "Keane and Wolpin",
@@ -2400,8 +2417,9 @@
      "intro": "<strong>问题与做法。</strong>第6.2节提到，若家庭的消费效用是凹的、又不能借钱，补贴对资源少的家庭作用更大，单指标假设A2不再成立。它要回答的政策问题是：低收入家庭的孩子上学少，是因为借不到钱，还是因为别的原因？Keane and Wolpin (2001)用一个动态结构模型回答它，并同时问父母的转移在多大程度上解释了受教育程度的代际相关。模型中，16岁起的年轻男性每年选择上学（全日或部分时间）、工作（每周0、20或40小时）与储蓄；上学与工作不互斥。父母按一个外生的规则给转移，金额随父母的教育而增加，子女上大学时更多；净资产必须高于一个下限，下限可以为负，随年龄、教育与工作经验变化；借款利率可以高于存款利率。16岁时的技能与偏好有四种类型，类型的分布依赖父母的教育。"
     },
     {
-     "title": "实验与结构模型的结合",
+     "title": "Attanasio, Meghir and Santiago（2012）：实验与结构模型的结合",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "AttanasioMeghirSantiago2012",
       "authors": "Attanasio, Meghir, and Santiago",
@@ -2416,15 +2434,8 @@
     {
      "title": "三种结合方式",
      "number": "",
-     "paper": {
-      "key": "Dynarski2003",
-      "authors": "Dynarski",
-      "year": "2003",
-      "title": "Does Aid Matter? Measuring the Effect of Student Aid on College Attendance and Completion",
-      "venue": "American Economic Review",
-      "doi": "10.1257/000282803321455287",
-      "url": ""
-     },
+     "isPaper": false,
+     "paper": null,
      "intro": "三篇论文与本章的关系可以概括为一张表："
     }
    ],
@@ -2788,19 +2799,19 @@
      "number": "7.9",
      "subsections": [
       {
-       "title": "McFadden：旧金山湾区捷运的预测",
+       "title": "McFadden（1974）：旧金山湾区捷运的预测",
        "number": ""
       },
       {
-       "title": "状态依赖还是异质性",
+       "title": "Dubé, Hitsch and Rossi（2010）：状态依赖还是异质性",
        "number": ""
       },
       {
-       "title": "从需求响应的不对称识别考虑",
+       "title": "Abaluck and Adams-Prassl（2021）：从需求响应的不对称识别考虑集",
        "number": ""
       },
       {
-       "title": "信息摩擦与保险计划选择",
+       "title": "Handel and Kolstad（2015）：信息摩擦与保险计划选择",
        "number": ""
       }
      ]
@@ -2815,8 +2826,9 @@
    "casesIntro": "本节读四项研究：离散选择模型的第一次大规模样本外预测、区分状态依赖与异质性的面板研究、从需求响应的不对称识别考虑集的研究，以及用问卷直接测量信息摩擦的保险选择研究。每项先说问题与做法，再列出原文的数字，然后在一个知道真值的小经济上重做它的关键一步。",
    "cases": [
     {
-     "title": "McFadden：旧金山湾区捷运的预测",
+     "title": "McFadden（1974）：旧金山湾区捷运的预测",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "McFadden1974travel",
       "authors": "McFadden",
@@ -2829,8 +2841,9 @@
      "intro": "<strong>问题与做法。</strong>1970年代初，旧金山湾区捷运系统（BART）尚未通车，规划需要知道它会吸引多少通勤者、从哪些方式吸引。McFadden (1974)报告了伯克利研究组在BART沿线的出行调查：710户中访问到213户，其中160名通勤者在驾车与公共汽车之间选择，作者用二元Logit估计时间与费用的系数，各设定下车内时间的价值约为税后工资的三成到六成。研究组随后用多项Logit描述单独驾车、合乘、公共汽车三种方式的选择，并在通车后重访同一批人。多项Logit下\n$$P_j=\\frac{\\exp(V_j)}{\\sum_k\\exp(V_k)},\\qquad V_j=c_j+\\beta_t\\,\\text{时间}_j+\\beta_c\\,\\text{费用}_j,$$\n新方式BART的概率由它的时间与费用代入同一组系数得到，它的常数项无法从通车前的数据估计，必须另行指定。"
     },
     {
-     "title": "状态依赖还是异质性",
+     "title": "Dubé, Hitsch and Rossi（2010）：状态依赖还是异质性",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "DubeHitschRossi2010",
       "authors": "Dubé, Hitsch, and Rossi",
@@ -2843,8 +2856,9 @@
      "intro": "<strong>问题与做法。</strong>Dubé, Hitsch, and Rossi (2010)研究包装消费品的品牌选择惯性：消费者更可能购买上次买过的品牌。效用写成\n$$U_{hjt}=\\alpha_{hj}+\\eta_h\\,p_{jt}+\\gamma_h\\,1\\{s_{ht}=j\\}+\\varepsilon_{hjt},$$\n$s_{ht}$是上次购买的品牌。$\\gamma_h>0$可以来自状态依赖，也可以来自没有控制好的偏好异质性或自相关的偏好冲击。他们用一组针对性的检验逐一排除后两者。异质性用多元正态的混合分布刻画，以MCMC估计；为确认异质性已经控制住，把每户的购买顺序随机打乱再估计，状态依赖造成的部分会消失，残留的异质性造成的部分不会。对自相关冲击，他们用两个检验：没有滞后选择变量的模型中，过去的价格能否预测现在的选择（Chamberlain的检验）；若上次购买是促销引起的，它包含的偏好冲击信息较少，自相关下惯性应当较弱，于是在模型中加入$s_{ht}$与“上次购买时有促销”的交互项。"
     },
     {
-     "title": "从需求响应的不对称识别考虑",
+     "title": "Abaluck and Adams-Prassl（2021）：从需求响应的不对称识别考虑集",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "AbaluckAdams2021",
       "authors": "Abaluck and Adams-Prassl",
@@ -2857,8 +2871,9 @@
      "intro": "<strong>问题与做法。</strong>Abaluck and Adams-Prassl (2021)的出发点是第7.1节社会剩余函数的推论：全部备选项都被考虑时，概率对效用的Jacobian是对称的，$\\partial s_j/\\partial p_k=\\partial s_k/\\partial p_j$，类似于Slutsky对称。在默认选项专用的考虑模型中，消费者以概率$\\mu(p_0)$“醒着”，在全部备选项中按完全考虑的概率$s^\\star_j$选择，否则留在默认选项0：\n$$s_0=1-\\mu(p_0)+\\mu(p_0)s^\\star_0,\\qquad s_j=\\mu(p_0)s^\\star_j\\ (j>0).$$\n求导并利用$s^\\star$的对称性，\n$$\\frac{\\partial s_j}{\\partial p_0}-\\frac{\\partial s_0}{\\partial p_j}=\\mu'(p_0)\\,s^\\star_j,\\qquad\\text{从而}\\qquad\n\\frac{\\mu'(p_0)}{\\mu(p_0)}=\\frac1{s_j}\\Bigl(\\frac{\\partial s_j}{\\partial p_0}-\\frac{\\partial s_0}{\\partial p_j}\\Bigr).$$\n不对称的大小识别了注意概率随默认选项价格的变化，再加上价格趋于无穷时人人都醒来的条件，就识别了$\\mu$本身。这不需要问卷，也不需要事先规定哪些属性只影响注意。"
     },
     {
-     "title": "信息摩擦与保险计划选择",
+     "title": "Handel and Kolstad（2015）：信息摩擦与保险计划选择",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "HandelKolstad2015",
       "authors": "Handel and Kolstad",
@@ -3204,19 +3219,19 @@
      "number": "8.8",
      "subsections": [
       {
-       "title": "Willis与Rosen：教育与自选择",
+       "title": "Willis and Rosen（1979）：教育与自选择",
        "number": ""
       },
       {
-       "title": "边际政策的大学收益",
+       "title": "Carneiro, Heckman and Vytlacil（2011）：边际政策的大学收益",
        "number": ""
       },
       {
-       "title": "从IV估计量到政策相关参数",
+       "title": "Mogstad, Santos and Torgovitsky（2018）：从IV估计量到政策相关参数",
        "number": ""
       },
       {
-       "title": "有替代选项的公共项目",
+       "title": "Kline and Walters（2016）：有替代选项的公共项目",
        "number": ""
       }
      ]
@@ -3232,8 +3247,9 @@
    "casesIntro": "本节读四项研究：用Roy模型解释大学选择的经典研究、用MTE评价边际政策的研究、从IV估计量推断政策相关参数的方法，以及在有替代选项时评价公共项目的研究。前两项与最后一项各配一个知道真值的小经济；第三项的数值例子本身就可以完全复现。",
    "cases": [
     {
-     "title": "Willis与Rosen：教育与自选择",
+     "title": "Willis and Rosen（1979）：教育与自选择",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "WillisRosen1979",
       "authors": "Willis and Rosen",
@@ -3246,8 +3262,9 @@
      "intro": "<strong>问题与做法。</strong>Willis and Rosen (1979)问：上大学是不是一个经济决策，上大学者是不是“能力更高”的人？他们用第8.3节的Roy模型：大学（A）与高中（B）两个部门各有一条对数收入方程，$\\log y_j=X\\beta_j+u_j$，上大学当且仅当\n$$\\alpha_0+\\alpha_1(\\log y_A-\\log y_B)+\\alpha_4 Z-\\eta>0,$$\n$X$含能力测验分数，$Z$含只影响成本与偏好的家庭背景。估计分三步，方法来自Lee：先用全部外生变量做简约式Probit；再在每个部门用OLS估计带逆Mills比的收入方程，修正选择偏误；最后用估计的系数为每个人预测$\\log(\\hat y_A/\\hat y_B)$，代入结构Probit。结构Probit的系数是$\\alpha/\\sigma$，识别要求$X$与$Z$各有对方没有的变量，否则预测的收入差与其他回归元共线。"
     },
     {
-     "title": "边际政策的大学收益",
+     "title": "Carneiro, Heckman and Vytlacil（2011）：边际政策的大学收益",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "CarneiroHeckmanVytlacil2011",
       "authors": "Carneiro, Heckman, and Vytlacil",
@@ -3260,8 +3277,9 @@
      "intro": "<strong>问题与做法。</strong>Carneiro, Heckman, and Vytlacil (2011)问：扩大大学入学的政策，新增的学生能得到多大的收益？他们用第8.4节的工具：在$D=1\\{P(Z)\\ge U_D\\}$下，$\\E[Y\\mid P=p]$对$p$的导数就是$\\MTE(p)$，即local IV。政策的效应是MTE的加权平均，权重取决于政策怎样移动倾向得分。按同一比例提高每个人上大学概率的政策$P\\to(1+\\alpha)P$，当$\\alpha\\to0$时的边际效应为\n$$\\text{MPRTE}=\\frac{\\E[P\\,\\MTE(P)]}{\\E[P]},$$\n它比IV更重视倾向得分高、因而$u$较大的人。"
     },
     {
-     "title": "从IV估计量到政策相关参数",
+     "title": "Mogstad, Santos and Torgovitsky（2018）：从IV估计量到政策相关参数",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "MogstadSantosTorgovitsky2018",
       "authors": "Mogstad, Santos, and Torgovitsky",
@@ -3274,8 +3292,9 @@
      "intro": "Mogstad, Santos, and Torgovitsky (2018)回答的问题是：工具只移动一部分人，怎样用它对其他人的效应作推断？他们的出发点是一个观察：IV估计量与目标参数都是同样两条潜在结果曲线的加权平均，权重已知，所以知道前者就约束了后者。任一形如$\\beta_s=\\E[s(D,Z)Y]$的量都满足\n$$\\beta_s=\\E\\Bigl[\\int_0^1\\mu_0(u)s(0,Z)\\1\\{u>P\\}\\dd u\\Bigr]+\\E\\Bigl[\\int_0^1\\mu_1(u)s(1,Z)\\1\\{u\\le P\\}\\dd u\\Bigr],$$\n只需把$Y=DY_1+(1-D)Y_0$代入，再对$U_D$积分。IV斜率对应$s=(Z-\\E Z)/\\Cov(D,Z)$，OLS斜率对应$s=(D-\\E D)/\\Var(D)$，两阶段最小二乘的系数也有这种形式，他们称这些量为<strong>类IV估计量</strong>。给定一组估计量与曲线的可行集，目标的上下界是两个线性规划，这就是第8.5节的做法。"
     },
     {
-     "title": "有替代选项的公共项目",
+     "title": "Kline and Walters（2016）：有替代选项的公共项目",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "KlineWalters2016",
       "authors": "Kline and Walters",
@@ -3693,55 +3712,27 @@
      "number": "9.9",
      "subsections": [
       {
-       "title": "双胞胎与交叉报告",
+       "title": "Ashenfelter and Krueger（1994）：双胞胎与交叉报告",
        "number": ""
       },
       {
-       "title": "调查收入的误差结构",
+       "title": "Bound and Krueger（1991）：调查收入的误差结构",
        "number": ""
       },
       {
-       "title": "Hamilton：经济周期的状态转换",
+       "title": "Hamilton（1989）：经济周期的状态转换",
        "number": ""
       },
       {
-       "title": "Erdem与Keane：品牌的学习",
+       "title": "Erdem and Keane（1996）：品牌的学习",
        "number": ""
       },
       {
-       "title": "Fernández-Villaverde与Rubio-Ramírez：宏观模型的粒子似然",
+       "title": "Fernández-Villaverde and Rubio-Ramírez（2007）：宏观模型的粒子似然",
        "number": ""
       },
       {
-       "title": "技能形成技术",
-       "number": ""
-      },
-      {
-       "title": "技术函数",
-       "number": ""
-      },
-      {
-       "title": "政策乘数",
-       "number": ""
-      },
-      {
-       "title": "投资的内生性",
-       "number": ""
-      },
-      {
-       "title": "测量误差与技术参数",
-       "number": ""
-      },
-      {
-       "title": "数据增广",
-       "number": ""
-      },
-      {
-       "title": "跨期的测量锚",
-       "number": ""
-      },
-      {
-       "title": "规范化与政策单位",
+       "title": "Cunha, Heckman and Schennach（2010）：技能形成技术",
        "number": ""
       }
      ]
@@ -3757,8 +3748,9 @@
    "casesIntro": "本节读六项研究：用双胞胎的交叉报告纠正教育回报的测量误差，用行政记录检验调查收入的误差结构，宏观时间序列中的状态转换，消费者的品牌学习，非线性宏观模型的似然估计，以及估计儿童技能形成技术的研究。前五项各配一个知道真值的小经济或本章已有的算例；最后一项与本章的测量方法关系最深，所以把它用到的技术一起讲。",
    "cases": [
     {
-     "title": "双胞胎与交叉报告",
+     "title": "Ashenfelter and Krueger（1994）：双胞胎与交叉报告",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "AshenfelterKrueger1994",
       "authors": "Ashenfelter and Krueger",
@@ -3771,8 +3763,9 @@
      "intro": "<strong>问题与做法。</strong>Ashenfelter and Krueger (1994)用同卵双胞胎估计教育回报。双胞胎差分消除了家庭背景与遗传能力，却放大了测量误差的相对作用：受教育年数的真实差异在双胞胎之间很小，报告误差却不会因差分而减少，可靠性比因此大幅下降（式(9.7)）。他们的设计是第9.1节的重复测量：每个双胞胎既报告自己的受教育年数，也报告同胞的，于是每人的教育有两个报告。差分方程\n$$y_{1i}-y_{2i}=\\beta(S_{1i}^{1}-S_{2i}^{2})+\\varepsilon_{1i}-\\varepsilon_{2i}$$\n中的$S_{1i}^1-S_{2i}^2$是两人的自报之差，用交叉报告之差$S_{1i}^2-S_{2i}^1$（2号对1号的报告减1号对2号的报告）作工具，在经典误差下就是一致的。"
     },
     {
-     "title": "调查收入的误差结构",
+     "title": "Bound and Krueger（1991）：调查收入的误差结构",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BoundKrueger1991",
       "authors": "Bound and Krueger",
@@ -3785,8 +3778,9 @@
      "intro": "<strong>问题与做法。</strong>Bound and Krueger (1991)把1978年3月当前人口调查（CPS）中1976与1977年的自报收入，与社会保障的行政工资记录相匹配，直接估计收入的测量误差。把行政记录当作真值$y$，自报收入$y^\\ast=y+v$，他们发现$v$在两年之间正相关，并且与真实收入负相关，即第9.1节的均值回归误差。经典误差下的可靠性公式不再适用，他们用的是回归意义上的可靠性\n$$\\lambda=\\frac{\\Cov(y^\\ast,y)}{\\Var(y^\\ast)},$$\n它就是$y^\\ast$作解释变量时的衰减因子。"
     },
     {
-     "title": "Hamilton：经济周期的状态转换",
+     "title": "Hamilton（1989）：经济周期的状态转换",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "Hamilton1989",
       "authors": "Hamilton",
@@ -3799,8 +3793,9 @@
      "intro": "<strong>问题与做法。</strong>Hamilton (1989)把美国实际GNP的季度增长率写成一个两状态Markov链驱动的过程：\n$$\\Delta y_t-\\mu(s_t)=\\sum_{k=1}^4\\phi_k\\bigl(\\Delta y_{t-k}-\\mu(s_{t-k})\\bigr)+\\varepsilon_t,\\qquad \\mu(s)=\\alpha_0+\\alpha_1 s,$$\n$s_t=1$的停留概率为$p$，$s_t=0$为$q$。研究者看不到状态。因为自回归项含过去四期的状态，滤波在32种状态历史$(s_t,\\dots,s_{t-4})$上递推，这就是第9.5节的前向递推，只是发射分布是正态的；它同时给出似然，于是参数可以用最大似然估计。"
     },
     {
-     "title": "Erdem与Keane：品牌的学习",
+     "title": "Erdem and Keane（1996）：品牌的学习",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "ErdemKeane1996",
       "authors": "Erdem and Keane",
@@ -3813,8 +3808,9 @@
      "intro": "Erdem and Keane (1996)研究洗衣粉市场的品牌选择。消费者不知道各品牌的属性，使用经验与广告都提供关于属性的带噪信号，消费者按Bayes法则更新期望。这是第9.7节的正态学习，第9.7.6节的小模型就是它的简化：信念的方差随经验递减，风险厌恶的消费者对不熟悉的品牌要求补偿，前瞻的消费者还看重试用带来的信息。"
     },
     {
-     "title": "Fernández-Villaverde与Rubio-Ramírez：宏观模型的粒子似然",
+     "title": "Fernández-Villaverde and Rubio-Ramírez（2007）：宏观模型的粒子似然",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "FernandezVillaverdeRubioRamirez2007",
       "authors": "Fernández-Villaverde and Rubio-Ramírez",
@@ -3827,8 +3823,9 @@
      "intro": "<strong>问题与做法。</strong>线性化的DSGE模型是一个线性高斯状态空间，Kalman滤波给出它的似然（第25章）。但这是线性近似经济的似然，不是模型本身的似然；作者此前证明，解的二阶近似误差对似然有一阶的影响，而且误差随样本长度累积。Fernández-Villaverde and Rubio-Ramírez (2007)说明粒子滤波使非线性、非正态模型的似然推断成为可能：粒子滤波给出似然的无偏估计，可以用于最大似然或贝叶斯估计，也可以比较不同的模型。"
     },
     {
-     "title": "技能形成技术",
+     "title": "Cunha, Heckman and Schennach（2010）：技能形成技术",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "CunhaHeckmanSchennach2010",
       "authors": "Cunha, Heckman, and Schennach",
@@ -3839,72 +3836,6 @@
       "url": ""
      },
      "intro": "Cunha, Heckman, and Schennach (2010)估计儿童认知与非认知技能的多阶段生产技术。技能与父母投资都是潜在变量，各由多项测验与问卷测量。作者证明了一大类含内生投入的非线性因子模型的非参数识别，用的就是本章的重复测量与因子结构。数据是全国青年纵向调查母亲样本的子女（CNLSY/79），两个阶段的技术，技能锚定在受教育年数上。他们的主要发现是：认知技能生产中，投资与已有技能的替代性在较晚阶段下降，基准模型（表I）中替代弹性从第一阶段的2.57降到第二阶段的0.42；非认知技能中大致不随阶段变化；两种技能的自生产率都在第二阶段更高，非认知技能在第一阶段促进认知技能。对大多数劣势组合，早期投资相对晚期投资更优。所用的认知与非认知能力测量合计解释了受教育年数34%的变异（认知16%，非认知12%），测量到的父母投资解释了15%。由于技能没有天然单位，作者把技能的尺度锚定在成年结果上，使不同阶段的技能可以比较；他们报告，锚定方式会影响估计，而放松因子的正态假设影响不大。"
-    },
-    {
-     "title": "技术函数",
-     "number": "",
-     "paper": null,
-     "intro": "技术函数决定早期投资能否由后期弥补。常用的CES技术为\n$$f(S,I)=A\\{\\gamma S^\\rho+(1-\\gamma)I^\\rho\\}^{1/\\rho},$$\n$\\rho\\to0$时连续收敛到Cobb–Douglas。$1/(1-\\rho)$是技能与投资的替代弹性：替代性越低，早期投资不足越难由后期投资弥补。记$Q=\\gamma S^\\rho+(1-\\gamma)I^\\rho$，对$S$与$I$各求一次导数，得到\n$$f_{SI}=A\\gamma(1-\\gamma)(1-\\rho)Q^{1/\\rho-2}S^{\\rho-1}I^{\\rho-1}.$$\n除$1-\\rho$以外各项都是正的，所以$\\rho<1$时为正，$\\rho>1$时为负。在$S=1.3$、$I=0.7$、$\\gamma=0.6$处，$\\rho=0.5$时$f_{SI}=0.126$（与中心差分一致），$\\rho=1.5$时为$-0.098$。"
-    },
-    {
-     "title": "政策乘数",
-     "number": "",
-     "paper": null,
-     "intro": "一项给父母发放补贴的政策，对孩子最终的技能有多大作用？父母的投资会随孩子的技能调整，$I_t=g_t(S_t,p)$，所以政策$p$既直接改变投资，也通过技能改变后续投资。用$D_t=\\partial S_t/\\partial p$表示$t$期技能对政策的导数，对技术方程用链式法则：\n$$D_{t+1}=f_{S,t}D_t+f_{I,t}\\{g_{S,t}D_t+g_{p,t}\\},\\qquad D_0=0.$$\n大括号里第一项是投资对技能的反馈，第二项是政策的直接作用。"
-    },
-    {
-     "title": "投资的内生性",
-     "number": "",
-     "paper": null,
-     "intro": "父母根据孩子的技能与自己掌握的信息选择投资，投资因此与技术冲击相关，这是一个内生性问题。设投资规则$I_t=\\pi_t(S_t,Z_t,V_t)$对未观测的$V_t$严格递增，$Z_t$（如父母所在地的工资或价格）影响投资而不进入技术。第2章的控制函数在这里可以用：投资规则单调，所以给定$(S_t,Z_t)$，投资的条件秩就是$V_t$的条件秩，\n$$U_t=F_{I\\mid S,Z}(I_t\\mid S_t,Z_t)=F_{V\\mid S,Z}(V_t\\mid S_t,Z_t).$$\n若$(V_t,\\omega_{t+1})\\indep Z_t\\mid S_t$，给定$(S_t,U_t)$以后技术冲击与投资独立，$U_t$就是控制函数。"
-    },
-    {
-     "title": "测量误差与技术参数",
-     "number": "",
-     "paper": {
-      "key": "CunhaHeckmanSchennach2010",
-      "authors": "Cunha, Heckman, and Schennach",
-      "year": "2010",
-      "title": "Estimating the Technology of Cognitive and Noncognitive Skill Formation",
-      "venue": "Econometrica",
-      "doi": "10.3982/ECTA6551",
-      "url": ""
-     },
-     "intro": "测量误差对动态技术的影响比静态回归更严重，因为两个解释变量相关。设对数技能$\\theta_1=0.7\\theta_0+0.3\\log I+\\eta$，投资随$\\theta_0$上升，两期技能各由测验测量，误差标准差为0.7。在5000名儿童的样本中，若技能可见，回归得$(0.686,0.303)$。用测验成绩代替技能，得$(0.370,0.554)$：自生产率被低估近一半，投资的作用被高估近一倍。投资与真实技能相关，它吸收了被测量误差削弱的那部分，和命题9.2说的一样。用$\\theta_0$的第二次测验作工具，得$(0.711,0.272)$。这是第9.1节重复测量工具的动态版本；非线性技术需要第9.2—9.3节的分布识别(Cunha, Heckman, and Schennach 2010)。"
-    },
-    {
-     "title": "数据增广",
-     "number": "",
-     "paper": {
-      "key": "TannerWong1987",
-      "authors": "Tanner and Wong",
-      "year": "1987",
-      "title": "The Calculation of Posterior Distributions by Data Augmentation",
-      "venue": "Journal of the American Statistical Association",
-      "doi": "10.1080/01621459.1987.10478458",
-      "url": ""
-     },
-     "intro": "工具变量只用到二阶矩。完整的似然方法要对两期技能积分，第3.6.5节的数据增广在这里很自然：把潜在技能当作参数一起抽样。两期模型为\n$$\\log I=\\pi_SS_0+V,\\qquad S_1=c_SS_0+c_I\\log I+E,\\qquad M_{tj}=\\lambda_{tj}S_t+U_{tj},$$\n各冲击是独立的正态，$S_0\\sim N(0,1)$。为突出机制，测量载荷、投资规则与各方差都视为已知，只推断$c=(c_S,c_I)$。"
-    },
-    {
-     "title": "跨期的测量锚",
-     "number": "",
-     "paper": null,
-     "intro": "动态因子模型要在每一期固定潜在技能的单位，常见的做法是令每期第一个测验的载荷为1。如果不同年龄使用的测验对技能的敏感度不同，这一做法改变的就不只是单位。"
-    },
-    {
-     "title": "规范化与政策单位",
-     "number": "",
-     "paper": {
-      "key": "AgostinelliWiswall2025",
-      "authors": "Agostinelli and Wiswall",
-      "year": "2025",
-      "title": "Estimating the Technology of Children's Skill Formation",
-      "venue": "Journal of Political Economy",
-      "doi": "10.1086/733396",
-      "url": ""
-     },
-     "intro": "技能的单位可以换，技术函数族能不能跟着换？令$S'=aS$、$I'=bI$、$S_+'=cS_+$。对$\\rho\\neq0$，取$K=\\gamma a^{-\\rho}+(1-\\gamma)b^{-\\rho}$、$A'=cAK^{1/\\rho}$、$\\gamma'=\\gamma a^{-\\rho}/K$，则$f'(aS,bI)=cf(S,I)$，所以CES族在单位变换下封闭。程序在$(a,b,c)=(2,0.5,3)$处核对，两边都等于3.114。translog对正比例变换同样封闭，把$\\log S=\\log S'-\\log a$与$\\log I=\\log I'-\\log b$代入、收集各项即可。一般的加性平移$S'=S+d$破坏对数与齐次结构，两族都不封闭。"
     }
    ],
    "figures": [
@@ -4306,11 +4237,11 @@
      "number": "10.9",
      "subsections": [
       {
-       "title": "Rust：发动机更换",
+       "title": "Rust（1987）：发动机更换",
        "number": ""
       },
       {
-       "title": "Gourinchas与Parker：生命周期中的消费",
+       "title": "Gourinchas and Parker（2002）：生命周期中的消费",
        "number": ""
       },
       {
@@ -4331,8 +4262,9 @@
    "casesIntro": "本节读五项研究：结构动态离散选择的起点，用生命周期储蓄模型解释消费曲线的研究，以及三项在后面各章细读的研究：职业生涯选择、退休与社会保障、用社会实验验证动态模型。前两项各配一个知道真值的小经济。",
    "cases": [
     {
-     "title": "Rust：发动机更换",
+     "title": "Rust（1987）：发动机更换",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "Rust1987",
       "authors": "Rust",
@@ -4345,8 +4277,9 @@
      "intro": "<strong>问题与做法。</strong>Rust (1987)问：威斯康星州麦迪逊市公交公司维修主管Harold Zurcher更换发动机的决策，是否遵循一个在维修成本与更换成本之间权衡的最优停时规则？状态是累计里程$x$，离散成90格、每格5000英里；行动是继续使用或更换。继续使用的当期成本为$c(x,\\theta_1)=0.001\\,\\theta_{11}x$，更换的成本为$RC$，再加上研究者看不到的极值冲击，于是选择概率由第10.3节的log-sum公式给出：\n$$P(\\text{更换}\\mid x)=\\frac{\\exp\\{-RC+\\beta EV(0)\\}}{\\exp\\{-c(x)+\\beta EV(x)\\}+\\exp\\{-RC+\\beta EV(0)\\}},$$\n$EV$是平滑Bellman方程的不动点。里程每月增加0、1或2格的概率$\\theta_3$先由里程数据单独估计。Rust为此提出嵌套不动点算法（第10.4节）：外层对$(RC,\\theta_{11})$做最大似然，内层对每个候选参数求解Bellman方程。"
     },
     {
-     "title": "Gourinchas与Parker：生命周期中的消费",
+     "title": "Gourinchas and Parker（2002）：生命周期中的消费",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "GourinchasParker2002",
       "authors": "Gourinchas and Parker",
@@ -4361,15 +4294,8 @@
     {
      "title": "其他三项研究",
      "number": "",
-     "paper": {
-      "key": "KeaneWolpin1997",
-      "authors": "Keane and Wolpin",
-      "year": "1997",
-      "title": "The Career Decisions of Young Men",
-      "venue": "Journal of Political Economy",
-      "doi": "10.1086/262080",
-      "url": ""
-     },
+     "isPaper": false,
+     "paper": null,
      "intro": "Keane and Wolpin (1997)估计了一个关于上学、工作与职业选择的动态模型，数据是NLSY79中的青年白人男性。个人每年在上学、白领工作、蓝领工作、参军与留在家中之间选择，人力资本随上学与各类工作经验积累。状态空间很大，作者用第3章Keane and Wolpin (1994)的模拟与插值近似期望最大值，这是第10.2.9节的近似动态规划在经验研究中的早期应用。常被引用的结论是：16岁时的初始差异解释了终身效用差异的大部分。模型、识别与反事实在第19.9.1节细读。"
     }
    ],
@@ -4649,23 +4575,23 @@
      "number": "11.8",
      "subsections": [
       {
-       "title": "Bresnahan与Reiss：进入阈值",
+       "title": "Bresnahan and Reiss（1991）：进入阈值",
        "number": ""
       },
       {
-       "title": "Ciliberto与Tamer：不加选择假设的航空市场",
+       "title": "Ciliberto and Tamer（2009）：不加选择假设的航空市场",
        "number": ""
       },
       {
-       "title": "Seim：进入与位置选择",
+       "title": "Seim（2006）：进入与位置选择",
        "number": ""
       },
       {
-       "title": "Bajari、Hong与Ryan：均衡选择的估计",
+       "title": "Bajari, Hong and Ryan（2010）：均衡选择的估计",
        "number": ""
       },
       {
-       "title": "Bramoullé、Djebbari与Fortin：网络中的同伴效应",
+       "title": "Bramoullé, Djebbari and Fortin（2009）：网络中的同伴效应",
        "number": ""
       }
      ]
@@ -4680,8 +4606,9 @@
    "casesIntro": "本节读五项研究：只用进入者数量估计竞争的研究，不加选择假设的航空市场研究，不完全信息的进入与产品定位，完全信息博弈中均衡选择的估计，以及网络中的同伴效应。前两项在第13章细读，这里只说它们与本章的联系；后三项各有一个知道真值的小经济。",
    "cases": [
     {
-     "title": "Bresnahan与Reiss：进入阈值",
+     "title": "Bresnahan and Reiss（1991）：进入阈值",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BresnahanReiss1991",
       "authors": "Bresnahan and Reiss",
@@ -4694,8 +4621,9 @@
      "intro": "Bresnahan and Reiss (1991)研究美国偏远小城镇的零售与专业服务市场：医生、牙医、药店、水管工、轮胎经销商等。这些城镇地理上孤立，市场边界比较清楚。他们用第11.2节的有序模型估计支持$n$家企业所需要的市场规模，再比较每家企业的阈值：若第$n$家进入所需的人均市场规模明显高于第$n-1$家，说明多一家企业使竞争更激烈、单位利润下降。主要发现是，竞争行为的变化几乎都发生在第二、第三家企业进入时，三到五家以后再多一家影响很小。这个结论只用了市场规模与企业数量，不需要价格或成本数据；它的前提是市场规模度量可比、企业近似对称、只观察数量时模型对数量是完整的。模型、数据与一个知道真值的算例在第13.9.2节。"
     },
     {
-     "title": "Ciliberto与Tamer：不加选择假设的航空市场",
+     "title": "Ciliberto and Tamer（2009）：不加选择假设的航空市场",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "CilibertoTamer2009",
       "authors": "Ciliberto and Tamer",
@@ -4708,8 +4636,9 @@
      "intro": "Ciliberto and Tamer (2009)研究美国航空公司进入航线市场，允许各家航空公司的竞争效应不同，不对均衡选择作任何假设。这是第11.5节的做法：每个候选参数给出结果概率的上下界，识别集合是使数据频率落在界内的参数。他们发现大型航空公司的竞争效应与低成本航空公司及西南航空不同，政策实验是废除Wright修正案对达拉斯Love机场航线竞争的影响。不必假设选择，结论以集合的形式给出，反事实也要在识别集合上取范围。模型、估计与反事实在第13.9.3节细读。"
     },
     {
-     "title": "Seim：进入与位置选择",
+     "title": "Seim（2006）：进入与位置选择",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "Seim2006",
       "authors": "Seim",
@@ -4722,8 +4651,9 @@
      "intro": "<strong>问题与做法。</strong>Seim (2006)问：企业怎样在进入的同时选择产品定位，空间差异化能为企业挡住多少竞争？她把进入与位置选择写成一个不完全信息博弈：$F$个潜在进入者各自私下观察自己在各位置的收益冲击（I型极值分布），根据对手选择各位置的概率决定是否进入、进入哪里。位置$\\ell$的收益为\n$$\\pi_\\ell=X_\\ell\\beta+\\xi+\\sum_b\\gamma_b\\,\\E[N_{b\\ell}]+\\varepsilon_\\ell,\\qquad \\E[N_{b\\ell}]=(F-1)\\sum_{k:\\,d_{k\\ell}\\in b}p_k,$$\n$b$是距离带，$p_k$是一个对手选位置$k$的概率。对称的Bayes–Nash均衡是$p=\\Lambda(v(p))$的不动点，这就是第11.3节的概率均衡。似然由均衡概率写出，用嵌套不动点估计；私人信息使企业很多、位置很多时也能计算。市场层面的效应$\\xi$由“预测的进入数等于实际进入数”逐个市场反解。"
     },
     {
-     "title": "Bajari、Hong与Ryan：均衡选择的估计",
+     "title": "Bajari, Hong and Ryan（2010）：均衡选择的估计",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BajariHongRyan2010",
       "authors": "Bajari, Hong, and Ryan",
@@ -4736,8 +4666,9 @@
      "intro": "<strong>问题与做法。</strong>完全信息的离散博弈常有多重均衡，模型不完整。Bajari, Hong, and Ryan (2010)的做法是把均衡选择机制当作模型的一部分来估计：给定参数与冲击，先计算博弈的全部纯策略与混合策略Nash均衡，再让每个均衡被选中的概率依赖它的可计算特征，例如是否使联合利润最大、是否被另一个均衡Pareto占优、是否是混合策略、Nash乘积的大小。似然要对冲击积分，作者用重要性抽样的模拟估计量，并在排除限制与无穷远处的识别下证明了较弱函数形式下的识别。"
     },
     {
-     "title": "Bramoullé、Djebbari与Fortin：网络中的同伴效应",
+     "title": "Bramoullé, Djebbari and Fortin（2009）：网络中的同伴效应",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BramoulleDjebbariFortin2009",
       "authors": "Bramoullé, Djebbari, and Fortin",
@@ -5076,6 +5007,7 @@
     {
      "title": "Nevo（2001）：谷物早餐的市场势力",
      "number": "12.9.1",
+     "isPaper": true,
      "paper": {
       "key": "Nevo2001",
       "authors": "Nevo",
@@ -5090,6 +5022,7 @@
     {
      "title": "Petrin（2002）：小型厢式车的福利",
      "number": "12.9.2",
+     "isPaper": true,
      "paper": {
       "key": "Petrin2002",
       "authors": "Petrin",
@@ -5447,6 +5380,7 @@
     {
      "title": "Gowrisankaran, Nevo and Town（2015）：医院与保险公司的议价",
      "number": "13.9.1",
+     "isPaper": true,
      "paper": {
       "key": "GowrisankaranNevoTown2015",
       "authors": "Gowrisankaran, Nevo, and Town",
@@ -5461,6 +5395,7 @@
     {
      "title": "Bresnahan and Reiss（1991）：竞争随进入者增多变化多快",
      "number": "13.9.2",
+     "isPaper": true,
      "paper": {
       "key": "BresnahanReiss1991",
       "authors": "Bresnahan and Reiss",
@@ -5475,6 +5410,7 @@
     {
      "title": "Ciliberto and Tamer（2009）：航空市场的异质竞争效应",
      "number": "13.9.3",
+     "isPaper": true,
      "paper": {
       "key": "CilibertoTamer2009",
       "authors": "Ciliberto and Tamer",
@@ -5753,6 +5689,7 @@
     {
      "title": "Guerre, Perrigne and Vuong（2000）：不靠参数的反演",
      "number": "14.9.1",
+     "isPaper": true,
      "paper": {
       "key": "GuerrePerrigneVuong2000",
       "authors": "Guerre, Perrigne, and Vuong",
@@ -5767,6 +5704,7 @@
     {
      "title": "Bajari, Houghton and Tadelis（2014）：不完全合同的投标",
      "number": "14.9.2",
+     "isPaper": true,
      "paper": {
       "key": "BajariHoughtonTadelis2014",
       "authors": "Bajari, Houghton, and Tadelis",
@@ -5992,6 +5930,7 @@
     {
      "title": "Hendel and Nevo（2006）：囤货与促销",
      "number": "15.8.1",
+     "isPaper": true,
      "paper": {
       "key": "HendelNevo2006",
       "authors": "Hendel and Nevo",
@@ -6006,6 +5945,7 @@
     {
      "title": "Ryan（2012）：水泥业的环境规制",
      "number": "15.8.2",
+     "isPaper": true,
      "paper": {
       "key": "Ryan2012",
       "authors": "Ryan",
@@ -6020,15 +5960,8 @@
     {
      "title": "近年的应用",
      "number": "",
-     "paper": {
-      "key": "CollardWexler2013",
-      "authors": "Collard-Wexler",
-      "year": "2013",
-      "title": "Demand Fluctuations in the Ready-Mix Concrete Industry",
-      "venue": "Econometrica",
-      "doi": "10.3982/ECTA6877",
-      "url": ""
-     },
+     "isPaper": false,
+     "paper": null,
      "intro": "这个框架已经用到不少政策问题上。Collard-Wexler (2013)估计预拌混凝土行业，说明需求波动的规模怎样塑造行业结构。Sweeting (2013)用它研究美国广播电台版权费的动态反应，说明长期的格式调整大于短期。Igami (2017)用硬盘行业的技术换代检验创新者困境：在位者是否换代，要看蚕食、竞争和成本三种力量的大小，只有动态博弈能把它们分开。Fowlie, Reguant, and Ryan (2016)在水泥业中比较碳定价的方案，把市场势力和排放放到一起，结论是排放规制加重了市场势力的扭曲，贸易部门的排放泄漏又抵消了国内减排，两者合起来可能使完全内部化排放外部性的政策反而造成社会福利损失。这些研究都要回答一个共同的问题：观察到的行为对应哪个均衡，反事实时均衡是否还是那一个。"
     }
    ],
@@ -6287,7 +6220,7 @@
      "number": "16.9",
      "subsections": [
       {
-       "title": "De Loecker、Eeckhout与Unger（2020）：美国的加成",
+       "title": "De Loecker, Eeckhout and Unger（2020）：美国的加成",
        "number": "16.9.1"
       },
       {
@@ -6313,8 +6246,9 @@
    "casesIntro": "",
    "cases": [
     {
-     "title": "De Loecker、Eeckhout与Unger（2020）：美国的加成",
+     "title": "De Loecker, Eeckhout and Unger（2020）：美国的加成",
      "number": "16.9.1",
+     "isPaper": true,
      "paper": {
       "key": "DeLoeckerEeckhoutUnger2020",
       "authors": "De Loecker, Eeckhout, and Unger",
@@ -6329,6 +6263,7 @@
     {
      "title": "Hsieh and Klenow（2009）：中国和印度的错配",
      "number": "16.9.2",
+     "isPaper": true,
      "paper": {
       "key": "HsiehKlenow2009",
       "authors": "Hsieh and Klenow",
@@ -6343,6 +6278,7 @@
     {
      "title": "David and Venkateswaran（2019）：错配从哪里来",
      "number": "16.9.3",
+     "isPaper": true,
      "paper": {
       "key": "DavidVenkateswaran2019",
       "authors": "David and Venkateswaran",
@@ -6648,6 +6584,7 @@
     {
      "title": "Blundell, Costa Dias, Meghir and Shaw（2016）：税收抵免的长期效果",
      "number": "17.9.1",
+     "isPaper": true,
      "paper": {
       "key": "BlundellCostaDiasMeghirShaw2016",
       "authors": "Blundell et al.",
@@ -6908,6 +6845,7 @@
     {
      "title": "Lamadon, Mogstad and Setzler（2022）：租金、补偿性差异和错配",
      "number": "18.9.1",
+     "isPaper": true,
      "paper": {
       "key": "LamadonMogstadSetzler2022",
       "authors": "Lamadon, Mogstad, and Setzler",
@@ -7186,6 +7124,7 @@
     {
      "title": "Keane and Wolpin（1997）：年轻人的职业选择",
      "number": "19.9.1",
+     "isPaper": true,
      "paper": {
       "key": "KeaneWolpin1997",
       "authors": "Keane and Wolpin",
@@ -7200,6 +7139,7 @@
     {
      "title": "Low, Meghir and Pistaferri（2010）：工资风险和就业风险",
      "number": "19.9.2",
+     "isPaper": true,
      "paper": {
       "key": "LowMeghirPistaferri2010",
       "authors": "Low, Meghir, and Pistaferri",
@@ -7496,6 +7436,7 @@
     {
      "title": "Abdulkadiroğlu, Agarwal and Pathak（2017）：协调录取的福利",
      "number": "20.8.1",
+     "isPaper": true,
      "paper": {
       "key": "AbdulkadirogluAgarwalPathak2017",
       "authors": "Abdulkadiroğlu, Agarwal, and Pathak",
@@ -7510,6 +7451,7 @@
     {
      "title": "Attanasio, Meghir and Nix（2020）：印度儿童的认知和健康",
      "number": "20.8.2",
+     "isPaper": true,
      "paper": {
       "key": "AttanasioMeghirNix2020",
       "authors": "Attanasio, Meghir, and Nix",
@@ -7757,6 +7699,7 @@
     {
      "title": "Voena（2015）：离婚法和婚内的配置",
      "number": "21.9.1",
+     "isPaper": true,
      "paper": {
       "key": "Voena2015",
       "authors": "Voena",
@@ -8002,6 +7945,7 @@
     {
      "title": "Todd and Wolpin（2006）：用实验检验模型",
      "number": "22.8.1",
+     "isPaper": true,
      "paper": {
       "key": "ToddWolpin2006",
       "authors": "Todd and Wolpin",
@@ -8016,6 +7960,7 @@
     {
      "title": "Attanasio, Meghir and Santiago（2012）：用实验估计模型",
      "number": "22.8.2",
+     "isPaper": true,
      "paper": {
       "key": "AttanasioMeghirSantiago2012",
       "authors": "Attanasio, Meghir, and Santiago",
@@ -8030,6 +7975,7 @@
     {
      "title": "Kaboski and Townsend（2011）：信贷上限放宽以后",
      "number": "22.8.3",
+     "isPaper": true,
      "paper": {
       "key": "KaboskiTownsend2011",
       "authors": "Kaboski and Townsend",
@@ -8314,6 +8260,7 @@
     {
      "title": "Low and Pistaferri（2015）：残疾保险的激励和保险",
      "number": "23.7.1",
+     "isPaper": true,
      "paper": {
       "key": "LowPistaferri2015",
       "authors": "Low and Pistaferri",
@@ -8328,6 +8275,7 @@
     {
      "title": "French and Jones（2011）：医疗保险和退休",
      "number": "23.7.2",
+     "isPaper": true,
      "paper": {
       "key": "FrenchJones2011",
       "authors": "French and Jones",
@@ -8633,6 +8581,7 @@
     {
      "title": "Einav, Finkelstein and Cullen（2010）：用价格变化度量逆向选择的福利损失",
      "number": "24.9.1",
+     "isPaper": true,
      "paper": {
       "key": "EinavFinkelsteinCullen2010",
       "authors": "Einav, Finkelstein, and Cullen",
@@ -8647,6 +8596,7 @@
     {
      "title": "Handel（2013）：惯性和逆向选择",
      "number": "24.9.2",
+     "isPaper": true,
      "paper": {
       "key": "Handel2013",
       "authors": "Handel",
@@ -8895,11 +8845,11 @@
      "number": "25.9",
      "subsections": [
       {
-       "title": "Smets and Wouters（2007）",
+       "title": "Smets and Wouters（2007）：美国经济周期中的冲击与摩擦",
        "number": "25.9.1"
       },
       {
-       "title": "Nakamura and Steinsson（2014）",
+       "title": "Nakamura and Steinsson（2014）：用地区军费支出估计财政乘数",
        "number": "25.9.2"
       }
      ]
@@ -8912,8 +8862,9 @@
    "casesIntro": "",
    "cases": [
     {
-     "title": "Smets and Wouters（2007）",
+     "title": "Smets and Wouters（2007）：美国经济周期中的冲击与摩擦",
      "number": "25.9.1",
+     "isPaper": true,
      "paper": {
       "key": "SmetsWouters2007",
       "authors": "Smets and Wouters",
@@ -8926,8 +8877,9 @@
      "intro": "<strong>问题与做法。</strong>Smets and Wouters (2007)问：一个有名义与实际摩擦的中型DSGE模型，能否像向量自回归那样拟合并预测美国的总量数据？各种摩擦和冲击在多大程度上是数据所需要的？模型以Christiano, Eichenbaum, and Evans (2005)为基础：家庭有外部习惯形成，工资由Calvo机制设定并部分指数化；企业有投资调整成本、可变的资本利用率和固定成本，价格也是Calvo粘性并部分指数化；货币政策是对通胀、产出缺口及其变化反应并有平滑的Taylor规则。冲击有七种：全要素生产率、风险溢价、投资专有技术、工资加成、价格加成、外生支出和货币政策。模型在平衡增长路径附近对数线性化，写成状态空间，用Kalman滤波求似然，按第25.3节的方法用随机游走Metropolis抽样作贝叶斯估计。观测变量是1966年第1季度至2004年第4季度的七个序列：产出、消费、投资和实际工资的增长率，工作时数，通胀和联邦基金利率。"
     },
     {
-     "title": "Nakamura and Steinsson（2014）",
+     "title": "Nakamura and Steinsson（2014）：用地区军费支出估计财政乘数",
      "number": "25.9.2",
+     "isPaper": true,
      "paper": {
       "key": "NakamuraSteinsson2014",
       "authors": "Nakamura and Steinsson",
@@ -9157,11 +9109,11 @@
      "number": "26.8",
      "subsections": [
       {
-       "title": "Kaplan, Moll and Violante（2018）",
+       "title": "Kaplan, Moll and Violante（2018）：货币政策怎样影响消费",
        "number": ""
       },
       {
-       "title": "Bayer, Born and Luetticke（2024）",
+       "title": "Bayer, Born and Luetticke（2024）：美国经济周期中的冲击、摩擦与不平等",
        "number": ""
       }
      ]
@@ -9173,8 +9125,9 @@
    "casesIntro": "",
    "cases": [
     {
-     "title": "Kaplan, Moll and Violante（2018）",
+     "title": "Kaplan, Moll and Violante（2018）：货币政策怎样影响消费",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "KaplanMollViolante2018",
       "authors": "Kaplan, Moll, and Violante",
@@ -9187,8 +9140,9 @@
      "intro": "Kaplan, Moll, and Violante (2018)问的是：货币政策到底怎样影响消费？代表性家庭的新凯恩斯模型（RANK）给出的回答是跨期替代：利率下降，人们把消费提前。可是总量数据里消费对利率的敏感度很低，微观数据里消费对暂时性收入的反应又很大，两者都和这个渠道不合。下面的数字来自AER发表版。"
     },
     {
-     "title": "Bayer, Born and Luetticke（2024）",
+     "title": "Bayer, Born and Luetticke（2024）：美国经济周期中的冲击、摩擦与不平等",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "BayerBornLuetticke2024",
       "authors": "Bayer, Born, and Luetticke",
@@ -9468,11 +9422,11 @@
      "number": "27.9",
      "subsections": [
       {
-       "title": "Fajgelbaum, Goldberg, Kennedy and Khandelwal（2020）",
+       "title": "Fajgelbaum, Goldberg, Kennedy and Khandelwal（2020）：2018年美国关税的福利",
        "number": "27.9.1"
       },
       {
-       "title": "Ahlfeldt, Redding, Sturm and Wolf（2015）",
+       "title": "Ahlfeldt, Redding, Sturm and Wolf（2015）：柏林的分裂与集聚经济",
        "number": ""
       },
       {
@@ -9490,8 +9444,9 @@
    "casesIntro": "",
    "cases": [
     {
-     "title": "Fajgelbaum, Goldberg, Kennedy and Khandelwal（2020）",
+     "title": "Fajgelbaum, Goldberg, Kennedy and Khandelwal（2020）：2018年美国关税的福利",
      "number": "27.9.1",
+     "isPaper": true,
      "paper": {
       "key": "FajgelbaumGoldbergKennedyEtAl2020",
       "authors": "Fajgelbaum et al.",
@@ -9504,8 +9459,9 @@
      "intro": "Fajgelbaum et al. (2020)评估美国2018年的关税和贸易伙伴的报复。这次变化规模很大：美国对12043种产品的进口关税从2.6%提高到16.6%，涉及3030亿美元，占进口的12.7%；伙伴对8073种美国产品的关税从7.3%提高到20.4%，涉及1270亿美元，占美国出口的8.2%。下面的数字来自QJE发表版。"
     },
     {
-     "title": "Ahlfeldt, Redding, Sturm and Wolf（2015）",
+     "title": "Ahlfeldt, Redding, Sturm and Wolf（2015）：柏林的分裂与集聚经济",
      "number": "",
+     "isPaper": true,
      "paper": {
       "key": "AhlfeldtReddingSturmWolf2015",
       "authors": "Ahlfeldt et al.",
@@ -9520,6 +9476,7 @@
     {
      "title": "Donaldson and Hornbeck（2016）：铁路的总效应",
      "number": "27.9.3",
+     "isPaper": true,
      "paper": {
       "key": "DonaldsonHornbeck2016",
       "authors": "Donaldson and Hornbeck",

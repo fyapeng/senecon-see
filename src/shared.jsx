@@ -16,8 +16,9 @@ export const partOfChapter = Object.fromEntries(
   book.parts.flatMap((p, i) => p.chapters.map((n) => [n, { ...p, index: i }])),
 );
 export const paperCases = book.chapters.flatMap((c) =>
-  c.cases.filter((k) => k.paper).map((k) => ({ ...k, chapter: c.number, chapterTitle: c.title })),
+  c.cases.filter((k) => k.isPaper && k.paper).map((k) => ({ ...k, chapter: c.number, chapterTitle: c.title })),
 );
+export const paperCount = new Set(paperCases.map((c) => c.paper.key)).size;
 
 /** HTML exported from the LaTeX book, with $...$ and $$...$$ typeset by KaTeX. */
 export function Rich({ html, as: Tag = "div", className }) {

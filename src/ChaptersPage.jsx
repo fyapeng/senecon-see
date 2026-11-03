@@ -154,7 +154,6 @@ function Chapter({ ch }) {
             <details className="case-card" key={c.title}>
               <summary>
                 <Rich as="span" html={c.title} />
-                {c.paper && <small>{c.paper.authors} ({c.paper.year})</small>}
               </summary>
               <Paper paper={c.paper} />
               {c.intro && <Rich html={c.intro} />}
