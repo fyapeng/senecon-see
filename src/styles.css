@@ -822,3 +822,11 @@ footer {
 
 .download-note { color: #66736f; font-size: 14px; line-height: 1.9; margin-top: 24px; }
 .download-note a { color: #795719; text-underline-offset: 3px; }
+
+/* New-edition placeholder (2026-11): status lines and the pending pages for /preface/ and /code/ */
+.hero-status { max-width: 450px; margin: 30px 0 0; padding-left: 14px; border-left: 2px solid var(--gold); color: var(--gold-soft); font-size: 15px; line-height: 1.8; }
+.status-note { margin-top: 28px; color: var(--teal); }
+.pending-page { min-height: 100vh; display: flex; align-items: center; background: var(--paper-light); color: var(--ink); }
+.pending-inner { max-width: 640px; }
+.pending-inner h1 { margin: 12px 0 18px; font-family: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", SimSun, serif; font-size: 36px; }
+.pending-inner p { line-height: 1.9; }

@@ -15,4 +15,4 @@ npm run dev
 
 推送到 `main` 后，GitHub Actions 构建并发布 `dist/client` 到 GitHub Pages。
 
-当前公开版本v2.0.0（2026-09-18）。下载地址统一维护于src/content/release.js；教材与解答CC BY-NC 4.0，原创配套代码MIT，第三方适配另保留原许可。Release自动生成的Source code档案仅为网站源码。
+第二版v2.0.0已于2026-11-03撤下（Release转为草稿，网站移除下载与目录）。新版发布前，首页只保留简介，/preface/与/code/显示准备中。

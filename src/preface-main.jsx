@@ -1,11 +1,11 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { PrefacePage } from "./PrefacePage.jsx";
+import { PendingPage } from "./PendingPage.jsx";
 import "./styles.css";
 import "./preface.css";
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <PrefacePage />
+    <PendingPage title="前言与目录" />
   </React.StrictMode>,
 );

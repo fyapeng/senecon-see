@@ -20,3 +20,5 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The full catalogue must expose section-level titles generated from the authoritative chapter sources; use chapter disclosures to keep the twenty-one-chapter directory scannable.
 
 - Publish the textbook and solutions manual as separate PDF downloads plus a reading ZIP that preserves their relative cross-PDF links. Textbook and solutions are CC BY-NC 4.0; original companion code is MIT, with explicit third-party exceptions.
+
+- 2026-11-03：作者撤下第二版（21章、习题解答与v2.0.0下载）。网站将改版为学习结构估计的网页，取代“只做书目展示与下载页”的旧决定；改版方案确定后在此记录。
