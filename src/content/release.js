@@ -1,9 +1,11 @@
+const download = "https://github.com/fyapeng/senecon-see/releases/download/v3.0.0/";
+
 export const release = {
-  version: "v2.0.0",
-  date: "2026-09-18",
-  url: "https://github.com/fyapeng/senecon-see/releases/tag/v2.0.0",
-  textbook: "https://github.com/fyapeng/senecon-see/releases/download/v2.0.0/StructuralEstimation_Textbook.pdf",
-  solutions: "https://github.com/fyapeng/senecon-see/releases/download/v2.0.0/StructuralEstimation_Solutions.pdf",
-  bundle: "https://github.com/fyapeng/senecon-see/releases/download/v2.0.0/StructuralEstimation_Reading_v2.0.0.zip",
-  code: "https://github.com/fyapeng/senecon-see/releases/download/v2.0.0/StructuralEstimation_Code_v2.0.0.zip",
+  version: "v3.0.0",
+  date: "2026-11",
+  url: "https://github.com/fyapeng/senecon-see/releases/tag/v3.0.0",
+  textbook: `${download}StructuralEstimation_Textbook.pdf`,
+  code: `${download}StructuralEstimation_Code_v3.0.0.zip`,
+  chapter: (n) => `${download}StructuralEstimation_ch${String(n).padStart(2, "0")}.pdf`,
+  appendix: (letter) => `${download}StructuralEstimation_appendix${letter}.pdf`,
 };

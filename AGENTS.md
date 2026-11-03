@@ -10,15 +10,10 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 ## Project decisions
 
-- The selected visual target is Product Design ideation option 2: a deep-teal structural field, a paper-white lower surface, a realistic three-dimensional book crossing the two fields, and a prominent companion-code download action.
-- Keep this as a focused official book showcase and downloads page. Do not expand it into a full learning platform or duplicate the LaTeX textbook as a second content source.
-- Publish as the `fyapeng/senecon-see` GitHub Pages project site under the `/senecon-see/` base path.
-- Keep the long-form preface out of the primary navigation. The hero's secondary action is the high-contrast “阅读部分内容” button beside the companion-code download.
-- Publish the preface and full twenty-one-chapter catalogue as a separate reading page. Its deployed HTML is generated one-way from the authoritative LaTeX source and must not become an independently edited textbook source.
-- Keep `/code/` as the canonical web index promised by the preface. Store the immutable full code package in GitHub Releases, while the page explains versions, chapter paths, tests, and download entry points.
-- Publish the versioned textbook PDF from GitHub Releases and link it directly from the homepage. Do not publish the LaTeX source or generated build files.
-- The full catalogue must expose section-level titles generated from the authoritative chapter sources; use chapter disclosures to keep the twenty-one-chapter directory scannable.
-
-- Publish the textbook and solutions manual as separate PDF downloads plus a reading ZIP that preserves their relative cross-PDF links. Textbook and solutions are CC BY-NC 4.0; original companion code is MIT, with explicit third-party exceptions.
-
-- 2026-11-03：作者撤下第二版（21章、习题解答与v2.0.0下载）。网站将改版为学习结构估计的网页，取代“只做书目展示与下载页”的旧决定；改版方案确定后在此记录。
+- Visual identity: deep-teal structural field, paper-white lower surface, the three-dimensional book in the hero. Inner pages use a compact deep-teal header and the same serif headings.
+- 2026-11-03: the author asked for a site for learning structural estimation, replacing the earlier "showcase and downloads only" decision. Pages: home (introduction, book map of two volumes and five parts, reading routes by field, materials), `/chapters/#n` (question, goals, contents, figures, paper cases, summary, programs, per-chapter PDF), `/cases/` (paper case library with part filter and search), `/code/` (install, run, tests, modules per chapter), `/preface/`.
+- All book content on the site is exported one-way from the LaTeX source and the programs by `scripts/export_site_content.py` in the source repository (`src/content/*.json`, `public/figures/`). Never edit those files by hand; rerun the export.
+- The book has no exercises. Learning on the site comes from chapter summaries, figures produced by the programs, paper cases and runnable code. Do not embed the PDF; link the full book and per-chapter PDFs from GitHub Releases.
+- Publish as the `fyapeng/senecon-see` GitHub Pages project site under `/senecon-see/`. The public repository holds only the website; textbook LaTeX source is never published.
+- Phase two (not built yet): three to five interactive demonstrations with results precomputed in Python (no models run in the browser).
+- The second edition (21 chapters, exercises, solutions) was withdrawn on 2026-11-03; its v2.0.0 release is a draft.

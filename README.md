@@ -15,4 +15,4 @@ npm run dev
 
 推送到 `main` 后，GitHub Actions 构建并发布 `dist/client` 到 GitHub Pages。
 
-第二版v2.0.0已于2026-11-03撤下（Release转为草稿，网站移除下载与目录）。新版发布前，首页只保留简介，/preface/与/code/显示准备中。
+当前版本v3.0.0（2026-11）。网站内容由源码仓库的`scripts/export_site_content.py`从LaTeX书稿和程序单向导出到`src/content/*.json`与`public/figures/`，不在网站中另行编辑。下载地址维护于`src/content/release.js`；PDF与程序包放在GitHub Release。第二版v2.0.0已于2026-11-03撤下（Release转为草稿）。

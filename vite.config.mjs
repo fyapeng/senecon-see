@@ -14,6 +14,8 @@ export default defineConfig({
         home: path.resolve(root, "index.html"),
         preface: path.resolve(root, "preface/index.html"),
         code: path.resolve(root, "code/index.html"),
+        chapters: path.resolve(root, "chapters/index.html"),
+        cases: path.resolve(root, "cases/index.html"),
       },
     },
   },
@@ -24,7 +26,7 @@ export default defineConfig({
     host: "0.0.0.0",
     allowedHosts: ["terminal.local"],
     warmup: {
-      clientFiles: ["./src/main.jsx", "./src/preface-main.jsx", "./src/code-main.jsx"],
+      clientFiles: ["./src/main.jsx", "./src/preface-main.jsx", "./src/code-main.jsx", "./src/chapters-main.jsx", "./src/cases-main.jsx"],
     },
   },
   plugins: [react()],
