@@ -213,7 +213,7 @@ function Materials() {
             <p className="eyebrow eyebrow-dark">学习材料</p>
             <h2 id="materials-title">论文、程序与下载</h2>
           </div>
-          <p>本书不设习题。每章的程序演示是动手的入口：改一个有经济含义的参数，看选择、分布或均衡怎样变化。正文中的每个数字都由这些程序算出。</p>
+          <p>本书不设习题。每章的程序演示是动手的入口：改一个有经济含义的参数，看选择、分布或均衡怎样变化。配套程序演示主要模型的计算与估计，具体实现与适用范围见各章说明。</p>
         </div>
         <div className="resource-grid">
           <article>
@@ -225,7 +225,7 @@ function Materials() {
           <article>
             <Code size={34} />
             <h3>配套程序</h3>
-            <p>Python 为权威实现，Julia 独立实现并逐项核对；全套测试覆盖正文中的数字。</p>
+            <p>提供 Python 与 Julia 程序、测试和环境说明，便于运行演示、核对结果并尝试新的参数。</p>
             <a href={`${base}code/`}>安装与运行 <ArrowRight size={18} /></a>
           </article>
           <article>

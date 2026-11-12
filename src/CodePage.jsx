@@ -12,7 +12,7 @@ export function CodePage() {
           <p className="eyebrow eyebrow-dark">配套程序</p>
           <h1>程序与结果</h1>
           <p>
-            书中的每个数字和每张图都由这些程序算出。Python 是权威实现，主要用 NumPy 和 SciPy，需要自动微分的地方用 JAX；同样的计算另有一份独立写成的 Julia 实现，两种语言读入同一批数据，由测试逐项核对。全书共 {nModules} 个 Python 模块。
+            配套程序演示主要模型的计算与估计。Python 是权威实现，主要用 NumPy 和 SciPy，需要自动微分的地方用 JAX；许多计算另有独立写成的 Julia 实现，可用配套测试核对两种语言的结果。全书共 {nModules} 个 Python 模块，具体实现、输入数据与适用范围见各章说明。
           </p>
           <a className="button button-gold small" href={release.code}><Code size={20} /> 下载程序包（{release.version}）</a>
         </header>
@@ -28,7 +28,7 @@ conda activate se3`}</code></pre>
 
         <section className="chapter-block">
           <h2>运行一章</h2>
-          <p>每章的演示在 <code>v3/labs/python</code> 下以模块方式运行，打印本章正文中的数字；<code>figures</code> 模块生成本章的图。</p>
+          <p>每章的演示在 <code>v3/labs/python</code> 下以模块方式运行，输出对应教学例子的计算结果；<code>figures</code> 模块生成配套图形。</p>
           <pre className="code-block"><code>{`cd v3/labs/python
 python -m se3.ch06.enrollment     # 第6章：补贴与入学
 python -m se3.ch22.progresa       # 第22章：PROGRESA的两种用法
@@ -39,7 +39,7 @@ python -m se3.ch06.figures`}</code></pre>
         <section className="chapter-block">
           <h2>测试</h2>
           <pre className="code-block"><code>{`python -m pytest -q v3/tests`}</code></pre>
-          <p>全套测试在一台普通电脑上约一小时。测试检查正文的数字、推导中的恒等式、估计量在模拟数据上的表现，以及 Python 与 Julia 的一致性。</p>
+          <p>配套测试检查教学计算、相关恒等式、估计量在模拟数据上的表现，以及已有双语言实现的结果一致性。具体检查项见各章测试文件，运行时间取决于硬件和所安装的环境。</p>
         </section>
 
         <section className="chapter-block">
