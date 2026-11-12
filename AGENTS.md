@@ -16,4 +16,4 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 - The book has no exercises. Learning on the site comes from chapter summaries, figures produced by the programs, paper cases and runnable code. Do not embed the PDF; link the full book and per-chapter PDFs from GitHub Releases.
 - Publish as the `fyapeng/senecon-see` GitHub Pages project site under `/senecon-see/`. The public repository holds only the website; textbook LaTeX source is never published.
 - Phase two (not built yet): three to five interactive demonstrations with results precomputed in Python (no models run in the browser).
-- The second edition (21 chapters, exercises, solutions) was withdrawn on 2026-11-03; its v2.0.0 release is a draft.
+- The second edition (21 chapters, exercises, solutions) was withdrawn on 2026-11-03, when its v2.0.0 release became a draft. The old release was deleted on 2026-11-12.
